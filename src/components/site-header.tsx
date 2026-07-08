@@ -52,14 +52,12 @@ export function SiteHeader() {
         <div className="hidden items-center gap-2 lg:flex">
           <Link
             to="/contact"
-            search={{ intent: "consultation" } as never}
             className="rounded-full px-4 py-2 text-sm font-medium text-ink hover:text-primary"
           >
             Sign in
           </Link>
           <Link
             to="/contact"
-            search={{ intent: "proposal" } as never}
             className="group inline-flex items-center gap-2 rounded-full bg-[image:var(--gradient-primary)] px-5 py-2.5 text-sm font-semibold text-primary-foreground shadow-elegant transition-transform hover:scale-[1.02]"
           >
             Request proposal

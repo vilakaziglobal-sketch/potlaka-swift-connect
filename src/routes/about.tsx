@@ -134,7 +134,7 @@ function AboutPage() {
               { k: "Trading as", v: "POTLAKA.COM" },
               { k: "Founded", v: "2020" },
               { k: "Ownership", v: "100% Black-owned SA" },
-              { k: "Head office", v: "Johannesburg / Ekurhuleni" },
+              { k: "Head office", v: "Shop No 5, Kariba Centre, 1 Naauw Street, Elsburg, Germiston, 1428" },
               { k: "Founder & MD", v: "Sipho Vilakazi" },
               { k: "Primary business", v: "Enterprise last-mile delivery" },
               { k: "Service area", v: "Gauteng — expanding nationally" },

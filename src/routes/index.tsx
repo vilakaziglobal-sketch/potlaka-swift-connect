@@ -20,7 +20,7 @@ export const Route = createFileRoute("/")({
         content:
           "South Africa's intelligent last-mile delivery network. Reliable, technology-driven delivery solutions for retailers, distributors and enterprises in Johannesburg and Ekurhuleni.",
       },
-      { property: "og:title", content: "POTLAKA.COM — Intelligent Last-Mile Delivery" },
+      { property: "og:title", content: "POTLAKA.COM — Intelligent Last-Mile Delivery for Enterprise" },
       { property: "og:image", content: heroVan },
     ],
     links: [{ rel: "canonical", href: "/" }],

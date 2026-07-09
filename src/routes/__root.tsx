@@ -83,19 +83,23 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       {
         name: "description",
         content:
-          "POTLAKA.COM is South Africa's intelligent last-mile delivery network. Professional, technology-driven delivery solutions for enterprise businesses in Johannesburg and Ekurhuleni.",
+          "South Africa's intelligent last-mile delivery network. Reliable, technology-driven delivery solutions for retailers, distributors and enterprises in Johannesburg and Ekurhuleni.",
       },
       { name: "author", content: "Vilakazi Global SA (Pty) Ltd" },
-      { property: "og:title", content: "POTLAKA.COM — Intelligent Last-Mile Delivery" },
+      { property: "og:title", content: "POTLAKA.COM — Intelligent Last-Mile Delivery for Enterprise" },
       {
         property: "og:description",
         content:
-          "Technology-driven last-mile delivery for enterprises across Johannesburg, Ekurhuleni and beyond.",
+          "South Africa's intelligent last-mile delivery network. Reliable, technology-driven delivery solutions for retailers, distributors and enterprises in Johannesburg and Ekurhuleni.",
       },
       { property: "og:type", content: "website" },
       { property: "og:site_name", content: "POTLAKA.COM" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "theme-color", content: "#1a4bd1" },
+      { name: "twitter:title", content: "POTLAKA.COM — Intelligent Last-Mile Delivery for Enterprise" },
+      { name: "twitter:description", content: "South Africa's intelligent last-mile delivery network. Reliable, technology-driven delivery solutions for retailers, distributors and enterprises in Johannesburg and Ekurhuleni." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/34b06db5-2796-4025-8e5e-f29977d9d593/id-preview-fe595fed--a098dde9-4070-4177-ba24-6c710740a0e9.lovable.app-1783540339280.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/34b06db5-2796-4025-8e5e-f29977d9d593/id-preview-fe595fed--a098dde9-4070-4177-ba24-6c710740a0e9.lovable.app-1783540339280.png" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },

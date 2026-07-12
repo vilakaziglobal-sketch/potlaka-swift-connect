@@ -419,7 +419,7 @@ function AISection() {
         <div className="relative grid gap-16 lg:grid-cols-[1fr_1.1fr] lg:items-center">
           <div>
             <Eyebrow>Automation & Insights</Eyebrow>
-            <H2>Data-driven decisions <span className="text-gradient-gold">at every step.</span></H2>
+            <H2>Data-driven decisions <span className="text-gradient-gold">across your operation.</span></H2>
             <p className="mt-6 text-lg leading-relaxed text-ink-muted">
               The POTLAKA engine turns raw logistics data into actionable insights — helping your team plan, execute and improve.
             </p>

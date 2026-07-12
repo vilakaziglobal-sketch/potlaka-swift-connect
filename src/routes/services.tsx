@@ -15,7 +15,7 @@ export const Route = createFileRoute("/services")({
 });
 
 const LASTMILE = [
-  { icon: Truck, title: "Tech-driven last-mile delivery", desc: "Automated dispatch, live tracking and electronic proof of delivery on every consignment." },
+  { icon: Truck, title: "Tech-driven last-mile delivery", desc: "Automated dispatch, live tracking and electronic proof of delivery on each consignment." },
   { icon: Boxes, title: "Dedicated fleet solutions", desc: "Vehicles and teams committed to your brand, uniformed and embedded in your daily operations." },
   { icon: ClipboardList, title: "Scheduled route planning", desc: "Fixed, predictable delivery windows aligned to your commercial calendar." },
   { icon: Timer, title: "On-demand capacity", desc: "Extra vehicles and drivers when volumes spike — without compromising service levels." },

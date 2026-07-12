@@ -18,7 +18,7 @@ const FEATURES = [
   { icon: Radar, title: "Predictive fleet intelligence", desc: "Our applications and handheld devices turn driver and vehicle data into live location, behaviour scoring and utilisation predictions." },
   { icon: Network, title: "Logistics control tower", desc: "One operational view across warehouses, fleets and last-mile execution." },
   { icon: Bot, title: "Automated dispatch & routing", desc: "AI-assisted job allocation, load planning and route optimisation." },
-  { icon: FileSignature, title: "Electronic proof of delivery", desc: "Signatures, photos and timestamps captured on every consignment." },
+  { icon: FileSignature, title: "Electronic proof of delivery", desc: "Signatures, photos and timestamps captured on each consignment." },
   { icon: RouteIcon, title: "Intelligent route management", desc: "Structured routes engineered for efficiency and predictable arrival windows." },
   { icon: Bell, title: "Customer notifications", desc: "Automated status updates via SMS, email and WhatsApp on every stop." },
   { icon: Smartphone, title: "Driver application", desc: "A purpose-built app that guides drivers through each delivery with clarity." },

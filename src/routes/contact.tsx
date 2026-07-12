@@ -145,7 +145,7 @@ function ContactPage() {
                     maxLength={1500}
                     required
                     className="w-full rounded-xl border border-border bg-background px-4 py-3 text-sm text-ink placeholder:text-ink-muted/60 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20"
-                    placeholder="Sectors served, service windows, geography, current challenges…"
+                    placeholder="Sectors served, service windows, geography and current challenges…"
                   />
                   {errors.message && <p className="mt-1 text-xs text-destructive">{errors.message}</p>}
                 </div>

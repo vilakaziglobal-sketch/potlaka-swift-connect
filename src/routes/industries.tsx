@@ -17,15 +17,15 @@ const FLAGSHIP = [
   {
     icon: Store,
     name: "Retailers",
-    headline: "Store fulfilment, replenishment and branded last-mile.",
+    headline: "Omnichannel fulfilment, replenishment and branded last-mile.",
     intro:
-      "For national chains and independent brands, delivery IS the brand experience. We run store-to-customer, DC-to-store and click-and-collect flows that protect your customer promise.",
+      "For national chains and independent brands, delivery IS the brand experience. We run store, DC and warehouse fulfilment flows that protect your customer promise.",
     useCases: [
-      "Same-day store-to-door for online orders placed in-store",
-      "Automated replenishment routes between DC and stores",
+      "Omnichannel fulfilment from store, DC or warehouse",
+      "Automated replenishment routes across your network",
       "Uniformed drivers in branded vehicles — an extension of your team",
-      "Live customer notifications and ePOD on every drop",
-      "Peak-season overflow capacity for promos, launches and Black Friday",
+      "Live customer notifications and electronic proof of delivery",
+      "Peak-season overflow capacity for sales events and launches",
     ],
     kpis: ["DIFOT > 98%", "Live tracking", "Branded delivery"],
   },
@@ -36,7 +36,7 @@ const FLAGSHIP = [
     intro:
       "For wholesalers and B2B distributors, predictability is everything. Our control tower orchestrates fixed schedules, trade customer notifications and exception handling.",
     useCases: [
-      "Fixed-window multi-drop runs to trade customers",
+      "Fixed-window multi-drop routes to trade customers",
       "Route optimisation across hundreds of daily stops",
       "Automated trade-customer ETAs and delivery confirmations",
       "SLA and DIFOT scorecards per customer and per route",
@@ -47,14 +47,14 @@ const FLAGSHIP = [
   {
     icon: ShieldCheck,
     name: "Banks & Financial Services",
-    headline: "Secure, chain-of-custody delivery — audit-ready.",
+    headline: "Secure, compliant last-mile logistics for financial services.",
     intro:
-      "For banks, insurers and financial institutions, security and traceability are non-negotiable. We deliver cards, documents, devices and confidential materials with a compliance-grade audit trail.",
+      "For banks, insurers and fintechs, security and traceability are non-negotiable. We handle high-value, sensitive and confidential consignments with a compliance-grade audit trail.",
     useCases: [
-      "Card delivery with recipient ID verification",
-      "Confidential document couriering with tamper-evident packaging",
-      "Device deployment (POS, tablets, laptops) with chain-of-custody scanning",
+      "Tamper-evident handling and sealed handovers",
+      "Recipient identity verification and authentication",
       "Vetted, background-checked drivers assigned to your account",
+      "Device and asset deployment with chain-of-custody scanning",
       "Full audit trail: photos, signatures, GPS and timestamps per event",
     ],
     kpis: ["Vetted drivers", "Tamper-evident", "Audit trail"],
@@ -62,15 +62,15 @@ const FLAGSHIP = [
   {
     icon: Package,
     name: "E-commerce",
-    headline: "API-integrated last-mile that converts to repeat buyers.",
+    headline: "API-integrated last-mile that turns first-time buyers into repeat customers.",
     intro:
-      "For e-commerce leaders, the last mile is where CX is won or lost. We plug into your store, ship same-day or next-day, and automate returns to protect margin.",
+      "For online brands, the delivery experience is the brand experience. We plug into your store, offer flexible delivery windows and automate returns to protect margin.",
     useCases: [
-      "Shopify, WooCommerce and Magento API integration",
+      "E-commerce platform and order-management system integration",
       "Same-day and next-day delivery windows across Gauteng",
       "Branded tracking pages and customer notifications",
       "Automated returns collections with condition capture",
-      "Cash-on-delivery and card-on-delivery collection workflows",
+      "Flexible payment and collection workflows at the door",
     ],
     kpis: ["Same-day", "Store APIs", "Returns automation"],
   },

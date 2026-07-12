@@ -91,17 +91,17 @@ function AboutPage() {
           <div className="max-w-3xl">
             <div className="text-xs font-semibold uppercase tracking-wider text-primary">What we stand for</div>
             <h2 className="mt-4 text-balance text-4xl font-semibold leading-tight tracking-tight text-ink md:text-5xl">
-              Professionalism, reliability and operational excellence.
+              Professionalism. Reliability. Operational excellence.
             </h2>
           </div>
 
           <div className="mt-14 grid gap-5 md:grid-cols-2 lg:grid-cols-5">
             {[
-              { t: "Professionalism", d: "Every touchpoint reflects the standard your customers expect from your brand." },
-              { t: "Reliability", d: "Operational discipline that turns delivery into a source of competitive advantage." },
+              { t: "Professionalism", d: "Every touchpoint upholds the standard your customers expect from your brand." },
+              { t: "Reliability", d: "Operational discipline that turns delivery into a competitive advantage." },
               { t: "Speed", d: "Intelligent routing and dedicated capacity that move your business faster." },
               { t: "Transparency", d: "Real-time visibility and clear communication at every stage of the journey." },
-              { t: "Safety & Automation", d: "Security and safety built in, with automation that frees your people to focus on growth." },
+              { t: "Safety & Automation", d: "Security and safety engineered in. Automation that frees your people to drive growth." },
             ].map((v) => (
               <div key={v.t} className="rounded-2xl border border-border bg-background p-7">
                 <div className="font-display text-2xl font-semibold text-gradient-primary">{v.t}</div>

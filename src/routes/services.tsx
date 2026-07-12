@@ -70,7 +70,7 @@ function ServicesPage() {
           ))}
         </div>
         <p className="mt-10 text-sm text-ink-muted">
-          The technology that powers these services — automation, telematics, control tower and ePOD — lives on the{" "}
+          The technology that powers these services — automation, predictive fleet intelligence, control tower and ePOD — lives on the{" "}
           <Link to="/technology" className="font-semibold text-primary hover:underline">Technology</Link> page.
         </p>
       </section>

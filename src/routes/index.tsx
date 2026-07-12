@@ -298,8 +298,8 @@ function H2({ children, className = "" }: { children: React.ReactNode; className
 /* ---------- CHALLENGE ---------- */
 function Challenge() {
   const pains = [
-    "Disconnected systems", "Manual processes", "Poor visibility", "Delivery failures",
-    "Warehouse inefficiencies", "Customer frustration", "High operating costs", "No actionable data",
+    "Disconnected systems", "Manual processes", "Zero visibility", "Failed deliveries",
+    "Warehouse bottlenecks", "Frustrated customers", "Runaway costs", "Blind decisions",
   ];
   return (
     <Section>
@@ -308,8 +308,8 @@ function Challenge() {
           <Eyebrow>The Challenge</Eyebrow>
           <H2>Logistics is broken by <span className="text-gradient-primary">complexity.</span></H2>
           <p className="mt-6 max-w-lg text-lg leading-relaxed text-ink-muted">
-            Enterprises run their supply chain across a dozen disconnected tools. Data lives in silos.
-            Decisions are made in the dark. Customers pay the price.
+            Enterprises run their supply chain across a dozen disconnected tools. Data sits in silos.
+            Decisions are made blind. Customers pay the price.
           </p>
         </div>
         <div className="grid grid-cols-2 gap-3">

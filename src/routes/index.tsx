@@ -1,9 +1,9 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { motion } from "framer-motion";
 import {
-  ArrowRight, Play, Sparkles, Warehouse, Truck, Radar, LineChart,
+  ArrowRight, Sparkles, Warehouse, Truck, Radar, LineChart,
   Users, Bot, ShieldCheck, Cloud, Network, Lock, Zap, Activity,
-  Package, CheckCircle2, ArrowUpRight, Timer, TrendingUp,
+  Package, CheckCircle2, ArrowUpRight, TrendingUp,
   Gauge, BrainCircuit, Terminal,
 } from "lucide-react";
 
@@ -45,7 +45,6 @@ function Home() {
       <HowItWorks />
       <AISection />
       <Outcomes />
-      <Trial />
       <FinalCTA />
     </>
   );
@@ -85,15 +84,6 @@ function Hero() {
               Book a live demo
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
             </Link>
-            <Link
-              to="/contact"
-              className="inline-flex items-center gap-2 rounded-full bg-gold px-6 py-3.5 text-sm font-semibold text-[oklch(0.14_0.02_260)] shadow-glow-gold transition-transform hover:scale-[1.02]"
-            >
-              Start your 30-day trial
-            </Link>
-            <button className="inline-flex items-center gap-2 rounded-full glass px-5 py-3.5 text-sm font-medium text-ink hover:bg-white/10">
-              <Play className="h-4 w-4" /> Watch the platform
-            </button>
           </div>
 
           <div className="mt-14 flex items-center gap-8 text-xs uppercase tracking-[0.18em] text-ink-muted/70">

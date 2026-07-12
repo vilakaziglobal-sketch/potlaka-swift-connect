@@ -9,7 +9,7 @@ export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
       { title: "About POTLAKA.COM — Proudly South African, 100% Black-Owned" },
-      { name: "description", content: "POTLAKA.COM is the trading name of Vilakazi Global SA (Pty) Ltd — founded in 2020 by Sipho Vilakazi to deliver intelligent, dependable last-mile logistics for South African businesses." },
+      { name: "description", content: "POTLAKA.COM — founded in 2020 by Sipho Vilakazi to deliver intelligent, dependable last-mile logistics for South African businesses." },
       { property: "og:title", content: "About POTLAKA.COM" },
       { property: "og:image", content: executives },
     ],
@@ -31,9 +31,8 @@ function AboutPage() {
               Engineered in South Africa. <span className="text-gradient-accent">Built for enterprise.</span>
             </h1>
             <p className="mt-6 max-w-xl text-lg text-white/80 md:text-xl">
-              POTLAKA<span className="font-black text-[#FF1A1A]">.</span>COM is the trading name of Vilakazi Global SA (Pty) Ltd — a
-              proudly South African, 100% Black-owned technology company
-              engineering high-tech automation for transport, logistics and
+              POTLAKA<span className="font-black text-[#FF1A1A]">.</span>COM is a proudly South African, 100% Black-owned technology
+              company engineering high-tech automation for transport, logistics and
               warehousing, and tech-driven last-mile for retailers, distributors,
               banks and e-commerce leaders.
             </p>

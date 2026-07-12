@@ -134,27 +134,6 @@ function AboutPage() {
         </div>
       </section>
 
-      {/* Company facts */}
-      <section className="container-page pb-24">
-        <div className="rounded-3xl border border-border bg-surface-elevated p-10 md:p-14">
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
-            {[
-              { k: "Legal name", v: "Vilakazi Global SA (Pty) Ltd" },
-              { k: "Trading as", v: "POTLAKA.COM" },
-              { k: "Founded", v: "2020" },
-              { k: "Ownership", v: "100% Black-owned SA" },
-              { k: "Founder & MD", v: "Sipho Vilakazi" },
-              { k: "Primary business", v: "Enterprise last-mile delivery" },
-              { k: "Service area", v: "Gauteng — expanding nationally" },
-            ].map((c) => (
-              <div key={c.k}>
-                <div className="text-xs font-semibold uppercase tracking-wider text-ink-muted">{c.k}</div>
-                <div className="mt-1.5 font-display text-lg font-semibold text-ink">{c.v}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
     </>
   );
 }

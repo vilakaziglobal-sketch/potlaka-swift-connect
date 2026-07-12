@@ -79,25 +79,25 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "POTLAKA.COM — Intelligent Last-Mile Delivery for Enterprise" },
+      { title: "POTLAKA.COM — High-Tech Automation for Transport, Logistics & Warehousing" },
       {
         name: "description",
         content:
-          "South Africa's intelligent last-mile delivery network. Reliable, technology-driven delivery solutions for retailers, distributors and enterprises in Johannesburg and Ekurhuleni.",
+          "South African technology company delivering high-tech automation for transport, logistics and warehousing — plus tech-driven last-mile logistics engineered for retailers, distributors, banks and e-commerce leaders.",
       },
       { name: "author", content: "Vilakazi Global SA (Pty) Ltd" },
-      { property: "og:title", content: "POTLAKA.COM — Intelligent Last-Mile Delivery for Enterprise" },
+      { property: "og:title", content: "POTLAKA.COM — High-Tech Automation for Transport, Logistics & Warehousing" },
       {
         property: "og:description",
         content:
-          "South Africa's intelligent last-mile delivery network. Reliable, technology-driven delivery solutions for retailers, distributors and enterprises in Johannesburg and Ekurhuleni.",
+          "South African technology company delivering high-tech automation for transport, logistics and warehousing — plus tech-driven last-mile logistics engineered for retailers, distributors, banks and e-commerce leaders.",
       },
       { property: "og:type", content: "website" },
       { property: "og:site_name", content: "POTLAKA.COM" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "theme-color", content: "#1a4bd1" },
-      { name: "twitter:title", content: "POTLAKA.COM — Intelligent Last-Mile Delivery for Enterprise" },
-      { name: "twitter:description", content: "South Africa's intelligent last-mile delivery network. Reliable, technology-driven delivery solutions for retailers, distributors and enterprises in Johannesburg and Ekurhuleni." },
+      { name: "twitter:title", content: "POTLAKA.COM — High-Tech Automation for Transport, Logistics & Warehousing" },
+      { name: "twitter:description", content: "South African technology company delivering high-tech automation for transport, logistics and warehousing — plus tech-driven last-mile logistics engineered for retailers, distributors, banks and e-commerce leaders." },
       { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/34b06db5-2796-4025-8e5e-f29977d9d593/id-preview-fe595fed--a098dde9-4070-4177-ba24-6c710740a0e9.lovable.app-1783540339280.png" },
       { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/34b06db5-2796-4025-8e5e-f29977d9d593/id-preview-fe595fed--a098dde9-4070-4177-ba24-6c710740a0e9.lovable.app-1783540339280.png" },
     ],

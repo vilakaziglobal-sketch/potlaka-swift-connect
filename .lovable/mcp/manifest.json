@@ -15,7 +15,7 @@
       {
         "name": "get_company_info",
         "title": "Get company info",
-        "description": "Return company profile for POTLAKA.COM (Vilakazi Global SA (Pty) Ltd): legal name, trading name, founder, founding year, and positioning.",
+        "description": "Return company profile for POTLAKA.COM: trading name, founder, founding year, and positioning.",
         "annotations": {
           "readOnlyHint": true,
           "idempotentHint": true,

@@ -10,7 +10,7 @@ export default defineMcp({
   title: "POTLAKA.COM",
   version: "0.1.0",
   instructions:
-    "Tools for POTLAKA.COM (Vilakazi Global SA (Pty) Ltd), a South African last-mile delivery company. Use these tools to answer questions about the company, its services and industries served, its head office and contact details, and to prepare a delivery quote request (returns email and WhatsApp links — nothing is sent automatically).",
+    "Tools for POTLAKA.COM, a South African last-mile delivery company. Use these tools to answer questions about the company, its services and industries served, its head office and contact details, and to prepare a delivery quote request (returns email and WhatsApp links — nothing is sent automatically).",
   tools: [
     companyInfoTool,
     contactDetailsTool,

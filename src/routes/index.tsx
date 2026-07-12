@@ -39,6 +39,7 @@ function Home() {
       <TrustStrip />
       <WhyPotlaka />
       <Services />
+      <Automation />
       <Technology />
       <Industries />
       <Process />

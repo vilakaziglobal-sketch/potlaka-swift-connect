@@ -4,7 +4,7 @@ import {
   ArrowRight, Play, Sparkles, Cpu, Warehouse, Truck, Radar, LineChart,
   Users, Bot, ShieldCheck, Cloud, Network, Lock, Zap, Globe, Activity,
   MapPin, Package, CheckCircle2, ArrowUpRight, Timer, TrendingUp,
-  Building2, Landmark, ShoppingBag, Factory, Pill, Fuel, Wifi, Wrench,
+  Building2, Landmark, ShoppingBag, Factory, Pill, Fuel, Wifi, Wrench, HardHat,
   Boxes, Route as RouteIcon, Gauge, BrainCircuit, Terminal, Layers,
 } from "lucide-react";
 

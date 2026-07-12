@@ -6,7 +6,7 @@ export const Route = createFileRoute("/industries")({
   head: () => ({
     meta: [
       { title: "Industries We Serve | POTLAKA.COM" },
-      { name: "description", content: "Purpose-built last-mile delivery for retail, e-commerce, healthcare, pharmaceutical, manufacturing, FMCG, financial services and more across South Africa." },
+      { name: "description", content: "High-tech automation and tech-driven last-mile logistics for retailers, distributors, banks, e-commerce leaders, 3PLs, warehousing operators, manufacturers and more across South Africa." },
       { property: "og:title", content: "Industries — POTLAKA.COM" },
     ],
     links: [{ rel: "canonical", href: "/industries" }],
@@ -14,21 +14,21 @@ export const Route = createFileRoute("/industries")({
 });
 
 const INDUSTRIES = [
-  { name: "Retail", desc: "Store fulfilment, replenishment and last-mile delivery for national and independent retailers." },
-  { name: "E-Commerce", desc: "Fast, branded delivery experiences that convert first-time buyers into repeat customers." },
-  { name: "Wholesale", desc: "Multi-drop distribution to trade customers with scheduled, predictable service windows." },
-  { name: "Manufacturing", desc: "Just-in-time delivery for finished goods, parts and B2B distribution." },
+  { name: "Retail", desc: "Store fulfilment, replenishment and tech-driven last-mile delivery for national and independent retailers." },
+  { name: "E-Commerce", desc: "Automated dispatch and branded delivery experiences that convert first-time buyers into repeat customers." },
+  { name: "Distributors", desc: "Multi-drop distribution with control-tower visibility, scheduled service windows and ePOD." },
+  { name: "Banks", desc: "Secure delivery of bank cards, PIN mailers and confidential documents — with full chain-of-custody." },
+  { name: "Warehousing & 3PL", desc: "Warehouse automation, WMS integration and outbound last-mile execution for logistics operators." },
+  { name: "Manufacturing", desc: "Just-in-time delivery for finished goods, parts and B2B distribution — connected to your ERP." },
+  { name: "FMCG", desc: "High-frequency distribution to trade, retail and direct-to-consumer channels." },
+  { name: "Financial Services", desc: "Discreet, secure delivery of documents, cards and financial materials with tracked handovers." },
   { name: "Healthcare", desc: "Controlled, professional handling for hospitals, clinics and medical suppliers." },
   { name: "Pharmaceutical", desc: "Compliance-aware delivery workflows with electronic proof of delivery." },
   { name: "Automotive", desc: "Parts distribution across dealership networks and aftermarket suppliers." },
-  { name: "Financial Services", desc: "Discreet, secure delivery of documents, cards and financial materials." },
   { name: "Legal", desc: "Court filings, contracts and confidential documents handled professionally." },
   { name: "Government", desc: "Structured delivery services aligned to public-sector service requirements." },
   { name: "Electronics", desc: "High-value electronics distribution with careful handling and ePOD." },
-  { name: "Furniture", desc: "Larger consignments and coordinated delivery windows for retail and B2B." },
   { name: "Industrial Suppliers", desc: "Reliable distribution for industrial parts and equipment providers." },
-  { name: "FMCG", desc: "High-frequency distribution to trade, retail and direct-to-consumer channels." },
-  { name: "Construction", desc: "Materials and equipment delivery to sites and project locations." },
 ];
 
 function IndustriesPage() {
@@ -42,12 +42,12 @@ function IndustriesPage() {
               <span className="h-1.5 w-1.5 rounded-full bg-accent" /> Industries
             </div>
             <h1 className="mt-6 text-balance text-5xl font-semibold leading-[1.03] tracking-tight md:text-6xl">
-              Trusted across South Africa's most demanding sectors.
+              Automation and last-mile for South Africa's most demanding sectors.
             </h1>
             <p className="mt-6 max-w-2xl text-lg text-white/80 md:text-xl">
-              From regulated healthcare and pharmaceutical distribution to high-volume
-              retail and e-commerce fulfilment — our operational playbook adapts to
-              your industry.
+              Engineered for retailers, distributors, banks and e-commerce leaders —
+              and trusted by 3PLs, warehousing operators, manufacturers and regulated
+              industries.
             </p>
           </div>
         </div>

@@ -3,17 +3,19 @@ import { defineTool } from "@lovable.dev/mcp-js";
 export default defineTool({
   name: "list_industries",
   title: "List industries served",
-  description: "Return the industries POTLAKA.COM serves as a last-mile delivery partner.",
+  description: "Return the industries POTLAKA.COM serves with automation and tech-driven last-mile logistics.",
   inputSchema: {},
   annotations: { readOnlyHint: true, idempotentHint: true, openWorldHint: false },
   handler: () => {
     const industries = [
-      "Retail & FMCG",
-      "Distribution & wholesale",
-      "Manufacturing",
+      "Retail",
       "E-commerce",
+      "Distributors",
+      "Banks & financial services",
+      "Warehousing & 3PL",
+      "Manufacturing",
+      "FMCG",
       "Pharmaceutical & healthcare",
-      "Financial & professional services",
     ];
     return {
       content: [{ type: "text", text: JSON.stringify(industries, null, 2) }],

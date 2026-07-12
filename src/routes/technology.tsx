@@ -1,12 +1,12 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Radar, Cpu, Bell, FileSignature, BarChart3, Route as RouteIcon, Smartphone, LineChart } from "lucide-react";
+import { Radar, Cpu, Bell, FileSignature, BarChart3, Route as RouteIcon, Smartphone, LineChart, Warehouse, Network, Bot, ShieldCheck } from "lucide-react";
 
 export const Route = createFileRoute("/technology")({
   component: TechPage,
   head: () => ({
     meta: [
-      { title: "Technology — Intelligent Logistics Platform | POTLAKA.COM" },
-      { name: "description", content: "The POTLAKA.COM technology platform: fleet visibility, electronic proof of delivery, live tracking, driver applications, customer notifications and business reporting." },
+      { title: "Technology — Automation Platform for Logistics | POTLAKA.COM" },
+      { name: "description", content: "The POTLAKA.COM automation platform: warehouse management, fleet telematics, control-tower visibility, automated dispatch, ePOD, driver applications and analytics." },
       { property: "og:title", content: "Technology — POTLAKA.COM" },
     ],
     links: [{ rel: "canonical", href: "/technology" }],
@@ -14,14 +14,18 @@ export const Route = createFileRoute("/technology")({
 });
 
 const FEATURES = [
-  { icon: Radar, title: "Fleet & driver visibility", desc: "Live location, status and performance across every route and every vehicle." },
+  { icon: Warehouse, title: "Warehouse automation (WMS)", desc: "Barcode & RFID scanning, pick-pack workflows and automated stock control." },
+  { icon: Radar, title: "Fleet & driver telematics", desc: "Live vehicle location, driver behaviour and utilisation analytics." },
+  { icon: Network, title: "Logistics control tower", desc: "One operational view across warehouses, fleets and last-mile execution." },
+  { icon: Bot, title: "Automated dispatch & routing", desc: "AI-assisted job allocation, load planning and route optimisation." },
   { icon: FileSignature, title: "Electronic proof of delivery", desc: "Signatures, photos and timestamps captured on every consignment." },
   { icon: RouteIcon, title: "Intelligent route management", desc: "Structured routes engineered for efficiency and predictable arrival windows." },
   { icon: Bell, title: "Customer notifications", desc: "Automated status updates via SMS and email for every stop." },
   { icon: Smartphone, title: "Driver application", desc: "A purpose-built app that guides drivers through every delivery with clarity." },
-  { icon: BarChart3, title: "Business reporting", desc: "Weekly and monthly performance reports focused on business outcomes." },
+  { icon: BarChart3, title: "Executive reporting", desc: "Weekly and monthly SLA, cost-to-serve and performance reporting." },
   { icon: LineChart, title: "Delivery analytics", desc: "Insights on volumes, service levels, exceptions and customer experience." },
-  { icon: Cpu, title: "Interactive dashboard", desc: "A single operational view of your delivery performance in real time." },
+  { icon: Cpu, title: "Systems integration", desc: "APIs and connectors into ERP, e-commerce, WMS, TMS and banking platforms." },
+  { icon: ShieldCheck, title: "Secure chain-of-custody", desc: "Auditable handovers for bank cards, PIN mailers and confidential documents." },
 ];
 
 function TechPage() {
@@ -35,12 +39,12 @@ function TechPage() {
               <span className="h-1.5 w-1.5 rounded-full bg-accent" /> Technology
             </div>
             <h1 className="mt-6 text-balance text-5xl font-semibold leading-[1.03] tracking-tight md:text-6xl">
-              An intelligent logistics platform, built for enterprise visibility.
+              A high-tech automation platform for transport, logistics & warehousing.
             </h1>
             <p className="mt-6 max-w-2xl text-lg text-white/80 md:text-xl">
-              Real-time tracking, electronic proof of delivery, driver applications and
-              performance analytics — one operational fabric that keeps your business
-              informed at every step.
+              Warehouse management, fleet telematics, automated dispatch, ePOD and a
+              logistics control tower — one operational fabric powering tech-driven
+              last-mile for retailers, distributors, banks and e-commerce leaders.
             </p>
           </div>
         </div>

@@ -582,8 +582,8 @@ function Banking() {
             <Eyebrow>Banking &amp; Financial Services</Eyebrow>
             <H2>Secure financial <span className="text-gradient-gold">logistics.</span></H2>
             <p className="mt-6 text-lg leading-relaxed text-ink-muted">
-              Technology-enabled logistics for banks, financial institutions and fintechs — engineered
-              around chain-of-custody, verification and compliance.
+              Technology-led logistics for banks, insurers and fintechs — engineered around
+              chain of custody, verification and full regulatory compliance.
             </p>
           </div>
           <div className="grid gap-8 sm:grid-cols-2">

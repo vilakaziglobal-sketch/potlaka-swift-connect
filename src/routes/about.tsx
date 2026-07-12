@@ -28,14 +28,14 @@ function AboutPage() {
               <span className="h-1.5 w-1.5 rounded-full bg-accent" /> About us
             </div>
             <h1 className="mt-6 text-balance text-5xl font-semibold leading-[1.03] tracking-tight md:text-6xl">
-              Built in South Africa. <span className="text-gradient-accent">Built for business.</span>
+              Engineered in South Africa. <span className="text-gradient-accent">Built for enterprise.</span>
             </h1>
             <p className="mt-6 max-w-xl text-lg text-white/80 md:text-xl">
               POTLAKA<span className="font-black text-red-500">.</span>COM is the trading name of Vilakazi Global SA (Pty) Ltd — a
-              proudly South African, 100% Black-owned technology company delivering
-              high-tech automation for transport, logistics and warehousing, and
-              tech-driven last-mile logistics for retailers, distributors, banks and
-              e-commerce leaders.
+              proudly South African, 100% Black-owned technology company
+              engineering high-tech automation for transport, logistics and
+              warehousing, and tech-driven last-mile for retailers, distributors,
+              banks and e-commerce leaders.
             </p>
           </div>
           <motion.div
@@ -53,31 +53,33 @@ function AboutPage() {
           <div>
             <div className="text-xs font-semibold uppercase tracking-wider text-primary">Our story</div>
             <h2 className="mt-4 text-balance text-3xl font-semibold leading-tight tracking-tight text-ink md:text-4xl">
-              A logistics company built during a moment that changed everything.
+              Born in a moment that redefined logistics — and built for the decade that follows.
             </h2>
           </div>
           <div className="space-y-5 text-lg leading-relaxed text-ink-muted">
             <p>
-              Established in 2020 during the COVID-19 pandemic by founder and Managing
-              Director <span className="font-semibold text-ink">Sipho Vilakazi</span>,
-              POTLAKA<span className="font-black text-red-500">.</span>COM was created to bring professionalism, reliability and
-              technology to a category that South African businesses had every reason
-              to expect more from.
+              Founded in 2020 at the height of the COVID-19 pandemic by
+              Managing Director <span className="font-semibold text-ink">Sipho Vilakazi</span>,
+              POTLAKA<span className="font-black text-red-500">.</span>COM set out to
+              raise the bar for a category South African enterprises had every
+              reason to expect more from — bringing professionalism, reliability
+              and technology to the last mile.
             </p>
             <p>
-              The name POTLAKA is the Sesotho word for <em>"Hurry Up"</em> — a promise of
-              urgency, responsiveness and dependable service. We move business faster
-              through intelligent last-mile delivery.
+              POTLAKA is the Sesotho word for <em>"Hurry Up"</em> — our promise
+              of urgency, responsiveness and dependable service. We move
+              business faster through intelligent last-mile execution.
             </p>
             <p>
-              We are not a traditional courier. We are a technology-driven last-mile
-              company that becomes an extension of our clients' businesses — ensuring
-              every delivery reflects their brand and their customer service standards.
+              We are not a traditional courier. We are a technology company that
+              operates as an extension of our clients' brands — protecting
+              their customer promise on every delivery.
             </p>
             <p>
-              Our solutions cover security and safety across transport, logistics and
-              warehousing. By applying automation, we simplify complex processes and
-              give our clients and their staff more time to focus on what matters.
+              Security and safety are engineered into every transport,
+              logistics and warehousing workflow. Automation strips out the
+              routine — freeing your teams to focus on customers, exceptions
+              and growth.
             </p>
           </div>
         </div>
@@ -89,17 +91,17 @@ function AboutPage() {
           <div className="max-w-3xl">
             <div className="text-xs font-semibold uppercase tracking-wider text-primary">What we stand for</div>
             <h2 className="mt-4 text-balance text-4xl font-semibold leading-tight tracking-tight text-ink md:text-5xl">
-              Professionalism, reliability and operational excellence.
+              Professionalism. Reliability. Operational excellence.
             </h2>
           </div>
 
           <div className="mt-14 grid gap-5 md:grid-cols-2 lg:grid-cols-5">
             {[
-              { t: "Professionalism", d: "Every touchpoint reflects the standard your customers expect from your brand." },
-              { t: "Reliability", d: "Operational discipline that turns delivery into a source of competitive advantage." },
+              { t: "Professionalism", d: "Every touchpoint upholds the standard your customers expect from your brand." },
+              { t: "Reliability", d: "Operational discipline that turns delivery into a competitive advantage." },
               { t: "Speed", d: "Intelligent routing and dedicated capacity that move your business faster." },
               { t: "Transparency", d: "Real-time visibility and clear communication at every stage of the journey." },
-              { t: "Safety & Automation", d: "Security and safety built in, with automation that frees your people to focus on growth." },
+              { t: "Safety & Automation", d: "Security and safety engineered in. Automation that frees your people to drive growth." },
             ].map((v) => (
               <div key={v.t} className="rounded-2xl border border-border bg-background p-7">
                 <div className="font-display text-2xl font-semibold text-gradient-primary">{v.t}</div>
@@ -122,9 +124,9 @@ function AboutPage() {
               A growing, professionally branded fleet.
             </h2>
             <p className="mt-5 text-lg leading-relaxed text-ink-muted">
-              Our operational planning includes dedicated delivery and collection
-              vehicles to support business clients across our service network — with
-              a clear roadmap for growth as we expand into new metros.
+              A dedicated fleet of delivery and collection vehicles supports
+              business clients across our service network — with a clear
+              roadmap to expand into every major South African metro.
             </p>
             <Link to="/contact" className="mt-8 inline-flex items-center gap-2 rounded-full bg-[image:var(--gradient-primary)] px-6 py-3.5 text-sm font-semibold text-primary-foreground shadow-elegant transition-transform hover:scale-[1.02]">
               Partner with us <ArrowRight className="h-4 w-4" />

@@ -29,10 +29,10 @@ const schema = z.object({
 type FormValues = z.infer<typeof schema>;
 
 const INTENTS: { id: FormValues["intent"]; label: string; desc: string }[] = [
-  { id: "proposal", label: "Request a proposal", desc: "Tailored pricing and service design" },
-  { id: "consultation", label: "Book a consultation", desc: "30-minute strategy call with our team" },
-  { id: "account", label: "Open a business account", desc: "Start onboarding as a business client" },
-  { id: "general", label: "General enquiry", desc: "Media, partnerships or careers" },
+  { id: "proposal", label: "Request a proposal", desc: "Tailored pricing and a service model built for your business" },
+  { id: "consultation", label: "Book a consultation", desc: "A 30-minute strategy session with our enterprise team" },
+  { id: "account", label: "Open a business account", desc: "Begin onboarding as a POTLAKA enterprise client" },
+  { id: "general", label: "General enquiry", desc: "Media, partnerships and careers" },
 ];
 
 function ContactPage() {
@@ -77,11 +77,11 @@ function ContactPage() {
               <span className="h-1.5 w-1.5 rounded-full bg-accent" /> Let's talk
             </div>
             <h1 className="mt-6 text-balance text-5xl font-semibold leading-[1.03] tracking-tight md:text-6xl">
-              Start a conversation with our enterprise team.
+              Speak with our enterprise team.
             </h1>
             <p className="mt-6 max-w-2xl text-lg text-white/80 md:text-xl">
-              Tell us about your delivery requirements. We'll design a service model
-              that fits your operations, service levels and customer promise.
+              Tell us what you need to move. We'll engineer a service model
+              around your volumes, service levels and customer promise.
             </p>
           </div>
         </div>
@@ -97,8 +97,9 @@ function ContactPage() {
                 </div>
                 <h2 className="text-3xl font-semibold text-ink">Thank you — we've got it.</h2>
                 <p className="mt-3 max-w-md text-ink-muted">
-                  A member of our enterprise team will be in touch within one business day
-                  to schedule a call and discuss your requirements.
+                  A member of our enterprise team will be in touch within one
+                  business day to schedule a call and design a solution around
+                  your requirements.
                 </p>
               </div>
             ) : (
@@ -144,7 +145,7 @@ function ContactPage() {
                     maxLength={1500}
                     required
                     className="w-full rounded-xl border border-border bg-background px-4 py-3 text-sm text-ink placeholder:text-ink-muted/60 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20"
-                    placeholder="Sectors served, service windows, geography, current challenges…"
+                    placeholder="Sectors served, service windows, geography and current challenges…"
                   />
                   {errors.message && <p className="mt-1 text-xs text-destructive">{errors.message}</p>}
                 </div>
@@ -156,7 +157,7 @@ function ContactPage() {
                   Send enquiry
                   <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
                 </button>
-                <p className="text-xs text-ink-muted">By submitting you agree to be contacted by our enterprise team. We will never share your details.</p>
+                <p className="text-xs text-ink-muted">By submitting you agree to be contacted by our enterprise team. Your details are never shared.</p>
               </form>
             )}
           </div>
@@ -170,7 +171,7 @@ function ContactPage() {
               <div className="text-xs font-semibold uppercase tracking-wider text-white/70">Response time</div>
               <div className="mt-2 font-display text-3xl font-semibold">Within 1 business day</div>
               <p className="mt-3 text-sm text-white/80">
-                Our enterprise team responds to all qualified business enquiries within
+                Every qualified enterprise enquiry receives a response within
                 one working day, Monday to Friday.
               </p>
             </div>

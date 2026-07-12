@@ -12,17 +12,17 @@ export const Route = createFileRoute("/")({
   component: Home,
   head: () => ({
     meta: [
-      { title: "POTLAKA — Engineering the Future of Logistics" },
+      { title: "POTLAKA — Engineering the Future of Logistics in Africa" },
       {
         name: "description",
         content:
-          "POTLAKA has developed an AI-powered Enterprise Logistics Operating System that transforms warehousing, transport, fleet and last-mile delivery into one intelligent ecosystem.",
+          "POTLAKA builds the AI-powered Enterprise Logistics Operating System that unifies warehousing, transport, fleet and last-mile delivery into one intelligent platform.",
       },
       { property: "og:title", content: "POTLAKA — Engineering the Future of Logistics" },
       {
         property: "og:description",
         content:
-          "Africa's leading Logistics Technology Company. One platform for warehousing, transport, fleet and last-mile — powered by AI.",
+          "Africa's logistics technology company. One AI-powered platform for warehousing, transport, fleet and last-mile delivery.",
       },
     ],
     links: [{ rel: "canonical", href: "/" }],
@@ -73,11 +73,11 @@ function Hero() {
 
           <h1 className="mt-6 text-balance text-5xl font-semibold leading-[0.98] tracking-tight text-ink md:text-6xl lg:text-7xl">
             Engineering the{" "}
-            <span className="text-gradient-gold">Future of Logistics.</span>
+            <span className="text-gradient-gold">future of logistics.</span>
           </h1>
 
           <p className="mt-7 max-w-xl text-lg leading-relaxed text-ink-muted">
-            POTLAKA has developed an AI-powered <span className="text-ink">Enterprise Logistics Operating System</span> that transforms warehousing, transport, fleet management and last-mile delivery into one intelligent ecosystem.
+            POTLAKA has built an AI-powered <span className="text-ink">Enterprise Logistics Operating System</span> that unifies warehousing, transport, fleet and last-mile delivery into one intelligent platform.
           </p>
 
           <div className="mt-10 flex flex-wrap items-center gap-3">
@@ -85,17 +85,17 @@ function Hero() {
               to="/contact"
               className="group inline-flex items-center gap-2 rounded-full bg-[image:var(--gradient-primary)] px-6 py-3.5 text-sm font-semibold text-primary-foreground shadow-elegant transition-transform hover:scale-[1.02]"
             >
-              Book a Live Demo
+              Book a live demo
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
             </Link>
             <Link
               to="/contact"
               className="inline-flex items-center gap-2 rounded-full bg-gold px-6 py-3.5 text-sm font-semibold text-[oklch(0.14_0.02_260)] shadow-glow-gold transition-transform hover:scale-[1.02]"
             >
-              Start Free 30-Day Trial
+              Start your 30-day trial
             </Link>
             <button className="inline-flex items-center gap-2 rounded-full glass px-5 py-3.5 text-sm font-medium text-ink hover:bg-white/10">
-              <Play className="h-4 w-4" /> Watch Platform Overview
+              <Play className="h-4 w-4" /> Watch the platform
             </button>
           </div>
 
@@ -298,8 +298,8 @@ function H2({ children, className = "" }: { children: React.ReactNode; className
 /* ---------- CHALLENGE ---------- */
 function Challenge() {
   const pains = [
-    "Disconnected systems", "Manual processes", "Poor visibility", "Delivery failures",
-    "Warehouse inefficiencies", "Customer frustration", "High operating costs", "No actionable data",
+    "Disconnected systems", "Manual processes", "Zero visibility", "Failed deliveries",
+    "Warehouse bottlenecks", "Frustrated customers", "Runaway costs", "Blind decisions",
   ];
   return (
     <Section>
@@ -308,8 +308,8 @@ function Challenge() {
           <Eyebrow>The Challenge</Eyebrow>
           <H2>Logistics is broken by <span className="text-gradient-primary">complexity.</span></H2>
           <p className="mt-6 max-w-lg text-lg leading-relaxed text-ink-muted">
-            Enterprises run their supply chain across a dozen disconnected tools. Data lives in silos.
-            Decisions are made in the dark. Customers pay the price.
+            Enterprises run their supply chain across a dozen disconnected tools. Data sits in silos.
+            Decisions are made blind. Customers pay the price.
           </p>
         </div>
         <div className="grid grid-cols-2 gap-3">
@@ -335,20 +335,20 @@ function Challenge() {
 /* ---------- PLATFORM ---------- */
 function Platform() {
   const modules = [
-    { icon: Warehouse, title: "Warehouse Management", copy: "Slotting, pick-paths, receiving and inventory intelligence." },
+    { icon: Warehouse, title: "Warehouse Management", copy: "Slotting, pick-paths, receiving and real-time inventory intelligence." },
     { icon: Truck, title: "Transport Management", copy: "Planning, dispatch and multi-leg execution at national scale." },
     { icon: Gauge, title: "Fleet Intelligence", copy: "Telematics, driver scoring, fuel and utilisation analytics." },
-    { icon: Bot, title: "AI Automation", copy: "Route optimisation, demand forecasting, exception handling." },
-    { icon: Users, title: "Customer Experience", copy: "Portals, tracking, SMS & WhatsApp notifications, self-service." },
-    { icon: LineChart, title: "Business Intelligence", copy: "Executive dashboards and operational insight in real time." },
+    { icon: Bot, title: "AI Automation", copy: "Route optimisation, demand forecasting and autonomous exception handling." },
+    { icon: Users, title: "Customer Experience", copy: "Portals, live tracking and SMS &amp; WhatsApp notifications built for self-service." },
+    { icon: LineChart, title: "Business Intelligence", copy: "Executive dashboards and operational insight — in real time." },
   ];
   return (
     <Section id="platform">
       <div className="max-w-3xl">
         <Eyebrow>The POTLAKA Platform</Eyebrow>
-        <H2>One Platform.<br/><span className="text-gradient-gold">Every Logistics Operation.</span></H2>
+        <H2>One platform.<br/><span className="text-gradient-gold">Every logistics operation.</span></H2>
         <p className="mt-6 text-lg leading-relaxed text-ink-muted">
-          The Enterprise Logistics Operating System — six deeply integrated modules on a single, cloud-native architecture.
+          The Enterprise Logistics Operating System — six deeply integrated modules on one cloud-native architecture.
         </p>
       </div>
 
@@ -382,10 +382,11 @@ function Platform() {
 function HowItWorks() {
   const steps = [
     { n: "01", title: "Ingest", copy: "Orders, WMS, TMS, telematics, ERP — unified into one operating layer." },
-    { n: "02", title: "Optimise", copy: "AI plans routes, allocates fleet, predicts demand and pre-empts exceptions." },
-    { n: "03", title: "Execute", copy: "Drivers, warehouses and dispatch run the plan through mobile and web." },
-    { n: "04", title: "Prove", copy: "OTP, GPS, signature and chain-of-custody at every handover." },
-    { n: "05", title: "Learn", copy: "Every event feeds the model. The platform improves with every drop." },
+    { n: "01", title: "Ingest", copy: "Orders, WMS, TMS, telematics and ERP — unified into one operating layer." },
+    { n: "02", title: "Optimise", copy: "AI plans routes, allocates fleet, forecasts demand and pre-empts exceptions." },
+    { n: "03", title: "Execute", copy: "Drivers, warehouses and dispatch run the plan across mobile and web." },
+    { n: "04", title: "Prove", copy: "OTP, GPS, signature and chain-of-custody captured at every handover." },
+    { n: "05", title: "Learn", copy: "Every event trains the model. The platform gets sharper with every drop." },
   ];
   return (
     <Section>
@@ -416,14 +417,14 @@ function HowItWorks() {
 /* ---------- AI ---------- */
 function AISection() {
   const caps = [
-    "Predict delays before they occur",
-    "Optimise routes across your fleet",
-    "Allocate drivers to demand",
-    "Forecast volume by hour, day, week",
-    "Cut fuel with intelligent sequencing",
-    "Verify addresses and authenticate deliveries",
-    "Surface executive insight in real time",
-    "Automate exception handling end-to-end",
+    "Predict delays before they happen",
+    "Optimise routes across your entire fleet",
+    "Match drivers to demand in real time",
+    "Forecast volume by hour, day and week",
+    "Cut fuel spend with intelligent sequencing",
+    "Verify addresses and authenticate every delivery",
+    "Surface executive insight the moment it matters",
+    "Handle exceptions end-to-end, automatically",
   ];
   return (
     <Section>
@@ -494,23 +495,23 @@ function Outcomes() {
 /* ---------- SAFETY, SECURITY & AUTOMATION ---------- */
 function SafetySecurity() {
   const items = [
-    { icon: ShieldCheck, title: "Enterprise Security", copy: "POPIA-aligned data handling, encrypted handovers and auditable chain-of-custody across every logistics workflow." },
-    { icon: HardHat, title: "Workplace Safety", copy: "Driver behaviour monitoring, vehicle telematics and warehouse safety protocols that protect your people, assets and reputation." },
-    { icon: Bot, title: "Process Automation", copy: "Automated dispatch, routing, notifications and reporting remove repetitive tasks and reduce human error." },
-    { icon: Users, title: "People-First Operations", copy: "When systems handle the routine, your staff gain time to focus on customers, exceptions and growth." },
+    { icon: ShieldCheck, title: "Enterprise Security", copy: "POPIA-aligned data handling, encrypted handovers and an auditable chain of custody across every workflow." },
+    { icon: HardHat, title: "Workplace Safety", copy: "Driver behaviour scoring, vehicle telematics and warehouse safety protocols that protect your people, assets and reputation." },
+    { icon: Bot, title: "Process Automation", copy: "Automated dispatch, routing, notifications and reporting eliminate repetitive work and human error." },
+    { icon: Users, title: "People-First Operations", copy: "When systems handle the routine, your team focuses on customers, exceptions and growth." },
   ];
   return (
     <Section>
       <div className="max-w-3xl">
         <Eyebrow>Safety, Security &amp; Automation</Eyebrow>
         <H2>
-          Protecting people, assets and data while{" "}
+          Protect people, assets and data — while{" "}
           <span className="text-gradient-primary">simplifying operations</span>.
         </H2>
         <p className="mt-6 text-lg leading-relaxed text-ink-muted">
-          Our solutions cover security and safety within transport, logistics and warehousing.
-          We simplify processes by the application of automation — giving you and your staff more
-          time to focus on what matters.
+          Our platform embeds security and safety into every transport, logistics and warehousing
+          workflow. Automation removes the routine — giving you and your team more time for the
+          work that matters.
         </p>
       </div>
       <div className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
@@ -549,8 +550,8 @@ function Managed() {
           <Eyebrow>Managed Logistics Services</Eyebrow>
           <H2>Technology that <span className="text-gradient-gold">delivers.</span></H2>
           <p className="mt-6 max-w-lg text-lg leading-relaxed text-ink-muted">
-            Deploy the POTLAKA platform inside your organisation — or let our operations teams run
-            your logistics using the same enterprise-grade technology.
+            Deploy the POTLAKA platform inside your business — or hand the keys to our operations
+            team and let us run your logistics on the same enterprise-grade technology.
           </p>
           <Link to="/services" className="mt-8 inline-flex items-center gap-2 text-sm font-medium text-gold">
             Explore managed services <ArrowRight className="h-4 w-4" />
@@ -581,8 +582,8 @@ function Banking() {
             <Eyebrow>Banking &amp; Financial Services</Eyebrow>
             <H2>Secure financial <span className="text-gradient-gold">logistics.</span></H2>
             <p className="mt-6 text-lg leading-relaxed text-ink-muted">
-              Technology-enabled logistics for banks, financial institutions and fintechs — engineered
-              around chain-of-custody, verification and compliance.
+              Technology-led logistics for banks, insurers and fintechs — engineered around
+              chain of custody, verification and full regulatory compliance.
             </p>
           </div>
           <div className="grid gap-8 sm:grid-cols-2">
@@ -672,21 +673,21 @@ function Trial() {
             <Eyebrow>30-Day Enterprise Trial</Eyebrow>
             <H2>Experience the future of logistics — <span className="text-gradient-gold">live.</span></H2>
             <p className="mt-6 max-w-lg text-lg leading-relaxed text-ink-muted">
-              Deploy the POTLAKA Enterprise Logistics Operating System in a real business environment
-              and see measurable operational improvement within 30 days.
+              Deploy the POTLAKA Enterprise Logistics Operating System in a live business environment
+              and see measurable operational improvement inside 30 days.
             </p>
             <div className="mt-9 flex flex-wrap gap-3">
               <Link to="/contact" className="inline-flex items-center gap-2 rounded-full bg-gold px-6 py-3.5 text-sm font-semibold text-[oklch(0.14_0.02_260)] shadow-glow-gold transition-transform hover:scale-[1.02]">
-                Start My Free 30-Day Trial <ArrowRight className="h-4 w-4" />
+                Start my 30-day trial <ArrowRight className="h-4 w-4" />
               </Link>
               <Link to="/contact" className="inline-flex items-center gap-2 rounded-full glass px-6 py-3.5 text-sm font-semibold text-ink hover:bg-white/10">
-                Book a Live Demonstration
+                Book a live demonstration
               </Link>
             </div>
             <div className="mt-6 flex items-center gap-5 text-xs text-ink-muted">
               <span className="inline-flex items-center gap-1.5"><Timer className="h-3.5 w-3.5" /> 30 days</span>
-              <span className="inline-flex items-center gap-1.5"><CheckCircle2 className="h-3.5 w-3.5" /> No installation</span>
-              <span className="inline-flex items-center gap-1.5"><TrendingUp className="h-3.5 w-3.5" /> Measurable results</span>
+              <span className="inline-flex items-center gap-1.5"><CheckCircle2 className="h-3.5 w-3.5" /> Zero install</span>
+              <span className="inline-flex items-center gap-1.5"><TrendingUp className="h-3.5 w-3.5" /> Measurable ROI</span>
             </div>
           </div>
           <div className="rounded-2xl border border-white/10 bg-black/20 p-6">
@@ -719,10 +720,10 @@ function FinalCTA() {
           </p>
           <div className="mt-10 flex flex-wrap justify-center gap-3">
             <Link to="/contact" className="inline-flex items-center gap-2 rounded-full bg-[image:var(--gradient-primary)] px-6 py-3.5 text-sm font-semibold text-primary-foreground shadow-elegant">
-              Book a Live Demo <ArrowRight className="h-4 w-4" />
+              Book a live demo <ArrowRight className="h-4 w-4" />
             </Link>
             <Link to="/contact" className="inline-flex items-center gap-2 rounded-full bg-gold px-6 py-3.5 text-sm font-semibold text-[oklch(0.14_0.02_260)] shadow-glow-gold">
-              Start Free 30-Day Trial
+              Start your 30-day trial
             </Link>
           </div>
         </div>

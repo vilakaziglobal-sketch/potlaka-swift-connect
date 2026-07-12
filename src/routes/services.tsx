@@ -7,7 +7,7 @@ export const Route = createFileRoute("/services")({
   head: () => ({
     meta: [
       { title: "Services — Last-Mile Delivery for South African Enterprises | POTLAKA.COM" },
-      { name: "description", content: "South Africa's do-it-all last-mile delivery company — dedicated fleet, scheduled routes, on-demand capacity, reverse logistics and white-label delivery for enterprise brands." },
+      { name: "description", content: "Last-mile delivery services for South African enterprises — dedicated fleet, scheduled routes, on-demand capacity, reverse logistics and white-label delivery." },
       { property: "og:title", content: "Services — POTLAKA.COM" },
     ],
     links: [{ rel: "canonical", href: "/services" }],
@@ -15,7 +15,7 @@ export const Route = createFileRoute("/services")({
 });
 
 const LASTMILE = [
-  { icon: Truck, title: "Tech-driven last-mile delivery", desc: "Automated dispatch, live tracking and electronic proof of delivery on every consignment." },
+  { icon: Truck, title: "Tech-driven last-mile delivery", desc: "Automated dispatch, live tracking and electronic proof of delivery on each consignment." },
   { icon: Boxes, title: "Dedicated fleet solutions", desc: "Vehicles and teams committed to your brand, uniformed and embedded in your daily operations." },
   { icon: ClipboardList, title: "Scheduled route planning", desc: "Fixed, predictable delivery windows aligned to your commercial calendar." },
   { icon: Timer, title: "On-demand capacity", desc: "Extra vehicles and drivers when volumes spike — without compromising service levels." },
@@ -27,7 +27,7 @@ const LASTMILE = [
   { icon: Truck, title: "White-label delivery", desc: "Your brand, your uniform, your customer experience — powered by our operating engine." },
   { icon: MapPin, title: "Business collections", desc: "Scheduled and ad-hoc collections from suppliers, partners and business locations." },
   { icon: Package, title: "Branded customer experience", desc: "Tracking pages, SMS and WhatsApp updates, and signatures that reflect your brand." },
-  { icon: Activity, title: "Real-time client reporting", desc: "Live dashboards and automated reports give your clients instant visibility — no manual updates." },
+  { icon: Activity, title: "Real-time client reporting", desc: "Live dashboards and automated reports give your clients timely visibility — fewer manual updates." },
 ];
 
 
@@ -42,10 +42,10 @@ function ServicesPage() {
               <span className="h-1.5 w-1.5 rounded-full bg-accent" /> Services
             </div>
             <h1 className="mt-6 text-balance text-5xl font-semibold leading-[1.03] tracking-tight md:text-6xl">
-              One last-mile delivery company. One intelligent platform.
+              Last-mile delivery for South African enterprises.
             </h1>
             <p className="mt-6 max-w-2xl text-lg text-white/80 md:text-xl">
-              We design and operate last-mile delivery for South African enterprises — dedicated fleet, scheduled routes, on-demand capacity and reverse logistics, all on one operating engine.
+              We design and operate last-mile delivery for South African enterprises — dedicated fleet, scheduled routes, on-demand capacity and reverse logistics, supported by our operating platform.
             </p>
 
           </div>
@@ -56,7 +56,7 @@ function ServicesPage() {
         <SectionHeading
           eyebrow="Tech-driven last-mile"
           title={<>Last-mile logistics built for <span className="text-gradient-primary">your operation</span>.</>}
-          description="From scheduled routes to on-demand capacity, our platform matches the right vehicle, driver and workflow to every delivery — every time."
+          description="From scheduled routes to on-demand capacity, our platform helps match the right vehicle, driver and workflow to each delivery."
         />
         <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {LASTMILE.map((s) => (

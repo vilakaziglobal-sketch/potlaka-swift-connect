@@ -9,7 +9,7 @@ export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
       { title: "About POTLAKA.COM — Proudly South African, 100% Black-Owned" },
-      { name: "description", content: "POTLAKA.COM — founded in 2020 by Sipho Vilakazi to deliver intelligent, dependable last-mile logistics for South African businesses." },
+      { name: "description", content: "POTLAKA.COM — founded in 2020 by Sipho Vilakazi to deliver dependable last-mile logistics for South African businesses." },
       { property: "og:title", content: "About POTLAKA.COM" },
       { property: "og:image", content: executives },
     ],
@@ -32,9 +32,9 @@ function AboutPage() {
             </h1>
             <p className="mt-6 max-w-xl text-lg text-white/80 md:text-xl">
               POTLAKA<span className="font-black text-[#FF1A1A]">.</span>COM is a proudly South African, 100% Black-owned technology
-              company engineering high-tech automation for transport, logistics and
+              company developing automation for transport, logistics and
               warehousing, and tech-driven last-mile for retailers, distributors,
-              banks and e-commerce leaders.
+              banks and e-commerce.
             </p>
           </div>
           <motion.div
@@ -52,17 +52,16 @@ function AboutPage() {
           <div>
             <div className="text-xs font-semibold uppercase tracking-wider text-primary">Our story</div>
             <h2 className="mt-4 text-balance text-3xl font-semibold leading-tight tracking-tight text-ink md:text-4xl">
-              Born in a moment that redefined logistics — and built for the decade that follows.
+              Founded to make logistics more reliable.
             </h2>
           </div>
           <div className="space-y-5 text-lg leading-relaxed text-ink-muted">
             <p>
-              Founded in 2020 at the height of the COVID-19 pandemic by
+              Founded in 2020 by
               Managing Director <span className="font-semibold text-ink">Sipho Vilakazi</span>,
               POTLAKA<span className="font-black text-[#FF1A1A]">.</span>COM set out to
-              raise the bar for a category South African enterprises had every
-              reason to expect more from — bringing professionalism, reliability
-              and technology to the last mile.
+              bring professionalism, reliability and technology to last-mile
+              logistics for South African enterprises.
             </p>
             <p>
               POTLAKA is the Sesotho word for <em>"Hurry Up"</em> — our promise
@@ -70,13 +69,13 @@ function AboutPage() {
               business faster through intelligent last-mile execution.
             </p>
             <p>
-              We are not a traditional courier. We are a technology company that
-              operates as an extension of our clients' brands — protecting
-              their customer promise on every delivery.
+              We are a technology company that operates as an extension of our
+              clients' brands — helping protect their customer promise on each
+              delivery.
             </p>
             <p>
-              Security and safety are engineered into every transport,
-              logistics and warehousing workflow. Automation strips out the
+              Security and safety are built into every transport,
+              logistics and warehousing workflow. Automation reduces the
               routine — freeing your teams to focus on customers, exceptions
               and growth.
             </p>
@@ -97,8 +96,8 @@ function AboutPage() {
           <div className="mt-14 grid gap-5 md:grid-cols-2 lg:grid-cols-5">
             {[
               { t: "Professionalism", d: "Every touchpoint upholds the standard your customers expect from your brand." },
-              { t: "Reliability", d: "Operational discipline that turns delivery into a competitive advantage." },
-              { t: "Speed", d: "Intelligent routing and dedicated capacity that move your business faster." },
+              { t: "Reliability", d: "Operational discipline that helps make delivery a dependable part of your business." },
+              { t: "Speed", d: "Intelligent routing and dedicated capacity that help move your business faster." },
               { t: "Transparency", d: "Real-time visibility and clear communication at every stage of the journey." },
               { t: "Safety & Automation", d: "Security and safety engineered in. Automation that frees your people to drive growth." },
             ].map((v) => (

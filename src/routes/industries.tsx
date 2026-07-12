@@ -6,7 +6,7 @@ export const Route = createFileRoute("/industries")({
   head: () => ({
     meta: [
       { title: "Industries — Retailers, Distributors, Banks & E-commerce | POTLAKA.COM" },
-      { name: "description", content: "Tech-driven last-mile and logistics automation engineered for retailers, distributors, banks and e-commerce leaders — plus 3PLs, healthcare, pharma, FMCG and more across South Africa." },
+      { name: "description", content: "Tech-driven last-mile and logistics automation for retailers, distributors, banks and e-commerce — plus 3PLs, healthcare, pharma, FMCG and more across South Africa." },
       { property: "og:title", content: "Industries — POTLAKA.COM" },
     ],
     links: [{ rel: "canonical", href: "/industries" }],
@@ -27,7 +27,7 @@ const FLAGSHIP = [
       "Live customer notifications and electronic proof of delivery",
       "Peak-season overflow capacity for sales events and launches",
     ],
-    kpis: ["DIFOT > 98%", "Live tracking", "Branded delivery"],
+    kpis: ["Delivery tracking", "Branded delivery", "Scheduled routes"],
   },
   {
     icon: Boxes,
@@ -62,9 +62,9 @@ const FLAGSHIP = [
   {
     icon: Package,
     name: "E-commerce",
-    headline: "API-integrated last-mile that turns first-time buyers into repeat customers.",
+    headline: "API-integrated last-mile for online brands.",
     intro:
-      "For online brands, the delivery experience is the brand experience. We plug into your store, unlock flexible delivery windows and automate returns to protect your margin.",
+      "For online brands, delivery is part of the customer experience. We integrate with your store, offer flexible delivery windows and automate returns to protect your margin.",
     useCases: [
       "Direct integration with your e-commerce and order-management systems",
       "Same-day and next-day delivery windows across Gauteng",
@@ -100,7 +100,7 @@ function IndustriesPage() {
               <span className="h-1.5 w-1.5 rounded-full bg-accent" /> Industries
             </div>
             <h1 className="mt-6 text-balance text-5xl font-semibold leading-[1.03] tracking-tight md:text-6xl">
-              Engineered for <span className="text-gradient-accent">retailers, distributors, banks</span> and <span className="text-gradient-accent">e-commerce</span> leaders.
+              Built for <span className="text-gradient-accent">retailers, distributors, banks</span> and <span className="text-gradient-accent">e-commerce</span>.
             </h1>
             <p className="mt-6 max-w-2xl text-lg text-white/80 md:text-xl">
               Four flagship verticals, each with a dedicated playbook — plus deep

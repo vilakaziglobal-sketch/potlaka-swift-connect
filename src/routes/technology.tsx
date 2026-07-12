@@ -6,7 +6,7 @@ export const Route = createFileRoute("/technology")({
   head: () => ({
     meta: [
       { title: "Technology — Automation Platform for Logistics | POTLAKA.COM" },
-      { name: "description", content: "The POTLAKA.COM automation platform: warehouse management, predictive fleet intelligence, control-tower visibility, automated dispatch, ePOD, driver applications and analytics." },
+      { name: "description", content: "The POTLAKA.COM platform: warehouse management, fleet intelligence, control-tower visibility, automated dispatch, ePOD, driver applications and analytics." },
       { property: "og:title", content: "Technology — POTLAKA.COM" },
     ],
     links: [{ rel: "canonical", href: "/technology" }],
@@ -18,11 +18,11 @@ const FEATURES = [
   { icon: Radar, title: "Predictive fleet intelligence", desc: "Our applications and handheld devices turn driver and vehicle data into live location, behaviour scoring and utilisation predictions." },
   { icon: Network, title: "Logistics control tower", desc: "One operational view across warehouses, fleets and last-mile execution." },
   { icon: Bot, title: "Automated dispatch & routing", desc: "AI-assisted job allocation, load planning and route optimisation." },
-  { icon: FileSignature, title: "Electronic proof of delivery", desc: "Signatures, photos and timestamps captured on every consignment." },
+  { icon: FileSignature, title: "Electronic proof of delivery", desc: "Signatures, photos and timestamps captured on each consignment." },
   { icon: RouteIcon, title: "Intelligent route management", desc: "Structured routes engineered for efficiency and predictable arrival windows." },
   { icon: Bell, title: "Customer notifications", desc: "Automated status updates via SMS, email and WhatsApp on every stop." },
-  { icon: Smartphone, title: "Driver application", desc: "A purpose-built app that guides drivers through every delivery with clarity." },
-  { icon: BarChart3, title: "Real-time client reporting", desc: "Live dashboards and automated reports — no more manual updates for your clients." },
+  { icon: Smartphone, title: "Driver application", desc: "A purpose-built app that guides drivers through each delivery with clarity." },
+  { icon: BarChart3, title: "Real-time client reporting", desc: "Live dashboards and automated reports that reduce manual updates for your clients." },
   { icon: LineChart, title: "Delivery analytics", desc: "Insight on volumes, service levels, exceptions and customer experience." },
   { icon: Cpu, title: "Systems integration", desc: "APIs and connectors into ERP, e-commerce, WMS, TMS and core banking platforms." },
   { icon: ShieldCheck, title: "Secure chain of custody", desc: "Auditable handovers for sensitive, high-value or confidential consignments." },
@@ -42,12 +42,12 @@ function TechPage() {
               A high-tech automation platform for transport, logistics and warehousing.
             </h1>
             <p className="mt-6 max-w-2xl text-lg text-white/80 md:text-xl">
-              Warehouse management, predictive fleet intelligence, automated
-              dispatch, ePOD and a logistics control tower — one operational
-              fabric powering tech-driven last-mile for retailers, distributors,
-              banks and e-commerce leaders. Security and safety controls are
-              engineered into every layer, so your team is free to focus on the
-              work that matters.
+              Warehouse management, fleet intelligence, automated dispatch,
+              ePOD and a logistics control tower — one operational fabric
+              powering tech-driven last-mile for retailers, distributors,
+              banks and e-commerce. Security and safety controls are built
+              into every workflow, so your team can focus on the work that
+              matters.
             </p>
           </div>
         </div>
@@ -80,9 +80,9 @@ function TechPage() {
               </h2>
               <p className="mt-6 text-lg leading-relaxed text-ink-muted">
                 Every workflow across transport, logistics and warehousing is
-                built on enterprise-grade security and safety controls.
-                Automation removes manual effort at every step — giving your
-                team more time for the work that matters.
+                built on practical security and safety controls.
+                Automation reduces manual effort — giving your team more time
+                for the work that matters.
               </p>
             </div>
             <div className="grid gap-8 sm:grid-cols-2">

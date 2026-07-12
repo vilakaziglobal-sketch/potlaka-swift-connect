@@ -79,25 +79,25 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "POTLAKA — Engineering the Future of Logistics" },
+      { title: "POTLAKA — Logistics Technology for South African Enterprises" },
       {
         name: "description",
         content:
-          "Africa's leading logistics technology company. POTLAKA is developing an AI-powered Enterprise Logistics Operating System for warehousing, transport, fleet and last-mile delivery.",
+          "POTLAKA develops logistics technology for warehousing, transport, fleet and last-mile delivery for South African enterprises.",
       },
       { name: "author", content: "POTLAKA.COM" },
-      { property: "og:title", content: "POTLAKA — Engineering the Future of Logistics" },
+      { property: "og:title", content: "POTLAKA — Logistics Technology for South African Enterprises" },
       {
         property: "og:description",
         content:
-          "An AI-powered Enterprise Logistics Operating System — warehousing, transport, fleet and last-mile in one intelligent ecosystem.",
+          "Logistics technology for warehousing, transport, fleet and last-mile delivery.",
       },
       { property: "og:type", content: "website" },
       { property: "og:site_name", content: "POTLAKA" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "theme-color", content: "#0b1020" },
-      { name: "twitter:title", content: "POTLAKA — Engineering the Future of Logistics" },
-      { name: "twitter:description", content: "An AI-powered Enterprise Logistics Operating System for warehousing, transport, fleet and last-mile." },
+      { name: "twitter:title", content: "POTLAKA — Logistics Technology for South African Enterprises" },
+      { name: "twitter:description", content: "Logistics technology for warehousing, transport, fleet and last-mile delivery." },
     ],
     links: [
       { rel: "stylesheet", href: appCss },

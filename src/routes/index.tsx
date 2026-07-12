@@ -44,6 +44,7 @@ function Home() {
       <Platform />
       <HowItWorks />
       <AISection />
+      <ClientReporting />
       <Outcomes />
       <FinalCTA />
     </>

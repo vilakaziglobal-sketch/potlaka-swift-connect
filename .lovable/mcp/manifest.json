@@ -63,7 +63,7 @@
       {
         "name": "list_industries",
         "title": "List industries served",
-        "description": "Return the industries POTLAKA.COM serves as a last-mile delivery partner.",
+        "description": "Return the industries POTLAKA.COM serves with automation and tech-driven last-mile logistics.",
         "annotations": {
           "readOnlyHint": true,
           "idempotentHint": true,

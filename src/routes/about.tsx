@@ -33,7 +33,9 @@ function AboutPage() {
             <p className="mt-6 max-w-xl text-lg text-white/80 md:text-xl">
               POTLAKA.COM is the trading name of Vilakazi Global SA (Pty) Ltd — a
               proudly South African, 100% Black-owned technology company delivering
-              intelligent last-mile logistics for enterprise.
+              high-tech automation for transport, logistics and warehousing, and
+              tech-driven last-mile logistics for retailers, distributors, banks and
+              e-commerce leaders.
             </p>
           </div>
           <motion.div

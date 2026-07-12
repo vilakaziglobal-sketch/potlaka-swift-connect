@@ -15,7 +15,7 @@ export default defineTool({
       founder: "Sipho Vilakazi",
       role: "Founder & Managing Director",
       positioning:
-        "Intelligent last-mile delivery for enterprise businesses across Johannesburg and Ekurhuleni, with a vision to grow across South Africa.",
+        "South African technology company delivering high-tech automation for transport, logistics and warehousing — and tech-driven last-mile logistics engineered for retailers, distributors, banks and e-commerce leaders.",
       website: "https://potlaka.com",
     };
     return {

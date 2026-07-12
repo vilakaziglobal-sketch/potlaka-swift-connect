@@ -14,13 +14,13 @@ export const Route = createFileRoute("/")({
   component: Home,
   head: () => ({
     meta: [
-      { title: "POTLAKA.COM — Intelligent Last-Mile Delivery for Enterprise" },
+      { title: "POTLAKA.COM — High-Tech Automation for Transport, Logistics & Warehousing" },
       {
         name: "description",
         content:
-          "South Africa's intelligent last-mile delivery network. Reliable, technology-driven delivery solutions for retailers, distributors and enterprises in Johannesburg and Ekurhuleni.",
+          "South African technology company delivering high-tech automation for transport, logistics and warehousing — and tech-driven last-mile logistics engineered for retailers, distributors, banks and e-commerce leaders.",
       },
-      { property: "og:title", content: "POTLAKA.COM — Intelligent Last-Mile Delivery for Enterprise" },
+      { property: "og:title", content: "POTLAKA.COM — High-Tech Automation for Transport, Logistics & Warehousing" },
       { property: "og:image", content: heroVan },
     ],
     links: [{ rel: "canonical", href: "/" }],
@@ -60,7 +60,7 @@ function Hero() {
           <motion.div initial="hidden" animate="show" variants={fadeUp}>
             <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-3 py-1.5 text-xs font-medium uppercase tracking-wider text-white/90 backdrop-blur">
               <span className="h-1.5 w-1.5 rounded-full bg-accent animate-pulse" />
-              South Africa's Intelligent Last-Mile Network
+              High-Tech Automation · Transport · Logistics · Warehousing
             </div>
           </motion.div>
 
@@ -68,16 +68,17 @@ function Hero() {
             initial="hidden" animate="show" custom={1} variants={fadeUp}
             className="mt-6 text-balance text-5xl font-semibold leading-[1.02] tracking-tight md:text-6xl lg:text-7xl"
           >
-            Last-mile delivery that <span className="text-gradient-accent">powers business growth</span>.
+            Automating the movement of <span className="text-gradient-accent">South African business</span>.
           </motion.h1>
 
           <motion.p
             initial="hidden" animate="show" custom={2} variants={fadeUp}
             className="mt-6 max-w-xl text-lg leading-relaxed text-white/80 md:text-xl"
           >
-            POTLAKA.COM helps enterprises across Johannesburg and Ekurhuleni improve
-            delivery performance through professional, technology-driven last-mile
-            logistics — engineered for retailers, distributors and e-commerce leaders.
+            POTLAKA.COM is a South African technology company delivering high-tech
+            automation across transport, logistics and warehousing — and tech-driven
+            last-mile logistics engineered for retailers, distributors, banks and
+            e-commerce leaders.
           </motion.p>
 
           <motion.div
@@ -191,8 +192,8 @@ function Hero() {
 /* ---------------- TRUST STRIP ---------------- */
 function TrustStrip() {
   const items = [
-    "Retail", "E-commerce", "Wholesale", "Healthcare", "Manufacturing",
-    "Automotive", "Pharmaceutical", "FMCG", "Financial Services",
+    "Retail", "E-commerce", "Distributors", "Banks", "Warehousing",
+    "Manufacturing", "3PL", "FMCG", "Financial Services",
   ];
   return (
     <section className="border-y border-border bg-surface">
@@ -255,27 +256,27 @@ function WhyPotlaka() {
 /* ---------------- SERVICES ---------------- */
 function Services() {
   const services = [
-    { icon: Truck, title: "Enterprise last-mile", desc: "Full-service last-mile delivery engineered for enterprise operations." },
-    { icon: Boxes, title: "Dedicated fleet solutions", desc: "Vehicles and teams dedicated exclusively to your brand." },
+    { icon: Cpu, title: "Warehouse automation", desc: "WMS integration, scanning, robotics-ready workflows and automated stock control." },
+    { icon: Radar, title: "Fleet & transport automation", desc: "Telematics, live tracking, automated dispatch and intelligent route optimisation." },
+    { icon: BarChart3, title: "Logistics control tower", desc: "Real-time dashboards, exception alerts and predictive delivery analytics." },
+    { icon: Truck, title: "Tech-driven last-mile", desc: "Automated last-mile delivery for retailers, distributors, banks and e-commerce." },
+    { icon: Boxes, title: "Dedicated fleet solutions", desc: "Vehicles and teams dedicated exclusively to your brand, wired into your systems." },
     { icon: Timer, title: "Same & next-day delivery", desc: "Time-bound delivery windows that align with your customer promise." },
-    { icon: Store, title: "Store-to-customer", desc: "Retail fulfilment from your storefront to your customer's door." },
-    { icon: Building2, title: "Warehouse & retail distribution", desc: "DC to store, store to store, warehouse to customer." },
-    { icon: Repeat, title: "Reverse logistics & returns", desc: "Structured collections and returns that protect margin." },
-    { icon: Package, title: "Overflow capacity", desc: "On-demand scale for promotions, launches and seasonal peaks." },
-    { icon: Users, title: "White-label delivery", desc: "Your brand, your uniform, our operational engine — end to end." },
+    { icon: Building2, title: "Warehouse & retail distribution", desc: "DC to store, store to store, warehouse to customer — fully digitised." },
+    { icon: Repeat, title: "Reverse logistics & returns", desc: "Automated collections and returns workflows that protect margin." },
   ];
   return (
     <section className="relative bg-surface py-24 md:py-32">
       <div className="container-page">
         <div className="grid gap-10 lg:grid-cols-[1fr_1.4fr] lg:items-end">
           <SectionHeading
-            eyebrow="Our services"
-            title={<>Delivery solutions built <br className="hidden md:block" />for how business really works.</>}
+            eyebrow="What we do"
+            title={<>Automation and last-mile, <br className="hidden md:block" />engineered as one platform.</>}
           />
           <p className="text-lg leading-relaxed text-ink-muted lg:pl-6">
-            From scheduled distribution to same-day delivery and dedicated fleets, we
-            design the service model around your operational reality — not the other way
-            around.
+            From warehouse automation and fleet telematics to tech-driven last-mile
+            delivery for retailers, distributors, banks and e-commerce leaders — we
+            build the digital backbone that moves your business faster.
           </p>
         </div>
 
@@ -434,9 +435,9 @@ function MiniCard({ icon: Icon, title, hint }: { icon: React.ComponentType<{ cla
 /* ---------------- INDUSTRIES ---------------- */
 function Industries() {
   const industries = [
-    "Retail","Wholesale","Manufacturing","Healthcare","Automotive",
-    "Financial Services","Legal","Government","Pharmaceutical","Electronics",
-    "Furniture","Industrial Suppliers","E-Commerce","FMCG","Construction",
+    "Retail","E-Commerce","Distributors","Banks","Warehousing",
+    "3PL & Logistics","Manufacturing","FMCG","Financial Services","Healthcare",
+    "Pharmaceutical","Automotive","Electronics","Wholesale","Industrial Suppliers",
   ];
   return (
     <section className="relative overflow-hidden bg-[oklch(0.16_0.02_260)] py-24 text-white md:py-32">
@@ -448,13 +449,13 @@ function Industries() {
               <span className="h-1.5 w-1.5 rounded-full bg-accent" /> Industries we serve
             </div>
             <h2 className="mt-4 text-balance text-4xl font-semibold leading-[1.05] tracking-tight md:text-5xl">
-              Purpose-built for the industries that <span className="text-gradient-accent">move South Africa</span>.
+              Automation and last-mile for the industries that <span className="text-gradient-accent">move South Africa</span>.
             </h2>
           </div>
           <p className="text-lg leading-relaxed text-white/75">
-            From retail and e-commerce to healthcare, pharmaceutical and industrial
-            distribution — our operational playbook adapts to the compliance, timing
-            and customer-experience demands of your sector.
+            Purpose-built for retailers, distributors, banks and e-commerce leaders —
+            plus 3PLs, manufacturers and warehousing operators who need automation,
+            visibility and dependable last-mile execution.
           </p>
         </div>
 

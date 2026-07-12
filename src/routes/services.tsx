@@ -1,27 +1,18 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { SectionHeading } from "@/components/section";
-import { ArrowRight, Truck, Boxes, Timer, Store, Building2, Repeat, Package, Users, ClipboardList, MapPin, Cpu, Radar, BarChart3, Warehouse, Network, Bot, ShieldCheck, HardHat, Lock } from "lucide-react";
+import { ArrowRight, Truck, Boxes, Timer, Store, Building2, Repeat, Package, Users, ClipboardList, MapPin } from "lucide-react";
 
 export const Route = createFileRoute("/services")({
   component: ServicesPage,
   head: () => ({
     meta: [
-      { title: "Services — Last-Mile Delivery & Logistics Technology | POTLAKA.COM" },
-      { name: "description", content: "South Africa's do-it-all last-mile delivery company — powered by proprietary logistics technology, automation and real-time visibility for retailers, distributors, banks and e-commerce leaders." },
+      { title: "Services — Last-Mile Delivery for South African Enterprises | POTLAKA.COM" },
+      { name: "description", content: "South Africa's do-it-all last-mile delivery company — dedicated fleet, scheduled routes, on-demand capacity, reverse logistics and white-label delivery for enterprise brands." },
       { property: "og:title", content: "Services — POTLAKA.COM" },
     ],
     links: [{ rel: "canonical", href: "/services" }],
   }),
 });
-
-const AUTOMATION = [
-  { icon: Warehouse, title: "Warehouse automation", desc: "Warehouse management, barcode and RFID scanning, pick-pack automation and robotics-ready workflows." },
-  { icon: Radar, title: "Fleet & transport telematics", desc: "Live vehicle tracking, driver behaviour analytics, geo-fencing and automated compliance reporting." },
-  { icon: Network, title: "Logistics control tower", desc: "One operational view across warehouses, fleets and last-mile — with predictive alerts and exception management." },
-  { icon: Bot, title: "Automated dispatch & routing", desc: "AI-assisted route optimisation, load planning and automated job allocation across your fleet." },
-  { icon: BarChart3, title: "Analytics & business intelligence", desc: "Executive dashboards, SLA reporting and cost-to-serve analytics built for supply-chain leaders." },
-  { icon: Cpu, title: "Systems integration", desc: "APIs and connectors into ERP, e-commerce, WMS, TMS and core banking platforms." },
-];
 
 const LASTMILE = [
   { icon: Truck, title: "Tech-driven last-mile delivery", desc: "Automated dispatch, live tracking and electronic proof of delivery on every consignment." },
@@ -32,12 +23,12 @@ const LASTMILE = [
   { icon: Building2, title: "Distribution centre flows", desc: "DC-to-store and DC-to-customer distribution with structured milestone reporting." },
   { icon: Store, title: "Inter-store transfers", desc: "Replenishment, stock balancing and store-to-store movement on structured routes." },
   { icon: Repeat, title: "Reverse logistics", desc: "Managed collections and returns designed to protect margin and customer trust." },
-  { icon: Boxes, title: "Overflow capacity", desc: "On-demand capacity that absorbs promotions, launches and seasonal peaks." },
   { icon: Users, title: "Dedicated delivery teams", desc: "Named, trained delivery crews that operate as an extension of your business." },
   { icon: Truck, title: "White-label delivery", desc: "Your brand, your uniform, your customer experience — powered by our operating engine." },
   { icon: MapPin, title: "Business collections", desc: "Scheduled and ad-hoc collections from suppliers, partners and business locations." },
   { icon: Package, title: "Branded customer experience", desc: "Tracking pages, SMS and WhatsApp updates, and signatures that reflect your brand." },
 ];
+
 
 function ServicesPage() {
   return (

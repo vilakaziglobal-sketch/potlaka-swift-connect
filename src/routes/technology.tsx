@@ -65,6 +65,55 @@ function TechPage() {
           ))}
         </div>
       </section>
+
+      <section className="container-page pb-24">
+        <div className="relative overflow-hidden rounded-[2rem] border border-white/5 bg-[oklch(0.10_0.02_260)] p-10 md:p-16">
+          <div className="pointer-events-none absolute -right-40 -top-40 h-96 w-96 rounded-full bg-gold/10 blur-3xl" />
+          <div className="relative grid gap-12 lg:grid-cols-[0.9fr_1.1fr]">
+            <div>
+              <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-3 py-1.5 text-xs font-semibold uppercase tracking-wider text-white/90 backdrop-blur">
+                <span className="h-1.5 w-1.5 rounded-full bg-accent" /> Safety &amp; Security
+              </div>
+              <h2 className="mt-6 text-balance text-4xl font-semibold leading-[1.03] tracking-tight text-ink md:text-5xl">
+                Security and safety <span className="text-gradient-gold">by design</span>.
+              </h2>
+              <p className="mt-6 text-lg leading-relaxed text-ink-muted">
+                Our platform covers security and safety across transport, logistics and warehousing.
+                Automation removes manual effort at every step, giving your staff more time to focus
+                on what matters.
+              </p>
+            </div>
+            <div className="grid gap-8 sm:grid-cols-2">
+              <div>
+                <div className="text-xs font-medium uppercase tracking-[0.18em] text-gold">Security controls</div>
+                <ul className="mt-4 space-y-2.5">
+                  {[
+                    { icon: ShieldCheck, text: "Role-based access control" },
+                    { icon: Lock, text: "Encrypted data in transit &amp; at rest" },
+                    { icon: FileSignature, text: "Auditable ePOD &amp; chain-of-custody" },
+                    { icon: Cpu, text: "POPIA-aligned data handling" },
+                  ].map((s) => (
+                    <li key={s.text} className="flex items-center gap-2 text-sm text-ink"><s.icon className="h-3.5 w-3.5 text-ink-muted" />{s.text}</li>
+                  ))}
+                </ul>
+              </div>
+              <div>
+                <div className="text-xs font-medium uppercase tracking-[0.18em] text-gold">Safety &amp; automation</div>
+                <ul className="mt-4 space-y-2.5">
+                  {[
+                    { icon: HardHat, text: "Driver behaviour &amp; safety scoring" },
+                    { icon: Radar, text: "Live vehicle tracking &amp; geo-fencing" },
+                    { icon: Bot, text: "Automated dispatch &amp; status updates" },
+                    { icon: Users, text: "More time for your team to focus" },
+                  ].map((s) => (
+                    <li key={s.text} className="flex items-center gap-2 text-sm text-ink"><s.icon className="h-3.5 w-3.5 text-ink-muted" />{s.text}</li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </>
   );
 }

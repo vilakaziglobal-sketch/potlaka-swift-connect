@@ -28,14 +28,14 @@ function AboutPage() {
               <span className="h-1.5 w-1.5 rounded-full bg-accent" /> About us
             </div>
             <h1 className="mt-6 text-balance text-5xl font-semibold leading-[1.03] tracking-tight md:text-6xl">
-              Built in South Africa. <span className="text-gradient-accent">Built for business.</span>
+              Engineered in South Africa. <span className="text-gradient-accent">Built for enterprise.</span>
             </h1>
             <p className="mt-6 max-w-xl text-lg text-white/80 md:text-xl">
               POTLAKA<span className="font-black text-red-500">.</span>COM is the trading name of Vilakazi Global SA (Pty) Ltd — a
-              proudly South African, 100% Black-owned technology company delivering
-              high-tech automation for transport, logistics and warehousing, and
-              tech-driven last-mile logistics for retailers, distributors, banks and
-              e-commerce leaders.
+              proudly South African, 100% Black-owned technology company
+              engineering high-tech automation for transport, logistics and
+              warehousing, and tech-driven last-mile for retailers, distributors,
+              banks and e-commerce leaders.
             </p>
           </div>
           <motion.div

@@ -101,6 +101,30 @@ function ServicesPage() {
         </div>
       </section>
 
+      <section className="container-page py-20 md:py-28">
+        <SectionHeading
+          eyebrow="Safety, security &amp; simplified operations"
+          title={<>Automation that protects your <span className="text-gradient-primary">people, assets and data</span>.</>}
+          description="From secure chain-of-custody to driver safety and warehouse compliance, our platform embeds enterprise-grade safeguards into every workflow — then automates the routine so your staff focus on high-value work."
+        />
+        <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          {[
+            { icon: ShieldCheck, title: "Enterprise security", desc: "Encrypted data, access controls and POPIA-aligned handling across the platform." },
+            { icon: HardHat, title: "Workplace safety", desc: "Telematics, driver scoring and warehouse protocols that reduce risk and protect teams." },
+            { icon: Lock, title: "Chain-of-custody", desc: "Auditable handovers with GPS, OTP, signatures and photographic proof at every stage." },
+            { icon: Bot, title: "Automation-first design", desc: "Repetitive dispatch, routing and reporting tasks run autonomously — freeing your people." },
+          ].map((s, i) => (
+            <div key={s.title} className="group rounded-2xl border border-border bg-surface-elevated p-7 transition-all hover:-translate-y-1 hover:border-primary/30 hover:shadow-card">
+              <div className="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary transition-colors group-hover:bg-[image:var(--gradient-primary)] group-hover:text-white">
+                <s.icon className="h-6 w-6" />
+              </div>
+              <h3 className="text-lg font-semibold text-ink">{s.title}</h3>
+              <p className="mt-3 text-sm leading-relaxed text-ink-muted">{s.desc}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
       <section className="container-page pb-24">
         <div className="rounded-3xl bg-[image:var(--gradient-primary)] p-10 text-white md:p-14">
           <SectionHeading

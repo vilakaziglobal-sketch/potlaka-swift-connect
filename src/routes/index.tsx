@@ -317,6 +317,123 @@ function Services() {
   );
 }
 
+/* ---------------- AUTOMATION ---------------- */
+const AUTOMATION_PILLARS = [
+  {
+    icon: Truck,
+    eyebrow: "Transport",
+    title: "Autonomous fleet orchestration",
+    desc: "AI dispatch, telematics-driven routing and predictive maintenance that keep every vehicle earning.",
+    cases: [
+      "Dynamic route optimisation across multi-drop runs",
+      "Driver behaviour scoring & fuel-burn analytics",
+      "Predictive maintenance alerts before breakdowns",
+      "Automated POD capture with geo-verified signatures",
+    ],
+  },
+  {
+    icon: Network,
+    eyebrow: "Logistics",
+    title: "Control-tower automation",
+    desc: "A single operational fabric that unifies orders, carriers, exceptions and SLAs in real time.",
+    cases: [
+      "Order-to-delivery orchestration across 3PLs",
+      "Exception detection with auto-escalation workflows",
+      "SLA & carrier-performance scorecards",
+      "Automated customer notifications via SMS, email, WhatsApp",
+    ],
+  },
+  {
+    icon: Warehouse,
+    eyebrow: "Warehousing",
+    title: "Smart warehouse & inventory",
+    desc: "WMS, barcode/RFID scanning and robotics-ready workflows that eliminate paper and human error.",
+    cases: [
+      "Real-time inventory visibility across bins & DCs",
+      "Barcode/RFID pick-pack-ship with zero-error scanning",
+      "Wave-planning & slotting powered by demand data",
+      "Returns automation with condition capture & re-stock",
+    ],
+  },
+];
+
+const AUTOMATION_CAPABILITIES = [
+  { icon: Bot, title: "AI dispatch & routing", desc: "Machine-learning route engines that adapt to traffic, load and SLA in real time." },
+  { icon: ScanLine, title: "Barcode & RFID scanning", desc: "Chain-of-custody scanning from DC pick to customer signature." },
+  { icon: Workflow, title: "Workflow automation", desc: "Rules engines that trigger tasks, alerts and escalations without human touch." },
+  { icon: Brain, title: "Predictive analytics", desc: "Forecast demand, stockouts, delivery risk and maintenance windows." },
+  { icon: Radar, title: "IoT telematics", desc: "Live vehicle, driver and cold-chain telemetry across the fleet." },
+  { icon: Cpu, title: "API & ERP integration", desc: "Plug into SAP, Oracle, Sage, Shopify and bespoke ERPs via secure APIs." },
+];
+
+function Automation() {
+  return (
+    <section id="automation" className="relative overflow-hidden bg-surface py-24 md:py-32">
+      <div className="absolute inset-0 bg-mesh opacity-40" />
+      <div className="container-page relative">
+        <div className="max-w-3xl">
+          <SectionEyebrow>High-tech automation solutions</SectionEyebrow>
+          <SectionHeading
+            title={<>Automation engineered for <span className="text-gradient-primary">transport, logistics & warehousing</span>.</>}
+            description="We combine AI, IoT, RFID and cloud platforms to remove manual work, eliminate errors and give operators total visibility — from the loading bay to the customer's door."
+          />
+        </div>
+
+        <div className="mt-14 grid gap-6 lg:grid-cols-3">
+          {AUTOMATION_PILLARS.map((p, i) => (
+            <motion.div
+              key={p.title}
+              initial="hidden" whileInView="show" viewport={{ once: true, margin: "-80px" }} custom={i} variants={fadeUp}
+              className="group relative flex flex-col overflow-hidden rounded-3xl border border-border bg-background p-8 shadow-card transition-all hover:-translate-y-1 hover:border-primary/40"
+            >
+              <div className="mb-6 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-[image:var(--gradient-primary)] text-white shadow-elegant">
+                <p.icon className="h-6 w-6" />
+              </div>
+              <div className="text-xs font-semibold uppercase tracking-wider text-accent">{p.eyebrow}</div>
+              <h3 className="mt-2 text-2xl font-semibold text-ink">{p.title}</h3>
+              <p className="mt-3 text-sm leading-relaxed text-ink-muted">{p.desc}</p>
+              <ul className="mt-6 space-y-2.5 border-t border-border pt-6">
+                {p.cases.map((c) => (
+                  <li key={c} className="flex items-start gap-2.5 text-sm text-ink">
+                    <span className="mt-1.5 h-1.5 w-1.5 flex-none rounded-full bg-accent" />
+                    <span>{c}</span>
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
+          ))}
+        </div>
+
+        <div className="mt-16">
+          <div className="text-xs font-semibold uppercase tracking-wider text-primary">Core automation capabilities</div>
+          <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {AUTOMATION_CAPABILITIES.map((c) => (
+              <div key={c.title} className="flex items-start gap-4 rounded-2xl border border-border bg-background p-5">
+                <div className="inline-flex h-10 w-10 flex-none items-center justify-center rounded-lg bg-primary/10 text-primary">
+                  <c.icon className="h-5 w-5" />
+                </div>
+                <div>
+                  <div className="font-semibold text-ink">{c.title}</div>
+                  <p className="mt-1 text-sm leading-relaxed text-ink-muted">{c.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="mt-12">
+          <Link
+            to="/technology"
+            className="inline-flex items-center gap-2 rounded-full bg-[image:var(--gradient-primary)] px-6 py-3.5 text-sm font-semibold text-primary-foreground shadow-elegant transition-transform hover:scale-[1.02]"
+          >
+            Explore the automation platform <ArrowRight className="h-4 w-4" />
+          </Link>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 /* ---------------- TECHNOLOGY ---------------- */
 function Technology() {
   return (

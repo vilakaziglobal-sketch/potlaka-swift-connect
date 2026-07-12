@@ -77,11 +77,11 @@ function ContactPage() {
               <span className="h-1.5 w-1.5 rounded-full bg-accent" /> Let's talk
             </div>
             <h1 className="mt-6 text-balance text-5xl font-semibold leading-[1.03] tracking-tight md:text-6xl">
-              Start a conversation with our enterprise team.
+              Speak with our enterprise team.
             </h1>
             <p className="mt-6 max-w-2xl text-lg text-white/80 md:text-xl">
-              Tell us about your delivery requirements. We'll design a service model
-              that fits your operations, service levels and customer promise.
+              Tell us what you need to move. We'll engineer a service model
+              around your volumes, service levels and customer promise.
             </p>
           </div>
         </div>

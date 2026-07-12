@@ -97,8 +97,9 @@ function ContactPage() {
                 </div>
                 <h2 className="text-3xl font-semibold text-ink">Thank you — we've got it.</h2>
                 <p className="mt-3 max-w-md text-ink-muted">
-                  A member of our enterprise team will be in touch within one business day
-                  to schedule a call and discuss your requirements.
+                  A member of our enterprise team will be in touch within one
+                  business day to schedule a call and design a solution around
+                  your requirements.
                 </p>
               </div>
             ) : (

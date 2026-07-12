@@ -329,7 +329,7 @@ function Platform() {
   const modules = [
     { icon: Warehouse, title: "Warehouse Management", copy: "Slotting, pick-paths, receiving and real-time inventory intelligence." },
     { icon: Truck, title: "Transport Management", copy: "Planning, dispatch and multi-leg execution at national scale." },
-    { icon: Gauge, title: "Fleet Intelligence", copy: "Telematics, driver scoring, fuel and utilisation analytics." },
+    { icon: Gauge, title: "Fleet Intelligence", copy: "Predictive driver scoring, fuel and utilisation analytics from our apps and handheld devices." },
     { icon: Bot, title: "AI Automation", copy: "Route optimisation, demand forecasting and autonomous exception handling." },
     { icon: Users, title: "Customer Experience", copy: "Portals, live tracking and SMS & WhatsApp notifications built for self-service." },
     { icon: LineChart, title: "Client Reporting", copy: "Real-time dashboards and automated reports — no more manual updates." },
@@ -373,7 +373,7 @@ function Platform() {
 /* ---------- HOW IT WORKS ---------- */
 function HowItWorks() {
   const steps = [
-    { n: "01", title: "Ingest", copy: "Orders, WMS, TMS, telematics and ERP — unified into one operating layer." },
+    { n: "01", title: "Ingest", copy: "Orders, WMS, TMS, handheld device data and ERP — unified into one operating layer." },
     { n: "02", title: "Optimise", copy: "AI plans routes, allocates fleet, forecasts demand and pre-empts exceptions." },
     { n: "03", title: "Execute", copy: "Drivers, warehouses and dispatch run the plan across mobile and web." },
     { n: "04", title: "Prove", copy: "OTP, GPS, signature and chain-of-custody captured at every handover." },

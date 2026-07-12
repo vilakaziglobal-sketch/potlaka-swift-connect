@@ -6,7 +6,7 @@ export const Route = createFileRoute("/technology")({
   head: () => ({
     meta: [
       { title: "Technology — Automation Platform for Logistics | POTLAKA.COM" },
-      { name: "description", content: "The POTLAKA.COM automation platform: warehouse management, fleet telematics, control-tower visibility, automated dispatch, ePOD, driver applications and analytics." },
+      { name: "description", content: "The POTLAKA.COM automation platform: warehouse management, predictive fleet intelligence, control-tower visibility, automated dispatch, ePOD, driver applications and analytics." },
       { property: "og:title", content: "Technology — POTLAKA.COM" },
     ],
     links: [{ rel: "canonical", href: "/technology" }],
@@ -15,7 +15,7 @@ export const Route = createFileRoute("/technology")({
 
 const FEATURES = [
   { icon: Warehouse, title: "Warehouse automation (WMS)", desc: "Barcode and RFID scanning, pick-pack workflows and automated stock control." },
-  { icon: Radar, title: "Fleet & driver telematics", desc: "Live vehicle location, driver behaviour scoring and utilisation analytics." },
+  { icon: Radar, title: "Predictive fleet intelligence", desc: "Our applications and handheld devices turn driver and vehicle data into live location, behaviour scoring and utilisation predictions." },
   { icon: Network, title: "Logistics control tower", desc: "One operational view across warehouses, fleets and last-mile execution." },
   { icon: Bot, title: "Automated dispatch & routing", desc: "AI-assisted job allocation, load planning and route optimisation." },
   { icon: FileSignature, title: "Electronic proof of delivery", desc: "Signatures, photos and timestamps captured on every consignment." },
@@ -42,12 +42,12 @@ function TechPage() {
               A high-tech automation platform for transport, logistics and warehousing.
             </h1>
             <p className="mt-6 max-w-2xl text-lg text-white/80 md:text-xl">
-              Warehouse management, fleet telematics, automated dispatch, ePOD
-              and a logistics control tower — one operational fabric powering
-              tech-driven last-mile for retailers, distributors, banks and
-              e-commerce leaders. Security and safety controls are engineered
-              into every layer, so your team is free to focus on the work that
-              matters.
+              Warehouse management, predictive fleet intelligence, automated
+              dispatch, ePOD and a logistics control tower — one operational
+              fabric powering tech-driven last-mile for retailers, distributors,
+              banks and e-commerce leaders. Security and safety controls are
+              engineered into every layer, so your team is free to focus on the
+              work that matters.
             </p>
           </div>
         </div>

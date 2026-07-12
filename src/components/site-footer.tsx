@@ -43,7 +43,7 @@ export function SiteFooter() {
             title="Solutions"
             links={[
               { to: "/services", label: "Warehouse automation" },
-              { to: "/services", label: "Fleet telematics" },
+              { to: "/services", label: "Predictive fleet intelligence" },
               { to: "/services", label: "Tech-driven last-mile" },
               { to: "/industries", label: "Industries" },
               { to: "/contact", label: "Business account" },

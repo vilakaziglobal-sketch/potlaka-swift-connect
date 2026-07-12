@@ -89,8 +89,8 @@ function TechPage() {
                 <ul className="mt-4 space-y-2.5">
                   {[
                     { icon: ShieldCheck, text: "Role-based access control" },
-                    { icon: Lock, text: "Encrypted data in transit &amp; at rest" },
-                    { icon: FileSignature, text: "Auditable ePOD &amp; chain-of-custody" },
+                    { icon: Lock, text: "Encrypted data in transit & at rest" },
+                    { icon: FileSignature, text: "Auditable ePOD & chain-of-custody" },
                     { icon: Cpu, text: "POPIA-aligned data handling" },
                   ].map((s) => (
                     <li key={s.text} className="flex items-center gap-2 text-sm text-ink"><s.icon className="h-3.5 w-3.5 text-ink-muted" />{s.text}</li>
@@ -98,12 +98,12 @@ function TechPage() {
                 </ul>
               </div>
               <div>
-                <div className="text-xs font-medium uppercase tracking-[0.18em] text-gold">Safety &amp; automation</div>
+                <div className="text-xs font-medium uppercase tracking-[0.18em] text-gold">Safety & automation</div>
                 <ul className="mt-4 space-y-2.5">
                   {[
-                    { icon: HardHat, text: "Driver behaviour &amp; safety scoring" },
-                    { icon: Radar, text: "Live vehicle tracking &amp; geo-fencing" },
-                    { icon: Bot, text: "Automated dispatch &amp; status updates" },
+                    { icon: HardHat, text: "Driver behaviour & safety scoring" },
+                    { icon: Radar, text: "Live vehicle tracking & geo-fencing" },
+                    { icon: Bot, text: "Automated dispatch & status updates" },
                     { icon: Users, text: "More time for your team to focus" },
                   ].map((s) => (
                     <li key={s.text} className="flex items-center gap-2 text-sm text-ink"><s.icon className="h-3.5 w-3.5 text-ink-muted" />{s.text}</li>

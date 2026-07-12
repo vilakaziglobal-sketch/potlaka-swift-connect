@@ -51,21 +51,46 @@ function ServicesPage() {
               <span className="h-1.5 w-1.5 rounded-full bg-accent" /> Services
             </div>
             <h1 className="mt-6 text-balance text-5xl font-semibold leading-[1.03] tracking-tight md:text-6xl">
-              Delivery solutions engineered around your business.
+              High-tech automation and tech-driven last-mile — one platform.
             </h1>
             <p className="mt-6 max-w-2xl text-lg text-white/80 md:text-xl">
-              A full portfolio of enterprise-grade last-mile services — from dedicated
-              fleets and same-day delivery to reverse logistics and white-label operations.
+              Automation solutions for transport, logistics and warehousing — plus a
+              full portfolio of tech-driven last-mile services for retailers,
+              distributors, banks and e-commerce leaders.
             </p>
           </div>
         </div>
       </section>
 
-      <section className="container-page py-20 md:py-28">
-        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {SERVICES.map((s) => (
+      <section className="container-page pt-20 md:pt-28">
+        <SectionHeading
+          eyebrow="Automation solutions"
+          title={<>High-tech automation for transport, logistics <span className="text-gradient-primary">& warehousing</span>.</>}
+          description="Digitise, connect and automate the systems that move your business — from the warehouse floor to the customer's door."
+        />
+        <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          {AUTOMATION.map((s) => (
             <div key={s.title} className="group relative overflow-hidden rounded-2xl border border-border bg-surface-elevated p-7 transition-all hover:-translate-y-1 hover:border-primary/30 hover:shadow-card">
               <div className="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary transition-colors group-hover:bg-[image:var(--gradient-primary)] group-hover:text-white">
+                <s.icon className="h-6 w-6" />
+              </div>
+              <h3 className="text-xl font-semibold text-ink">{s.title}</h3>
+              <p className="mt-3 text-sm leading-relaxed text-ink-muted">{s.desc}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="container-page py-20 md:py-28">
+        <SectionHeading
+          eyebrow="Tech-driven last-mile"
+          title={<>Last-mile logistics for <span className="text-gradient-primary">retailers, distributors, banks & e-commerce</span>.</>}
+          description="Automated dispatch, real-time visibility and electronic proof of delivery on every consignment."
+        />
+        <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          {LASTMILE.map((s) => (
+            <div key={s.title} className="group relative overflow-hidden rounded-2xl border border-border bg-surface-elevated p-7 transition-all hover:-translate-y-1 hover:border-accent/40 hover:shadow-card">
+              <div className="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-accent/15 text-accent-foreground">
                 <s.icon className="h-6 w-6" />
               </div>
               <h3 className="text-xl font-semibold text-ink">{s.title}</h3>

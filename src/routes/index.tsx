@@ -450,6 +450,54 @@ function AISection() {
   );
 }
 
+/* ---------- CLIENT REPORTING ---------- */
+function ClientReporting() {
+  const benefits = [
+    "Live delivery dashboards for every client",
+    "Automated SLA, exception and milestone reports",
+    "Real-time notifications via SMS, email and WhatsApp",
+    "Self-service tracking without manual follow-ups",
+    "Executive-ready analytics, always current",
+    "No more spreadsheets, phone calls or status emails",
+  ];
+  return (
+    <Section>
+      <div className="relative overflow-hidden rounded-[2rem] border border-white/5 bg-gradient-to-br from-white/[0.05] to-white/[0.01] p-10 md:p-16">
+        <div className="pointer-events-none absolute -right-32 -top-32 h-80 w-80 rounded-full bg-gold/10 blur-3xl" />
+        <div className="relative grid gap-14 lg:grid-cols-2 lg:items-center">
+          <div>
+            <Eyebrow>Client Intelligence</Eyebrow>
+            <H2>Real-time reporting intelligence for your <span className="text-gradient-gold">clients.</span></H2>
+            <p className="mt-6 text-lg leading-relaxed text-ink-muted">
+              Give your clients complete visibility without lifting a finger. Automated dashboards, live status updates and instant reports replace manual work — so your team focuses on delivery, not data entry.
+            </p>
+            <div className="mt-8">
+              <Link to="/contact" className="inline-flex items-center gap-2 rounded-full bg-[image:var(--gradient-primary)] px-6 py-3.5 text-sm font-semibold text-primary-foreground shadow-elegant transition-transform hover:scale-[1.02]">
+                See it in action <ArrowRight className="h-4 w-4" />
+              </Link>
+            </div>
+          </div>
+          <div className="grid gap-3 sm:grid-cols-2">
+            {benefits.map((b, i) => (
+              <motion.div
+                key={b}
+                initial={{ opacity: 0, y: 12 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: i * 0.05, ease }}
+                className="flex items-start gap-3 rounded-xl glass px-4 py-3.5"
+              >
+                <LineChart className="mt-0.5 h-4 w-4 shrink-0 text-gold" />
+                <span className="text-sm text-ink">{b}</span>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </Section>
+  );
+}
+
 /* ---------- OUTCOMES ---------- */
 function Outcomes() {
   const kpis = [

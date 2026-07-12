@@ -417,14 +417,14 @@ function HowItWorks() {
 /* ---------- AI ---------- */
 function AISection() {
   const caps = [
-    "Predict delays before they occur",
-    "Optimise routes across your fleet",
-    "Allocate drivers to demand",
-    "Forecast volume by hour, day, week",
-    "Cut fuel with intelligent sequencing",
-    "Verify addresses and authenticate deliveries",
-    "Surface executive insight in real time",
-    "Automate exception handling end-to-end",
+    "Predict delays before they happen",
+    "Optimise routes across your entire fleet",
+    "Match drivers to demand in real time",
+    "Forecast volume by hour, day and week",
+    "Cut fuel spend with intelligent sequencing",
+    "Verify addresses and authenticate every delivery",
+    "Surface executive insight the moment it matters",
+    "Handle exceptions end-to-end, automatically",
   ];
   return (
     <Section>

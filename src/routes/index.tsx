@@ -73,11 +73,11 @@ function Hero() {
 
           <h1 className="mt-6 text-balance text-5xl font-semibold leading-[0.98] tracking-tight text-ink md:text-6xl lg:text-7xl">
             Engineering the{" "}
-            <span className="text-gradient-gold">Future of Logistics.</span>
+            <span className="text-gradient-gold">future of logistics.</span>
           </h1>
 
           <p className="mt-7 max-w-xl text-lg leading-relaxed text-ink-muted">
-            POTLAKA has developed an AI-powered <span className="text-ink">Enterprise Logistics Operating System</span> that transforms warehousing, transport, fleet management and last-mile delivery into one intelligent ecosystem.
+            POTLAKA has built an AI-powered <span className="text-ink">Enterprise Logistics Operating System</span> that unifies warehousing, transport, fleet and last-mile delivery into one intelligent platform.
           </p>
 
           <div className="mt-10 flex flex-wrap items-center gap-3">
@@ -85,17 +85,17 @@ function Hero() {
               to="/contact"
               className="group inline-flex items-center gap-2 rounded-full bg-[image:var(--gradient-primary)] px-6 py-3.5 text-sm font-semibold text-primary-foreground shadow-elegant transition-transform hover:scale-[1.02]"
             >
-              Book a Live Demo
+              Book a live demo
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
             </Link>
             <Link
               to="/contact"
               className="inline-flex items-center gap-2 rounded-full bg-gold px-6 py-3.5 text-sm font-semibold text-[oklch(0.14_0.02_260)] shadow-glow-gold transition-transform hover:scale-[1.02]"
             >
-              Start Free 30-Day Trial
+              Start your 30-day trial
             </Link>
             <button className="inline-flex items-center gap-2 rounded-full glass px-5 py-3.5 text-sm font-medium text-ink hover:bg-white/10">
-              <Play className="h-4 w-4" /> Watch Platform Overview
+              <Play className="h-4 w-4" /> Watch the platform
             </button>
           </div>
 

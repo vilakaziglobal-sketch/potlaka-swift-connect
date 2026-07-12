@@ -50,12 +50,12 @@ function ServicesPage() {
               <span className="h-1.5 w-1.5 rounded-full bg-accent" /> Services
             </div>
             <h1 className="mt-6 text-balance text-5xl font-semibold leading-[1.03] tracking-tight md:text-6xl">
-              High-tech automation and tech-driven last-mile — one platform.
+              One last-mile delivery company. One intelligent platform.
             </h1>
             <p className="mt-6 max-w-2xl text-lg text-white/80 md:text-xl">
-              Automation solutions for transport, logistics and warehousing — plus a
-              full portfolio of tech-driven last-mile services for retailers,
-              distributors, banks and e-commerce leaders.
+              We design, automate and run last-mile logistics for South African
+              enterprises — with the technology to make every delivery predictable,
+              visible and on-brand.
             </p>
           </div>
         </div>

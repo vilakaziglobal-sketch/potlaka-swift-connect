@@ -86,7 +86,7 @@ function ServicesPage() {
         <SectionHeading
           eyebrow="Tech-driven last-mile"
           title={<>Last-mile logistics built for <span className="text-gradient-primary">your operation</span>.</>}
-          description="From scheduled routes to on-demand capacity, our platform matches the right vehicle, driver and workflow to every delivery."
+          description="From scheduled routes to on-demand capacity, our platform matches the right vehicle, driver and workflow to every delivery — every time."
         />
         <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {LASTMILE.map((s) => (

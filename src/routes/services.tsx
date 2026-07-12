@@ -1,30 +1,39 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { SectionHeading } from "@/components/section";
-import { ArrowRight, Truck, Boxes, Timer, Store, Building2, Repeat, Package, Users, ClipboardList, MapPin } from "lucide-react";
+import { ArrowRight, Truck, Boxes, Timer, Store, Building2, Repeat, Package, Users, ClipboardList, MapPin, Cpu, Radar, BarChart3, Warehouse, Network, Bot } from "lucide-react";
 
 export const Route = createFileRoute("/services")({
   component: ServicesPage,
   head: () => ({
     meta: [
-      { title: "Services — Enterprise Last-Mile Delivery | POTLAKA.COM" },
-      { name: "description", content: "Enterprise last-mile delivery, dedicated fleet, same-day and next-day, warehouse and retail distribution, reverse logistics and white-label delivery for South African businesses." },
+      { title: "Services — Automation & Tech-Driven Last-Mile | POTLAKA.COM" },
+      { name: "description", content: "High-tech automation for transport, logistics and warehousing — plus tech-driven last-mile delivery for retailers, distributors, banks and e-commerce leaders across South Africa." },
       { property: "og:title", content: "Services — POTLAKA.COM" },
     ],
     links: [{ rel: "canonical", href: "/services" }],
   }),
 });
 
-const SERVICES = [
-  { icon: Truck, title: "Enterprise last-mile delivery", desc: "End-to-end last-mile logistics engineered for enterprise operations, service levels and customer expectations." },
+const AUTOMATION = [
+  { icon: Warehouse, title: "Warehouse automation", desc: "Warehouse management systems, barcode & RFID scanning, pick-pack automation and robotics-ready workflows." },
+  { icon: Radar, title: "Fleet & transport telematics", desc: "Live vehicle tracking, driver behaviour analytics, geo-fencing and automated compliance reporting." },
+  { icon: Network, title: "Logistics control tower", desc: "A single operational view across warehouses, fleets and last-mile — with predictive alerts and exception management." },
+  { icon: Bot, title: "Automated dispatch & routing", desc: "AI-assisted route optimisation, load planning and automated job allocation across your fleet." },
+  { icon: BarChart3, title: "Analytics & business intelligence", desc: "Executive dashboards, SLA reporting and cost-to-serve analytics for supply-chain leaders." },
+  { icon: Cpu, title: "Systems integration", desc: "APIs and connectors into ERP, e-commerce, WMS, TMS and banking platforms." },
+];
+
+const LASTMILE = [
+  { icon: Truck, title: "Tech-driven last-mile delivery", desc: "Automated last-mile logistics engineered for retailers, distributors, banks and e-commerce leaders." },
   { icon: Boxes, title: "Dedicated fleet solutions", desc: "Vehicles and teams dedicated exclusively to your brand, uniformed and integrated into your daily operations." },
   { icon: ClipboardList, title: "Scheduled deliveries", desc: "Fixed, predictable delivery windows aligned to your commercial and operational calendar." },
-  { icon: Timer, title: "Same-day deliveries", desc: "Time-critical delivery windows for retail, healthcare, e-commerce and financial services." },
-  { icon: Timer, title: "Next-day deliveries", desc: "Standard next-day service across our Gauteng network with full visibility and ePOD." },
+  { icon: Timer, title: "Same-day deliveries", desc: "Time-critical delivery windows for retail, banking, healthcare, e-commerce and financial services." },
+  { icon: Timer, title: "Next-day deliveries", desc: "Standard next-day service across our network with full visibility and ePOD." },
   { icon: Store, title: "Store-to-customer delivery", desc: "Retail fulfilment from your storefront directly to your customer's door." },
   { icon: Building2, title: "Warehouse distribution", desc: "DC-to-store and DC-to-customer distribution with structured milestone reporting." },
   { icon: Store, title: "Retail distribution", desc: "Store-to-store transfers, replenishment runs and multi-drop retail routes." },
   { icon: Repeat, title: "Reverse logistics", desc: "Managed returns and reverse flows engineered to protect margin and customer trust." },
-  { icon: Package, title: "Returns collections", desc: "Structured collections from customers, integrated with your returns workflows." },
+  { icon: Package, title: "Bank card & document delivery", desc: "Secure, tracked delivery of bank cards, PIN mailers, contracts and confidential documents." },
   { icon: Boxes, title: "Overflow delivery capacity", desc: "On-demand capacity to absorb promotional peaks, launches and seasonal spikes." },
   { icon: Users, title: "Dedicated delivery teams", desc: "Named, trained delivery teams that operate as an extension of your business." },
   { icon: Truck, title: "White-label delivery", desc: "Your brand, your uniform, your customer experience — powered by our operational engine." },

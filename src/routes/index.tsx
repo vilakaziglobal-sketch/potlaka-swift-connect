@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import {
   Truck, ShieldCheck, Radar, FileSignature, Users, Cpu, Layers, Sparkles,
   ArrowRight, MapPin, Package, Store, Building2, Repeat, Timer, Boxes,
-  BarChart3, Bell, Route as RouteIcon,
+  BarChart3, Bell, Route as RouteIcon, Warehouse, Bot, Workflow, ScanLine, Brain, Network,
 } from "lucide-react";
 import heroVan from "@/assets/hero-van.jpg";
 import warehouse from "@/assets/warehouse.jpg";

@@ -149,7 +149,7 @@ function LiveDashboard() {
 
         <div className="grid gap-3 p-4 sm:grid-cols-2">
           <MiniCard icon={<BrainCircuit className="h-4 w-4" />} title="AI reoptimised 12 routes" sub="Saved 84 km · 2h ago" />
-          <MiniCard icon={<Package className="h-4 w-4" />} title="Delivery confirmed · OTP" sub="Card #4821 · Sandton" />
+          <MiniCard icon={<LineChart className="h-4 w-4" />} title="Client report auto-sent" sub="Live SLA dashboard · 08:00" />
           <MiniCard icon={<Warehouse className="h-4 w-4" />} title="Bay 3 utilisation 94%" sub="WMS · Germiston DC" />
           <MiniCard icon={<Activity className="h-4 w-4" />} title="SLA alert cleared" sub="Route 22 · on-time" />
         </div>

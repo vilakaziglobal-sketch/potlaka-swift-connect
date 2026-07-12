@@ -73,7 +73,7 @@ function Hero() {
           </h1>
 
           <p className="mt-7 max-w-xl text-lg leading-relaxed text-ink-muted">
-            POTLAKA has built an AI-powered <span className="text-ink">Enterprise Logistics Operating System</span> that unifies warehousing, transport, fleet and last-mile delivery into one intelligent platform.
+            POTLAKA has built an AI-powered <span className="text-ink">Enterprise Logistics Operating System</span> that unifies warehousing, transport, fleet and last-mile delivery into one intelligent platform — with real-time reporting intelligence for your clients.
           </p>
 
           <div className="mt-10 flex flex-wrap items-center gap-3">

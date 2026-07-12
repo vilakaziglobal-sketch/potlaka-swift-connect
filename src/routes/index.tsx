@@ -491,6 +491,50 @@ function Outcomes() {
   );
 }
 
+/* ---------- SAFETY, SECURITY & AUTOMATION ---------- */
+function SafetySecurity() {
+  const items = [
+    { icon: ShieldCheck, title: "Enterprise Security", copy: "POPIA-aligned data handling, encrypted handovers and auditable chain-of-custody across every logistics workflow." },
+    { icon: HardHat, title: "Workplace Safety", copy: "Driver behaviour monitoring, vehicle telematics and warehouse safety protocols that protect your people, assets and reputation." },
+    { icon: Bot, title: "Process Automation", copy: "Automated dispatch, routing, notifications and reporting remove repetitive tasks and reduce human error." },
+    { icon: Users, title: "People-First Operations", copy: "When systems handle the routine, your staff gain time to focus on customers, exceptions and growth." },
+  ];
+  return (
+    <Section>
+      <div className="max-w-3xl">
+        <Eyebrow>Safety, Security &amp; Automation</Eyebrow>
+        <H2>
+          Protecting people, assets and data while{" "}
+          <span className="text-gradient-primary">simplifying operations</span>.
+        </H2>
+        <p className="mt-6 text-lg leading-relaxed text-ink-muted">
+          Our solutions cover security and safety within transport, logistics and warehousing.
+          We simplify processes by the application of automation — giving you and your staff more
+          time to focus on what matters.
+        </p>
+      </div>
+      <div className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        {items.map((item, i) => (
+          <motion.div
+            key={item.title}
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: i * 0.06, ease }}
+            className="rounded-2xl border border-white/5 bg-white/[0.02] p-7 transition-colors hover:border-white/15"
+          >
+            <div className="grid h-11 w-11 place-items-center rounded-xl bg-white/5 text-gold ring-hairline">
+              <item.icon className="h-5 w-5" />
+            </div>
+            <h3 className="mt-6 text-lg font-semibold text-ink">{item.title}</h3>
+            <p className="mt-2 text-sm leading-relaxed text-ink-muted">{item.copy}</p>
+          </motion.div>
+        ))}
+      </div>
+    </Section>
+  );
+}
+
 /* ---------- MANAGED SERVICES ---------- */
 function Managed() {
   const services = [

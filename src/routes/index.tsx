@@ -550,8 +550,8 @@ function Managed() {
           <Eyebrow>Managed Logistics Services</Eyebrow>
           <H2>Technology that <span className="text-gradient-gold">delivers.</span></H2>
           <p className="mt-6 max-w-lg text-lg leading-relaxed text-ink-muted">
-            Deploy the POTLAKA platform inside your organisation — or let our operations teams run
-            your logistics using the same enterprise-grade technology.
+            Deploy the POTLAKA platform inside your business — or hand the keys to our operations
+            team and let us run your logistics on the same enterprise-grade technology.
           </p>
           <Link to="/services" className="mt-8 inline-flex items-center gap-2 text-sm font-medium text-gold">
             Explore managed services <ArrowRight className="h-4 w-4" />

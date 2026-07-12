@@ -131,9 +131,9 @@ function LiveDashboard() {
 
         {/* Body */}
         <div className="grid gap-3 p-4 sm:grid-cols-3">
-          <KPI label="On-time delivery" value="Live" trend="Tracking" />
-          <KPI label="Fleet util." value="Live" trend="Tracking" />
-          <KPI label="Cost / drop" value="Live" trend="Tracking" />
+          <KPI label="On-time delivery" value="Live" trend="Active" />
+          <KPI label="Fleet util." value="Live" trend="Active" />
+          <KPI label="Cost / drop" value="Live" trend="Active" />
         </div>
 
         <div className="mx-4 rounded-2xl border border-white/5 bg-black/20 p-4">

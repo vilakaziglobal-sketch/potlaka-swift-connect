@@ -551,11 +551,41 @@ function MiniCard({ icon: Icon, title, hint }: { icon: React.ComponentType<{ cla
 }
 
 /* ---------------- INDUSTRIES ---------------- */
+const FLAGSHIP_INDUSTRIES = [
+  {
+    icon: Store,
+    name: "Retailers",
+    headline: "Store fulfilment & replenishment, engineered for speed.",
+    desc: "From national chains to independent brands — automated replenishment runs, store-to-customer delivery and branded last-mile that protects your customer experience.",
+    outcomes: ["Same-day store-to-door", "Automated replenishment routing", "Branded, uniformed drivers", "Full ePOD & exception reporting"],
+  },
+  {
+    icon: Boxes,
+    name: "Distributors",
+    headline: "Multi-drop distribution with control-tower visibility.",
+    desc: "Scheduled, predictable delivery windows to trade customers — orchestrated by our control tower with live tracking, SLA scorecards and automated exception handling.",
+    outcomes: ["Fixed multi-drop schedules", "Trade-customer notifications", "SLA & DIFOT scorecards", "ERP & WMS integration"],
+  },
+  {
+    icon: ShieldCheck,
+    name: "Banks",
+    headline: "Secure, chain-of-custody delivery for financial services.",
+    desc: "Discreet, verified delivery of cards, documents, devices and confidential materials — with vetted drivers, tamper-evident handling and full audit trails.",
+    outcomes: ["Vetted, screened drivers", "Chain-of-custody scanning", "Tamper-evident packaging", "Compliance-grade audit trail"],
+  },
+  {
+    icon: Package,
+    name: "E-commerce",
+    headline: "Branded delivery experiences that convert to repeat buyers.",
+    desc: "API-integrated last-mile for e-commerce leaders — with Shopify/WooCommerce/Magento connectors, live customer tracking and returns automation that protects margin.",
+    outcomes: ["Shopify / Woo / Magento APIs", "Live tracking & notifications", "Same-day & next-day windows", "Automated returns workflows"],
+  },
+];
+
 function Industries() {
-  const industries = [
-    "Retail","E-Commerce","Distributors","Banks","Warehousing",
-    "3PL & Logistics","Manufacturing","FMCG","Financial Services","Healthcare",
-    "Pharmaceutical","Automotive","Electronics","Wholesale","Industrial Suppliers",
+  const other = [
+    "3PL & Logistics","Warehousing","Manufacturing","FMCG",
+    "Healthcare","Pharmaceutical","Automotive","Electronics","Wholesale","Industrial Suppliers",
   ];
   return (
     <section className="relative overflow-hidden bg-[oklch(0.16_0.02_260)] py-24 text-white md:py-32">
@@ -567,30 +597,57 @@ function Industries() {
               <span className="h-1.5 w-1.5 rounded-full bg-accent" /> Industries we serve
             </div>
             <h2 className="mt-4 text-balance text-4xl font-semibold leading-[1.05] tracking-tight md:text-5xl">
-              Automation and last-mile for the industries that <span className="text-gradient-accent">move South Africa</span>.
+              Purpose-built for the sectors that <span className="text-gradient-accent">move South Africa</span>.
             </h2>
           </div>
           <p className="text-lg leading-relaxed text-white/75">
-            Purpose-built for retailers, distributors, banks and e-commerce leaders —
-            plus 3PLs, manufacturers and warehousing operators who need automation,
-            visibility and dependable last-mile execution.
+            Four flagship verticals — retailers, distributors, banks and e-commerce
+            leaders — each with a delivery playbook engineered around their
+            operational reality, service levels and customer expectations.
           </p>
         </div>
 
-        <div className="mt-14 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-5">
-          {industries.map((i, idx) => (
+        <div className="mt-14 grid gap-5 md:grid-cols-2">
+          {FLAGSHIP_INDUSTRIES.map((v, idx) => (
             <motion.div
-              key={i}
-              initial={{ opacity: 0, y: 16 }}
+              key={v.name}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: idx * 0.03, duration: 0.5 }}
-              className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur transition-all hover:border-accent/40 hover:bg-white/10"
+              viewport={{ once: true, margin: "-80px" }}
+              transition={{ delay: idx * 0.05, duration: 0.6 }}
+              className="group relative overflow-hidden rounded-3xl border border-white/10 bg-white/[0.04] p-8 backdrop-blur transition-all hover:-translate-y-1 hover:border-accent/40 hover:bg-white/[0.08]"
             >
-              <div className="text-sm font-semibold text-white">{i}</div>
-              <ArrowRight className="mt-4 h-4 w-4 text-accent opacity-0 transition-all group-hover:translate-x-1 group-hover:opacity-100" />
+              <div className="flex items-start gap-5">
+                <div className="inline-flex h-12 w-12 flex-none items-center justify-center rounded-xl bg-[image:var(--gradient-accent)] text-accent-foreground shadow-glow-accent">
+                  <v.icon className="h-6 w-6" />
+                </div>
+                <div>
+                  <div className="text-xs font-semibold uppercase tracking-wider text-accent">{v.name}</div>
+                  <h3 className="mt-1 text-xl font-semibold text-white">{v.headline}</h3>
+                </div>
+              </div>
+              <p className="mt-5 text-sm leading-relaxed text-white/75">{v.desc}</p>
+              <ul className="mt-6 grid grid-cols-1 gap-2 border-t border-white/10 pt-5 sm:grid-cols-2">
+                {v.outcomes.map((o) => (
+                  <li key={o} className="flex items-start gap-2 text-sm text-white/85">
+                    <span className="mt-1.5 h-1.5 w-1.5 flex-none rounded-full bg-accent" />
+                    <span>{o}</span>
+                  </li>
+                ))}
+              </ul>
             </motion.div>
           ))}
+        </div>
+
+        <div className="mt-14">
+          <div className="text-xs font-semibold uppercase tracking-wider text-white/60">Also serving</div>
+          <div className="mt-4 flex flex-wrap gap-2">
+            {other.map((i) => (
+              <span key={i} className="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-white/80">
+                {i}
+              </span>
+            ))}
+          </div>
         </div>
       </div>
     </section>

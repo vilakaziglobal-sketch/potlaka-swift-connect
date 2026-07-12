@@ -495,23 +495,23 @@ function Outcomes() {
 /* ---------- SAFETY, SECURITY & AUTOMATION ---------- */
 function SafetySecurity() {
   const items = [
-    { icon: ShieldCheck, title: "Enterprise Security", copy: "POPIA-aligned data handling, encrypted handovers and auditable chain-of-custody across every logistics workflow." },
-    { icon: HardHat, title: "Workplace Safety", copy: "Driver behaviour monitoring, vehicle telematics and warehouse safety protocols that protect your people, assets and reputation." },
-    { icon: Bot, title: "Process Automation", copy: "Automated dispatch, routing, notifications and reporting remove repetitive tasks and reduce human error." },
-    { icon: Users, title: "People-First Operations", copy: "When systems handle the routine, your staff gain time to focus on customers, exceptions and growth." },
+    { icon: ShieldCheck, title: "Enterprise Security", copy: "POPIA-aligned data handling, encrypted handovers and an auditable chain of custody across every workflow." },
+    { icon: HardHat, title: "Workplace Safety", copy: "Driver behaviour scoring, vehicle telematics and warehouse safety protocols that protect your people, assets and reputation." },
+    { icon: Bot, title: "Process Automation", copy: "Automated dispatch, routing, notifications and reporting eliminate repetitive work and human error." },
+    { icon: Users, title: "People-First Operations", copy: "When systems handle the routine, your team focuses on customers, exceptions and growth." },
   ];
   return (
     <Section>
       <div className="max-w-3xl">
         <Eyebrow>Safety, Security &amp; Automation</Eyebrow>
         <H2>
-          Protecting people, assets and data while{" "}
+          Protect people, assets and data — while{" "}
           <span className="text-gradient-primary">simplifying operations</span>.
         </H2>
         <p className="mt-6 text-lg leading-relaxed text-ink-muted">
-          Our solutions cover security and safety within transport, logistics and warehousing.
-          We simplify processes by the application of automation — giving you and your staff more
-          time to focus on what matters.
+          Our platform embeds security and safety into every transport, logistics and warehousing
+          workflow. Automation removes the routine — giving you and your team more time for the
+          work that matters.
         </p>
       </div>
       <div className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">

@@ -44,12 +44,9 @@ function ServicesPage() {
               One last-mile delivery company. One intelligent platform.
             </h1>
             <p className="mt-6 max-w-2xl text-lg text-white/80 md:text-xl">
-              We design, automate and operate last-mile logistics for South
-              African enterprises — with the technology to make every delivery
-              predictable, visible and on-brand. Security and safety are built
-              into every transport, logistics and warehousing workflow, so your
-              team can focus on the work that matters.
+              We design and operate last-mile delivery for South African enterprises — dedicated fleet, scheduled routes, on-demand capacity and reverse logistics, all on one operating engine.
             </p>
+
           </div>
         </div>
       </section>

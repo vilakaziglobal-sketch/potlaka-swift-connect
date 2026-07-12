@@ -1,27 +1,18 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { SectionHeading } from "@/components/section";
-import { ArrowRight, Truck, Boxes, Timer, Store, Building2, Repeat, Package, Users, ClipboardList, MapPin, Cpu, Radar, BarChart3, Warehouse, Network, Bot, ShieldCheck, HardHat, Lock } from "lucide-react";
+import { ArrowRight, Truck, Boxes, Timer, Store, Building2, Repeat, Package, Users, ClipboardList, MapPin } from "lucide-react";
 
 export const Route = createFileRoute("/services")({
   component: ServicesPage,
   head: () => ({
     meta: [
-      { title: "Services — Last-Mile Delivery & Logistics Technology | POTLAKA.COM" },
-      { name: "description", content: "South Africa's do-it-all last-mile delivery company — powered by proprietary logistics technology, automation and real-time visibility for retailers, distributors, banks and e-commerce leaders." },
+      { title: "Services — Last-Mile Delivery for South African Enterprises | POTLAKA.COM" },
+      { name: "description", content: "South Africa's do-it-all last-mile delivery company — dedicated fleet, scheduled routes, on-demand capacity, reverse logistics and white-label delivery for enterprise brands." },
       { property: "og:title", content: "Services — POTLAKA.COM" },
     ],
     links: [{ rel: "canonical", href: "/services" }],
   }),
 });
-
-const AUTOMATION = [
-  { icon: Warehouse, title: "Warehouse automation", desc: "Warehouse management, barcode and RFID scanning, pick-pack automation and robotics-ready workflows." },
-  { icon: Radar, title: "Fleet & transport telematics", desc: "Live vehicle tracking, driver behaviour analytics, geo-fencing and automated compliance reporting." },
-  { icon: Network, title: "Logistics control tower", desc: "One operational view across warehouses, fleets and last-mile — with predictive alerts and exception management." },
-  { icon: Bot, title: "Automated dispatch & routing", desc: "AI-assisted route optimisation, load planning and automated job allocation across your fleet." },
-  { icon: BarChart3, title: "Analytics & business intelligence", desc: "Executive dashboards, SLA reporting and cost-to-serve analytics built for supply-chain leaders." },
-  { icon: Cpu, title: "Systems integration", desc: "APIs and connectors into ERP, e-commerce, WMS, TMS and core banking platforms." },
-];
 
 const LASTMILE = [
   { icon: Truck, title: "Tech-driven last-mile delivery", desc: "Automated dispatch, live tracking and electronic proof of delivery on every consignment." },
@@ -32,12 +23,12 @@ const LASTMILE = [
   { icon: Building2, title: "Distribution centre flows", desc: "DC-to-store and DC-to-customer distribution with structured milestone reporting." },
   { icon: Store, title: "Inter-store transfers", desc: "Replenishment, stock balancing and store-to-store movement on structured routes." },
   { icon: Repeat, title: "Reverse logistics", desc: "Managed collections and returns designed to protect margin and customer trust." },
-  { icon: Boxes, title: "Overflow capacity", desc: "On-demand capacity that absorbs promotions, launches and seasonal peaks." },
   { icon: Users, title: "Dedicated delivery teams", desc: "Named, trained delivery crews that operate as an extension of your business." },
   { icon: Truck, title: "White-label delivery", desc: "Your brand, your uniform, your customer experience — powered by our operating engine." },
   { icon: MapPin, title: "Business collections", desc: "Scheduled and ad-hoc collections from suppliers, partners and business locations." },
   { icon: Package, title: "Branded customer experience", desc: "Tracking pages, SMS and WhatsApp updates, and signatures that reflect your brand." },
 ];
+
 
 function ServicesPage() {
   return (
@@ -53,32 +44,10 @@ function ServicesPage() {
               One last-mile delivery company. One intelligent platform.
             </h1>
             <p className="mt-6 max-w-2xl text-lg text-white/80 md:text-xl">
-              We design, automate and operate last-mile logistics for South
-              African enterprises — with the technology to make every delivery
-              predictable, visible and on-brand. Security and safety are built
-              into every transport, logistics and warehousing workflow, so your
-              team can focus on the work that matters.
+              We design and operate last-mile delivery for South African enterprises — dedicated fleet, scheduled routes, on-demand capacity and reverse logistics, all on one operating engine.
             </p>
-          </div>
-        </div>
-      </section>
 
-      <section className="container-page pt-20 md:pt-28">
-        <SectionHeading
-          eyebrow="Automation solutions"
-          title={<>High-tech automation for transport, logistics <span className="text-gradient-primary">and warehousing</span>.</>}
-          description="Digitise, connect and automate the systems that move your business — from the warehouse floor to the customer's door."
-        />
-        <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {AUTOMATION.map((s) => (
-            <div key={s.title} className="group relative overflow-hidden rounded-2xl border border-border bg-surface-elevated p-7 transition-all hover:-translate-y-1 hover:border-primary/30 hover:shadow-card">
-              <div className="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary transition-colors group-hover:bg-[image:var(--gradient-primary)] group-hover:text-white">
-                <s.icon className="h-6 w-6" />
-              </div>
-              <h3 className="text-xl font-semibold text-ink">{s.title}</h3>
-              <p className="mt-3 text-sm leading-relaxed text-ink-muted">{s.desc}</p>
-            </div>
-          ))}
+          </div>
         </div>
       </section>
 
@@ -99,31 +68,12 @@ function ServicesPage() {
             </div>
           ))}
         </div>
+        <p className="mt-10 text-sm text-ink-muted">
+          The technology that powers these services — automation, telematics, control tower and ePOD — lives on the{" "}
+          <Link to="/technology" className="font-semibold text-primary hover:underline">Technology</Link> page.
+        </p>
       </section>
 
-      <section className="container-page py-20 md:py-28">
-        <SectionHeading
-          eyebrow="Safety, security and simplified operations"
-          title={<>Automation that protects your <span className="text-gradient-primary">people, assets and data</span>.</>}
-          description="From secure chain of custody to driver safety and warehouse compliance, our platform embeds enterprise-grade safeguards into every workflow — then automates the routine so your team focuses on high-value work."
-        />
-        <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-          {[
-            { icon: ShieldCheck, title: "Enterprise security", desc: "Encrypted data, access controls and POPIA-aligned handling across the entire platform." },
-            { icon: HardHat, title: "Workplace safety", desc: "Telematics, driver scoring and warehouse protocols that cut risk and protect teams." },
-            { icon: Lock, title: "Chain of custody", desc: "Auditable handovers with GPS, OTP, signatures and photographic proof at every stage." },
-            { icon: Bot, title: "Automation-first design", desc: "Dispatch, routing and reporting run autonomously — freeing your people for what matters." },
-          ].map((s, i) => (
-            <div key={s.title} className="group rounded-2xl border border-border bg-surface-elevated p-7 transition-all hover:-translate-y-1 hover:border-primary/30 hover:shadow-card">
-              <div className="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary transition-colors group-hover:bg-[image:var(--gradient-primary)] group-hover:text-white">
-                <s.icon className="h-6 w-6" />
-              </div>
-              <h3 className="text-lg font-semibold text-ink">{s.title}</h3>
-              <p className="mt-3 text-sm leading-relaxed text-ink-muted">{s.desc}</p>
-            </div>
-          ))}
-        </div>
-      </section>
 
       <section className="container-page pb-24">
         <div className="rounded-3xl bg-[image:var(--gradient-primary)] p-10 text-white md:p-14">

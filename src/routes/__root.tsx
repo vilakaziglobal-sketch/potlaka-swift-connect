@@ -85,7 +85,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         content:
           "Africa's leading logistics technology company. POTLAKA is developing an AI-powered Enterprise Logistics Operating System for warehousing, transport, fleet and last-mile delivery.",
       },
-      { name: "author", content: "Vilakazi Global SA (Pty) Ltd" },
+      { name: "author", content: "POTLAKA.COM" },
       { property: "og:title", content: "POTLAKA — Engineering the Future of Logistics" },
       {
         property: "og:description",

@@ -171,7 +171,7 @@ function LiveDashboard() {
           <div className="grid h-9 w-9 place-items-center rounded-xl bg-emerald-400/15 text-emerald-300"><CheckCircle2 className="h-4 w-4" /></div>
           <div>
             <div className="text-xs font-medium text-ink">POD verified · OTP</div>
-            <div className="text-[10px] text-ink-muted">Standard Bank</div>
+            <div className="text-[10px] text-ink-muted">Enterprise client</div>
           </div>
         </div>
       </div>

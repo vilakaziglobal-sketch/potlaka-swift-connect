@@ -41,7 +41,7 @@ function AboutPage() {
             initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}
             className="relative aspect-[4/3] overflow-hidden rounded-3xl border border-white/15 shadow-elegant"
           >
-            <img src={executives} alt="Vilakazi Global SA executive team reviewing logistics dashboards" className="h-full w-full object-cover" width={1600} height={1000} />
+            <img src={executives} alt="POTLAKA executive team reviewing logistics dashboards" className="h-full w-full object-cover" width={1600} height={1000} />
           </motion.div>
         </div>
       </section>

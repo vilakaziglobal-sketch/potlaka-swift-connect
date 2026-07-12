@@ -335,20 +335,20 @@ function Challenge() {
 /* ---------- PLATFORM ---------- */
 function Platform() {
   const modules = [
-    { icon: Warehouse, title: "Warehouse Management", copy: "Slotting, pick-paths, receiving and inventory intelligence." },
+    { icon: Warehouse, title: "Warehouse Management", copy: "Slotting, pick-paths, receiving and real-time inventory intelligence." },
     { icon: Truck, title: "Transport Management", copy: "Planning, dispatch and multi-leg execution at national scale." },
     { icon: Gauge, title: "Fleet Intelligence", copy: "Telematics, driver scoring, fuel and utilisation analytics." },
-    { icon: Bot, title: "AI Automation", copy: "Route optimisation, demand forecasting, exception handling." },
-    { icon: Users, title: "Customer Experience", copy: "Portals, tracking, SMS & WhatsApp notifications, self-service." },
-    { icon: LineChart, title: "Business Intelligence", copy: "Executive dashboards and operational insight in real time." },
+    { icon: Bot, title: "AI Automation", copy: "Route optimisation, demand forecasting and autonomous exception handling." },
+    { icon: Users, title: "Customer Experience", copy: "Portals, live tracking and SMS &amp; WhatsApp notifications built for self-service." },
+    { icon: LineChart, title: "Business Intelligence", copy: "Executive dashboards and operational insight — in real time." },
   ];
   return (
     <Section id="platform">
       <div className="max-w-3xl">
         <Eyebrow>The POTLAKA Platform</Eyebrow>
-        <H2>One Platform.<br/><span className="text-gradient-gold">Every Logistics Operation.</span></H2>
+        <H2>One platform.<br/><span className="text-gradient-gold">Every logistics operation.</span></H2>
         <p className="mt-6 text-lg leading-relaxed text-ink-muted">
-          The Enterprise Logistics Operating System — six deeply integrated modules on a single, cloud-native architecture.
+          The Enterprise Logistics Operating System — six deeply integrated modules on one cloud-native architecture.
         </p>
       </div>
 

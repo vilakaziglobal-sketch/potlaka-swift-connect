@@ -452,7 +452,7 @@ function ClientReporting() {
     "Automated SLA, exception and milestone reports",
     "Real-time notifications via SMS, email and WhatsApp",
     "Self-service tracking that reduces follow-ups",
-    "Executive-ready analytics, always current",
+    "Executive-ready analytics, kept current",
     "Fewer spreadsheets, phone calls and status emails",
   ];
   return (

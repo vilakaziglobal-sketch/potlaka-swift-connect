@@ -12,17 +12,17 @@ export const Route = createFileRoute("/")({
   component: Home,
   head: () => ({
     meta: [
-      { title: "POTLAKA — Engineering the Future of Logistics" },
+      { title: "POTLAKA — Engineering the Future of Logistics in Africa" },
       {
         name: "description",
         content:
-          "POTLAKA has developed an AI-powered Enterprise Logistics Operating System that transforms warehousing, transport, fleet and last-mile delivery into one intelligent ecosystem.",
+          "POTLAKA builds the AI-powered Enterprise Logistics Operating System that unifies warehousing, transport, fleet and last-mile delivery into one intelligent platform.",
       },
       { property: "og:title", content: "POTLAKA — Engineering the Future of Logistics" },
       {
         property: "og:description",
         content:
-          "Africa's leading Logistics Technology Company. One platform for warehousing, transport, fleet and last-mile — powered by AI.",
+          "Africa's logistics technology company. One AI-powered platform for warehousing, transport, fleet and last-mile delivery.",
       },
     ],
     links: [{ rel: "canonical", href: "/" }],

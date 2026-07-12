@@ -1,9 +1,9 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { motion } from "framer-motion";
 import {
-  ArrowRight, Play, Sparkles, Warehouse, Truck, Radar, LineChart,
+  ArrowRight, Sparkles, Warehouse, Truck, Radar, LineChart,
   Users, Bot, ShieldCheck, Cloud, Network, Lock, Zap, Activity,
-  Package, CheckCircle2, ArrowUpRight, Timer, TrendingUp,
+  Package, CheckCircle2, ArrowUpRight, TrendingUp,
   Gauge, BrainCircuit, Terminal,
 } from "lucide-react";
 
@@ -45,7 +45,6 @@ function Home() {
       <HowItWorks />
       <AISection />
       <Outcomes />
-      <Trial />
       <FinalCTA />
     </>
   );
@@ -85,15 +84,6 @@ function Hero() {
               Book a live demo
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
             </Link>
-            <Link
-              to="/contact"
-              className="inline-flex items-center gap-2 rounded-full bg-gold px-6 py-3.5 text-sm font-semibold text-[oklch(0.14_0.02_260)] shadow-glow-gold transition-transform hover:scale-[1.02]"
-            >
-              Start your 30-day trial
-            </Link>
-            <button className="inline-flex items-center gap-2 rounded-full glass px-5 py-3.5 text-sm font-medium text-ink hover:bg-white/10">
-              <Play className="h-4 w-4" /> Watch the platform
-            </button>
           </div>
 
           <div className="mt-14 flex items-center gap-8 text-xs uppercase tracking-[0.18em] text-ink-muted/70">
@@ -492,62 +482,6 @@ function Outcomes() {
 }
 
 
-/* ---------- TRIAL ---------- */
-function Trial() {
-  const included = [
-    "Enterprise platform access",
-    "Live onboarding",
-    "AI route optimisation",
-    "Warehouse management",
-    "Driver mobile application",
-    "Customer portal",
-    "Executive dashboards",
-    "SMS & WhatsApp notifications",
-    "Technical implementation support",
-    "Performance reporting",
-  ];
-  return (
-    <Section id="trial">
-      <div className="relative overflow-hidden rounded-[2.5rem] border border-white/10 bg-gradient-to-b from-white/[0.05] to-white/[0.01] p-10 md:p-20">
-        <div className="pointer-events-none absolute inset-0 bg-mesh opacity-70" />
-        <div className="relative grid gap-16 lg:grid-cols-[1.05fr_1fr] lg:items-center">
-          <div>
-            <Eyebrow>30-Day Enterprise Trial</Eyebrow>
-            <H2>Experience the future of logistics — <span className="text-gradient-gold">live.</span></H2>
-            <p className="mt-6 max-w-lg text-lg leading-relaxed text-ink-muted">
-              Deploy the POTLAKA Enterprise Logistics Operating System in a live business environment
-              and see measurable operational improvement inside 30 days.
-            </p>
-            <div className="mt-9 flex flex-wrap gap-3">
-              <Link to="/contact" className="inline-flex items-center gap-2 rounded-full bg-gold px-6 py-3.5 text-sm font-semibold text-[oklch(0.14_0.02_260)] shadow-glow-gold transition-transform hover:scale-[1.02]">
-                Start my 30-day trial <ArrowRight className="h-4 w-4" />
-              </Link>
-              <Link to="/contact" className="inline-flex items-center gap-2 rounded-full glass px-6 py-3.5 text-sm font-semibold text-ink hover:bg-white/10">
-                Book a live demonstration
-              </Link>
-            </div>
-            <div className="mt-6 flex items-center gap-5 text-xs text-ink-muted">
-              <span className="inline-flex items-center gap-1.5"><Timer className="h-3.5 w-3.5" /> 30 days</span>
-              <span className="inline-flex items-center gap-1.5"><CheckCircle2 className="h-3.5 w-3.5" /> Zero install</span>
-              <span className="inline-flex items-center gap-1.5"><TrendingUp className="h-3.5 w-3.5" /> Measurable ROI</span>
-            </div>
-          </div>
-          <div className="rounded-2xl border border-white/10 bg-black/20 p-6">
-            <div className="text-xs font-medium uppercase tracking-[0.2em] text-gold">What's included</div>
-            <ul className="mt-5 grid gap-2.5">
-              {included.map((i) => (
-                <li key={i} className="flex items-start gap-3 text-sm text-ink">
-                  <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-gold" />
-                  {i}
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-      </div>
-    </Section>
-  );
-}
 
 /* ---------- FINAL CTA ---------- */
 function FinalCTA() {
@@ -563,9 +497,6 @@ function FinalCTA() {
           <div className="mt-10 flex flex-wrap justify-center gap-3">
             <Link to="/contact" className="inline-flex items-center gap-2 rounded-full bg-[image:var(--gradient-primary)] px-6 py-3.5 text-sm font-semibold text-primary-foreground shadow-elegant">
               Book a live demo <ArrowRight className="h-4 w-4" />
-            </Link>
-            <Link to="/contact" className="inline-flex items-center gap-2 rounded-full bg-gold px-6 py-3.5 text-sm font-semibold text-[oklch(0.14_0.02_260)] shadow-glow-gold">
-              Start your 30-day trial
             </Link>
           </div>
         </div>

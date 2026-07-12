@@ -60,7 +60,7 @@ export function SiteHeader() {
             to="/contact"
             className="group inline-flex items-center gap-2 rounded-full bg-gold px-5 py-2.5 text-sm font-semibold text-[oklch(0.14_0.02_260)] shadow-glow-gold transition-transform hover:scale-[1.02]"
           >
-            Start free trial
+            Book demo
             <svg viewBox="0 0 24 24" className="h-4 w-4 transition-transform group-hover:translate-x-0.5" fill="none" stroke="currentColor" strokeWidth="2.5">
               <path d="M5 12h14M13 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round" />
             </svg>

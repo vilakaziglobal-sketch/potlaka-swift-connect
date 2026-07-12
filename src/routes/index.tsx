@@ -86,12 +86,14 @@ function Hero() {
             </Link>
           </div>
 
-          <div className="mt-14 flex items-center gap-8 text-xs uppercase tracking-[0.18em] text-ink-muted/70">
+          <div className="mt-14 flex flex-wrap items-center gap-x-8 gap-y-3 text-xs uppercase tracking-[0.18em] text-ink-muted/70">
             <span className="flex items-center gap-2">
               <span className="text-sm font-bold text-gold">95%</span> On-time delivery
             </span>
             <span className="h-1 w-1 rounded-full bg-ink-muted/40" />
-            <span>Enterprise Ready</span>
+            <span className="flex items-center gap-2">
+              <Activity className="h-3.5 w-3.5 text-gold" /> Real-time client reporting
+            </span>
             <span className="h-1 w-1 rounded-full bg-ink-muted/40" />
             <span>Cloud Native</span>
           </div>

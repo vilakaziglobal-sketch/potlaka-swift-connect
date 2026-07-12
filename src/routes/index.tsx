@@ -44,6 +44,7 @@ function Home() {
       <Platform />
       <HowItWorks />
       <AISection />
+      <ClientReporting />
       <Outcomes />
       <FinalCTA />
     </>
@@ -73,7 +74,7 @@ function Hero() {
           </h1>
 
           <p className="mt-7 max-w-xl text-lg leading-relaxed text-ink-muted">
-            POTLAKA has built an AI-powered <span className="text-ink">Enterprise Logistics Operating System</span> that unifies warehousing, transport, fleet and last-mile delivery into one intelligent platform.
+            POTLAKA has built an AI-powered <span className="text-ink">Enterprise Logistics Operating System</span> that unifies warehousing, transport, fleet and last-mile delivery into one intelligent platform — with real-time reporting intelligence for your clients.
           </p>
 
           <div className="mt-10 flex flex-wrap items-center gap-3">
@@ -86,12 +87,14 @@ function Hero() {
             </Link>
           </div>
 
-          <div className="mt-14 flex items-center gap-8 text-xs uppercase tracking-[0.18em] text-ink-muted/70">
+          <div className="mt-14 flex flex-wrap items-center gap-x-8 gap-y-3 text-xs uppercase tracking-[0.18em] text-ink-muted/70">
             <span className="flex items-center gap-2">
               <span className="text-sm font-bold text-gold">95%</span> On-time delivery
             </span>
             <span className="h-1 w-1 rounded-full bg-ink-muted/40" />
-            <span>Enterprise Ready</span>
+            <span className="flex items-center gap-2">
+              <Activity className="h-3.5 w-3.5 text-gold" /> Real-time client reporting
+            </span>
             <span className="h-1 w-1 rounded-full bg-ink-muted/40" />
             <span>Cloud Native</span>
           </div>
@@ -147,7 +150,7 @@ function LiveDashboard() {
 
         <div className="grid gap-3 p-4 sm:grid-cols-2">
           <MiniCard icon={<BrainCircuit className="h-4 w-4" />} title="AI reoptimised 12 routes" sub="Saved 84 km · 2h ago" />
-          <MiniCard icon={<Package className="h-4 w-4" />} title="Delivery confirmed · OTP" sub="Card #4821 · Sandton" />
+          <MiniCard icon={<LineChart className="h-4 w-4" />} title="Client report auto-sent" sub="Live SLA dashboard · 08:00" />
           <MiniCard icon={<Warehouse className="h-4 w-4" />} title="Bay 3 utilisation 94%" sub="WMS · Germiston DC" />
           <MiniCard icon={<Activity className="h-4 w-4" />} title="SLA alert cleared" sub="Route 22 · on-time" />
         </div>
@@ -328,8 +331,8 @@ function Platform() {
     { icon: Truck, title: "Transport Management", copy: "Planning, dispatch and multi-leg execution at national scale." },
     { icon: Gauge, title: "Fleet Intelligence", copy: "Telematics, driver scoring, fuel and utilisation analytics." },
     { icon: Bot, title: "AI Automation", copy: "Route optimisation, demand forecasting and autonomous exception handling." },
-    { icon: Users, title: "Customer Experience", copy: "Portals, live tracking and SMS &amp; WhatsApp notifications built for self-service." },
-    { icon: LineChart, title: "Business Intelligence", copy: "Executive dashboards and operational insight — in real time." },
+    { icon: Users, title: "Customer Experience", copy: "Portals, live tracking and SMS & WhatsApp notifications built for self-service." },
+    { icon: LineChart, title: "Client Reporting", copy: "Real-time dashboards and automated reports — no more manual updates." },
   ];
   return (
     <Section id="platform">
@@ -370,12 +373,11 @@ function Platform() {
 /* ---------- HOW IT WORKS ---------- */
 function HowItWorks() {
   const steps = [
-    { n: "01", title: "Ingest", copy: "Orders, WMS, TMS, telematics, ERP — unified into one operating layer." },
     { n: "01", title: "Ingest", copy: "Orders, WMS, TMS, telematics and ERP — unified into one operating layer." },
     { n: "02", title: "Optimise", copy: "AI plans routes, allocates fleet, forecasts demand and pre-empts exceptions." },
     { n: "03", title: "Execute", copy: "Drivers, warehouses and dispatch run the plan across mobile and web." },
     { n: "04", title: "Prove", copy: "OTP, GPS, signature and chain-of-custody captured at every handover." },
-    { n: "05", title: "Learn", copy: "Every event trains the model. The platform gets sharper with every drop." },
+    { n: "05", title: "Report", copy: "Real-time dashboards and automated client reports replace manual updates." },
   ];
   return (
     <Section>
@@ -439,6 +441,54 @@ function AISection() {
               >
                 <Sparkles className="mt-0.5 h-4 w-4 shrink-0 text-gold" />
                 <span className="text-sm text-ink">{c}</span>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </Section>
+  );
+}
+
+/* ---------- CLIENT REPORTING ---------- */
+function ClientReporting() {
+  const benefits = [
+    "Live delivery dashboards for every client",
+    "Automated SLA, exception and milestone reports",
+    "Real-time notifications via SMS, email and WhatsApp",
+    "Self-service tracking without manual follow-ups",
+    "Executive-ready analytics, always current",
+    "No more spreadsheets, phone calls or status emails",
+  ];
+  return (
+    <Section>
+      <div className="relative overflow-hidden rounded-[2rem] border border-white/5 bg-gradient-to-br from-white/[0.05] to-white/[0.01] p-10 md:p-16">
+        <div className="pointer-events-none absolute -right-32 -top-32 h-80 w-80 rounded-full bg-gold/10 blur-3xl" />
+        <div className="relative grid gap-14 lg:grid-cols-2 lg:items-center">
+          <div>
+            <Eyebrow>Client Intelligence</Eyebrow>
+            <H2>Real-time reporting intelligence for your <span className="text-gradient-gold">clients.</span></H2>
+            <p className="mt-6 text-lg leading-relaxed text-ink-muted">
+              Give your clients complete visibility without lifting a finger. Automated dashboards, live status updates and instant reports replace manual work — so your team focuses on delivery, not data entry.
+            </p>
+            <div className="mt-8">
+              <Link to="/contact" className="inline-flex items-center gap-2 rounded-full bg-[image:var(--gradient-primary)] px-6 py-3.5 text-sm font-semibold text-primary-foreground shadow-elegant transition-transform hover:scale-[1.02]">
+                See it in action <ArrowRight className="h-4 w-4" />
+              </Link>
+            </div>
+          </div>
+          <div className="grid gap-3 sm:grid-cols-2">
+            {benefits.map((b, i) => (
+              <motion.div
+                key={b}
+                initial={{ opacity: 0, y: 12 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: i * 0.05, ease }}
+                className="flex items-start gap-3 rounded-xl glass px-4 py-3.5"
+              >
+                <LineChart className="mt-0.5 h-4 w-4 shrink-0 text-gold" />
+                <span className="text-sm text-ink">{b}</span>
               </motion.div>
             ))}
           </div>

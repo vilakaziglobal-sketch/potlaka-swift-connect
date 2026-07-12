@@ -6,8 +6,8 @@ export const Route = createFileRoute("/services")({
   component: ServicesPage,
   head: () => ({
     meta: [
-      { title: "Services — Automation & Tech-Driven Last-Mile | POTLAKA.COM" },
-      { name: "description", content: "High-tech automation for transport, logistics and warehousing — plus tech-driven last-mile delivery for retailers, distributors, banks and e-commerce leaders across South Africa." },
+      { title: "Services — Last-Mile Delivery & Logistics Technology | POTLAKA.COM" },
+      { name: "description", content: "South Africa's do-it-all last-mile delivery company — powered by proprietary logistics technology, automation and real-time visibility for retailers, distributors, banks and e-commerce leaders." },
       { property: "og:title", content: "Services — POTLAKA.COM" },
     ],
     links: [{ rel: "canonical", href: "/services" }],

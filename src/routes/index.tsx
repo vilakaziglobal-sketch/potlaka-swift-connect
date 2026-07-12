@@ -1,208 +1,268 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { motion } from "framer-motion";
 import {
-  Truck, ShieldCheck, Radar, FileSignature, Users, Cpu, Layers, Sparkles,
-  ArrowRight, MapPin, Package, Store, Building2, Repeat, Timer, Boxes,
-  BarChart3, Bell, Route as RouteIcon, Warehouse, Bot, Workflow, ScanLine, Brain, Network,
+  ArrowRight, Play, Sparkles, Cpu, Warehouse, Truck, Radar, LineChart,
+  Users, Bot, ShieldCheck, Cloud, Network, Lock, Zap, Globe, Activity,
+  MapPin, Package, CheckCircle2, ArrowUpRight, Timer, TrendingUp,
+  Building2, Landmark, ShoppingBag, Factory, Pill, Fuel, Wifi, Wrench,
+  Boxes, Route as RouteIcon, Gauge, BrainCircuit, Terminal, Layers,
 } from "lucide-react";
-import heroVan from "@/assets/hero-van.jpg";
-import warehouse from "@/assets/warehouse.jpg";
-import driver from "@/assets/driver.jpg";
-import { SectionHeading, SectionEyebrow } from "@/components/section";
 
 export const Route = createFileRoute("/")({
   component: Home,
   head: () => ({
     meta: [
-      { title: "POTLAKA.COM — High-Tech Automation for Transport, Logistics & Warehousing" },
+      { title: "POTLAKA — Engineering the Future of Logistics" },
       {
         name: "description",
         content:
-          "South African technology company delivering high-tech automation for transport, logistics and warehousing — and tech-driven last-mile logistics engineered for retailers, distributors, banks and e-commerce leaders.",
+          "POTLAKA has developed an AI-powered Enterprise Logistics Operating System that transforms warehousing, transport, fleet and last-mile delivery into one intelligent ecosystem.",
       },
-      { property: "og:title", content: "POTLAKA.COM — High-Tech Automation for Transport, Logistics & Warehousing" },
-      { property: "og:image", content: heroVan },
+      { property: "og:title", content: "POTLAKA — Engineering the Future of Logistics" },
+      {
+        property: "og:description",
+        content:
+          "Africa's leading Logistics Technology Company. One platform for warehousing, transport, fleet and last-mile — powered by AI.",
+      },
     ],
     links: [{ rel: "canonical", href: "/" }],
   }),
 });
 
+const ease = [0.22, 1, 0.36, 1] as const;
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
-  show: (i = 0) => ({ opacity: 1, y: 0, transition: { duration: 0.6, delay: i * 0.06, ease: [0.22, 1, 0.36, 1] as const } }),
+  show: (i = 0) => ({ opacity: 1, y: 0, transition: { duration: 0.7, delay: i * 0.06, ease } }),
 };
 
 function Home() {
   return (
     <>
       <Hero />
-      <TrustStrip />
-      <WhyPotlaka />
-      <Services />
-      <Automation />
-      <Technology />
+      <TrustBar />
+      <Challenge />
+      <Platform />
+      <HowItWorks />
+      <AISection />
+      <Outcomes />
+      <Managed />
+      <Banking />
       <Industries />
-      <Process />
-      <Coverage />
+      <Trial />
       <FinalCTA />
     </>
   );
 }
 
-/* ---------------- HERO ---------------- */
+/* ---------- HERO ---------- */
 function Hero() {
   return (
-    <section className="relative overflow-hidden bg-hero text-white">
-      <div className="absolute inset-0 bg-mesh opacity-70" />
-      <div className="pointer-events-none absolute inset-0 [background-image:linear-gradient(oklch(1_0_0/0.06)_1px,transparent_1px),linear-gradient(90deg,oklch(1_0_0/0.06)_1px,transparent_1px)] [background-size:56px_56px] [mask-image:radial-gradient(ellipse_at_center,black,transparent_70%)]" />
+    <section className="relative overflow-hidden bg-hero">
+      <div className="absolute inset-0 bg-grid opacity-40" />
+      <div className="pointer-events-none absolute inset-0 bg-mesh" />
+      <div className="container-page relative grid min-h-[92vh] items-center gap-16 py-24 lg:grid-cols-[1.05fr_1fr] lg:py-32">
+        <motion.div initial="hidden" animate="show" variants={fadeUp}>
+          <div className="inline-flex items-center gap-2 rounded-full glass px-3.5 py-1.5 text-xs font-medium tracking-wide text-ink-muted">
+            <span className="relative flex h-1.5 w-1.5">
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-gold opacity-75" />
+              <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-gold" />
+            </span>
+            Africa's Logistics Technology Company
+          </div>
 
-      <div className="container-page relative grid gap-14 pb-24 pt-24 md:pt-32 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:pb-32">
-        <div>
-          <motion.div initial="hidden" animate="show" variants={fadeUp}>
-            <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-3 py-1.5 text-xs font-medium uppercase tracking-wider text-white/90 backdrop-blur">
-              <span className="h-1.5 w-1.5 rounded-full bg-accent animate-pulse" />
-              High-Tech Automation · Transport · Logistics · Warehousing
-            </div>
-          </motion.div>
+          <h1 className="mt-6 text-balance text-5xl font-semibold leading-[0.98] tracking-tight text-ink md:text-6xl lg:text-7xl">
+            Engineering the{" "}
+            <span className="text-gradient-gold">Future of Logistics.</span>
+          </h1>
 
-          <motion.h1
-            initial="hidden" animate="show" custom={1} variants={fadeUp}
-            className="mt-6 text-balance text-5xl font-semibold leading-[1.02] tracking-tight md:text-6xl lg:text-7xl"
-          >
-            Automating the movement of <span className="text-gradient-accent">South African business</span>.
-          </motion.h1>
+          <p className="mt-7 max-w-xl text-lg leading-relaxed text-ink-muted">
+            POTLAKA has developed an AI-powered <span className="text-ink">Enterprise Logistics Operating System</span> that transforms warehousing, transport, fleet management and last-mile delivery into one intelligent ecosystem.
+          </p>
 
-          <motion.p
-            initial="hidden" animate="show" custom={2} variants={fadeUp}
-            className="mt-6 max-w-xl text-lg leading-relaxed text-white/80 md:text-xl"
-          >
-            POTLAKA.COM is a South African technology company delivering high-tech
-            automation across transport, logistics and warehousing — and tech-driven
-            last-mile logistics engineered for retailers, distributors, banks and
-            e-commerce leaders.
-          </motion.p>
-
-          <motion.div
-            initial="hidden" animate="show" custom={3} variants={fadeUp}
-            className="mt-9 flex flex-wrap items-center gap-3"
-          >
+          <div className="mt-10 flex flex-wrap items-center gap-3">
             <Link
               to="/contact"
-              className="group inline-flex items-center gap-2 rounded-full bg-[image:var(--gradient-accent)] px-6 py-3.5 text-sm font-semibold text-accent-foreground shadow-glow-accent transition-transform hover:scale-[1.03]"
+              className="group inline-flex items-center gap-2 rounded-full bg-[image:var(--gradient-primary)] px-6 py-3.5 text-sm font-semibold text-primary-foreground shadow-elegant transition-transform hover:scale-[1.02]"
             >
-              Request a proposal
+              Book a Live Demo
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
             </Link>
             <Link
               to="/contact"
-              className="inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 px-6 py-3.5 text-sm font-semibold text-white backdrop-blur transition-colors hover:bg-white/15"
+              className="inline-flex items-center gap-2 rounded-full bg-gold px-6 py-3.5 text-sm font-semibold text-[oklch(0.14_0.02_260)] shadow-glow-gold transition-transform hover:scale-[1.02]"
             >
-              Schedule a consultation
+              Start Free 30-Day Trial
             </Link>
-          </motion.div>
-
-          <motion.div
-            initial="hidden" animate="show" custom={4} variants={fadeUp}
-            className="mt-14 grid max-w-lg grid-cols-3 gap-6 border-t border-white/15 pt-8"
-          >
-            {[
-              { k: "99.4%", v: "On-time delivery" },
-              { k: "24/7", v: "Business support" },
-              { k: "100%", v: "Black-owned SA" },
-            ].map((s) => (
-              <div key={s.v}>
-                <div className="font-display text-3xl font-semibold tracking-tight md:text-4xl">{s.k}</div>
-                <div className="mt-1 text-xs uppercase tracking-wider text-white/60">{s.v}</div>
-              </div>
-            ))}
-          </motion.div>
-        </div>
-
-        {/* Right visual */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.96 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
-          className="relative"
-        >
-          <div className="relative aspect-[4/5] w-full overflow-hidden rounded-3xl border border-white/15 shadow-elegant">
-            <img
-              src={heroVan}
-              alt="Branded POTLAKA delivery van moving through Johannesburg"
-              className="h-full w-full object-cover"
-              width={1920}
-              height={1200}
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-
-            {/* Floating live tracking card */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.6, duration: 0.6 }}
-              className="absolute left-5 top-5 w-[260px] rounded-2xl glass p-4 text-white shadow-elegant"
-            >
-              <div className="flex items-center gap-2 text-xs font-medium text-white/80">
-                <span className="relative flex h-2 w-2">
-                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent opacity-75" />
-                  <span className="relative inline-flex h-2 w-2 rounded-full bg-accent" />
-                </span>
-                Live route · JHB · POT-4821
-              </div>
-              <div className="mt-3 flex items-baseline gap-2">
-                <span className="font-display text-2xl font-semibold">14</span>
-                <span className="text-xs text-white/70">of 18 stops complete</span>
-              </div>
-              <div className="mt-2 h-1.5 w-full overflow-hidden rounded-full bg-white/15">
-                <div className="h-full w-[78%] rounded-full bg-[image:var(--gradient-accent)]" />
-              </div>
-              <div className="mt-3 flex items-center justify-between text-xs text-white/70">
-                <span>ETA next stop</span>
-                <span className="font-semibold text-white">6 min</span>
-              </div>
-            </motion.div>
-
-            {/* Floating ePOD card */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.85, duration: 0.6 }}
-              className="absolute bottom-5 right-5 w-[240px] rounded-2xl glass p-4 text-white shadow-elegant"
-            >
-              <div className="flex items-center gap-2">
-                <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-[image:var(--gradient-accent)]">
-                  <FileSignature className="h-5 w-5 text-accent-foreground" />
-                </div>
-                <div>
-                  <div className="text-sm font-semibold">Delivered</div>
-                  <div className="text-xs text-white/70">Signed · Sandton City</div>
-                </div>
-              </div>
-              <div className="mt-3 text-xs text-white/70">ePOD captured 09:42</div>
-            </motion.div>
+            <button className="inline-flex items-center gap-2 rounded-full glass px-5 py-3.5 text-sm font-medium text-ink hover:bg-white/10">
+              <Play className="h-4 w-4" /> Watch Platform Overview
+            </button>
           </div>
+
+          <div className="mt-14 flex items-center gap-8 text-xs uppercase tracking-[0.18em] text-ink-muted/70">
+            <span>Enterprise Ready</span>
+            <span className="h-1 w-1 rounded-full bg-ink-muted/40" />
+            <span>Cloud Native</span>
+            <span className="h-1 w-1 rounded-full bg-ink-muted/40" />
+            <span>POPIA Aligned</span>
+          </div>
+        </motion.div>
+
+        <motion.div initial="hidden" animate="show" variants={fadeUp} custom={2} className="relative">
+          <LiveDashboard />
         </motion.div>
       </div>
 
-      {/* soft bottom fade to next section */}
-      <div className="pointer-events-none absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-b from-transparent to-background" />
+      <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-b from-transparent to-background" />
     </section>
   );
 }
 
-/* ---------------- TRUST STRIP ---------------- */
-function TrustStrip() {
+/* ---------- LIVE DASHBOARD MOCK ---------- */
+function LiveDashboard() {
+  return (
+    <div className="relative">
+      <div className="absolute -inset-8 rounded-[2rem] bg-[image:var(--gradient-primary)] opacity-20 blur-3xl" />
+      <div className="relative overflow-hidden rounded-3xl glass-strong shadow-elegant">
+        {/* Titlebar */}
+        <div className="flex items-center justify-between border-b border-white/5 px-5 py-3">
+          <div className="flex items-center gap-2">
+            <span className="h-2.5 w-2.5 rounded-full bg-white/20" />
+            <span className="h-2.5 w-2.5 rounded-full bg-white/20" />
+            <span className="h-2.5 w-2.5 rounded-full bg-white/20" />
+          </div>
+          <div className="flex items-center gap-1.5 rounded-full bg-white/5 px-3 py-1 text-[10px] font-medium tracking-wide text-ink-muted">
+            <span className="relative flex h-1.5 w-1.5">
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
+              <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-emerald-400" />
+            </span>
+            LOS · Live
+          </div>
+          <span className="font-mono text-[10px] text-ink-muted">v4.2.1</span>
+        </div>
+
+        {/* Body */}
+        <div className="grid gap-3 p-4 sm:grid-cols-3">
+          <KPI label="On-time" value="98.4%" trend="+2.1" />
+          <KPI label="Fleet util." value="87%" trend="+4.6" />
+          <KPI label="Cost / drop" value="R42" trend="-8.3" negative />
+        </div>
+
+        <div className="mx-4 rounded-2xl border border-white/5 bg-black/20 p-4">
+          <div className="mb-3 flex items-center justify-between text-xs">
+            <span className="font-medium text-ink">Live Fleet · Johannesburg</span>
+            <span className="font-mono text-ink-muted">147 active</span>
+          </div>
+          <MapMock />
+        </div>
+
+        <div className="grid gap-3 p-4 sm:grid-cols-2">
+          <MiniCard icon={<BrainCircuit className="h-4 w-4" />} title="AI reoptimised 12 routes" sub="Saved 84 km · 2h ago" />
+          <MiniCard icon={<Package className="h-4 w-4" />} title="Delivery confirmed · OTP" sub="Card #4821 · Sandton" />
+          <MiniCard icon={<Warehouse className="h-4 w-4" />} title="Bay 3 utilisation 94%" sub="WMS · Germiston DC" />
+          <MiniCard icon={<Activity className="h-4 w-4" />} title="SLA alert cleared" sub="Route 22 · on-time" />
+        </div>
+      </div>
+
+      {/* Floating cards */}
+      <div className="absolute -left-8 top-24 hidden rounded-2xl glass-strong px-4 py-3 shadow-elegant lg:block" style={{ animation: "float-y 6s ease-in-out infinite" }}>
+        <div className="flex items-center gap-3">
+          <div className="grid h-9 w-9 place-items-center rounded-xl bg-gold/20 text-gold"><Zap className="h-4 w-4" /></div>
+          <div>
+            <div className="text-xs font-medium text-ink">Route saved 23 min</div>
+            <div className="text-[10px] text-ink-muted">AI Dispatch</div>
+          </div>
+        </div>
+      </div>
+      <div className="absolute -right-6 bottom-16 hidden rounded-2xl glass-strong px-4 py-3 shadow-elegant lg:block" style={{ animation: "float-y 7s ease-in-out infinite", animationDelay: "1.5s" }}>
+        <div className="flex items-center gap-3">
+          <div className="grid h-9 w-9 place-items-center rounded-xl bg-emerald-400/15 text-emerald-300"><CheckCircle2 className="h-4 w-4" /></div>
+          <div>
+            <div className="text-xs font-medium text-ink">POD verified · OTP</div>
+            <div className="text-[10px] text-ink-muted">Standard Bank</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function KPI({ label, value, trend, negative }: { label: string; value: string; trend: string; negative?: boolean }) {
+  return (
+    <div className="rounded-xl border border-white/5 bg-white/[0.02] p-3">
+      <div className="text-[10px] uppercase tracking-wider text-ink-muted">{label}</div>
+      <div className="mt-1 font-display text-xl font-semibold text-ink">{value}</div>
+      <div className={`mt-0.5 font-mono text-[10px] ${negative ? "text-emerald-300" : "text-gold"}`}>{trend}%</div>
+    </div>
+  );
+}
+
+function MiniCard({ icon, title, sub }: { icon: React.ReactNode; title: string; sub: string }) {
+  return (
+    <div className="flex items-start gap-3 rounded-xl border border-white/5 bg-white/[0.02] p-3">
+      <div className="grid h-8 w-8 shrink-0 place-items-center rounded-lg bg-white/5 text-ink">{icon}</div>
+      <div className="min-w-0">
+        <div className="truncate text-xs font-medium text-ink">{title}</div>
+        <div className="truncate text-[10px] text-ink-muted">{sub}</div>
+      </div>
+    </div>
+  );
+}
+
+function MapMock() {
+  return (
+    <div className="relative h-40 overflow-hidden rounded-xl bg-gradient-to-br from-[oklch(0.20_0.05_260)] to-[oklch(0.14_0.03_260)]">
+      {/* grid */}
+      <div className="absolute inset-0 opacity-30" style={{
+        backgroundImage:
+          "linear-gradient(to right, rgba(255,255,255,0.06) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,0.06) 1px, transparent 1px)",
+        backgroundSize: "24px 24px",
+      }} />
+      {/* routes */}
+      <svg className="absolute inset-0 h-full w-full" viewBox="0 0 400 160" fill="none">
+        <path d="M20,130 C90,90 140,130 200,80 S320,60 380,40" stroke="url(#g1)" strokeWidth="1.5" strokeDasharray="3 4" />
+        <path d="M20,60 C80,80 150,40 220,70 S340,120 380,110" stroke="url(#g2)" strokeWidth="1.5" strokeDasharray="3 4" />
+        <defs>
+          <linearGradient id="g1" x1="0" x2="1"><stop stopColor="#f5c86d" /><stop offset="1" stopColor="#f5c86d" stopOpacity="0.1" /></linearGradient>
+          <linearGradient id="g2" x1="0" x2="1"><stop stopColor="#6ea8ff" /><stop offset="1" stopColor="#6ea8ff" stopOpacity="0.1" /></linearGradient>
+        </defs>
+      </svg>
+      {/* pins */}
+      {[
+        { l: "22%", t: "45%", c: "bg-gold" },
+        { l: "52%", t: "60%", c: "bg-primary-glow" },
+        { l: "72%", t: "30%", c: "bg-gold" },
+        { l: "38%", t: "78%", c: "bg-emerald-400" },
+      ].map((p, i) => (
+        <span key={i} className="absolute" style={{ left: p.l, top: p.t }}>
+          <span className={`absolute -inset-2 rounded-full ${p.c} opacity-40`} style={{ animation: `pulse-ring 2.4s ${i * 0.3}s infinite ease-out` }} />
+          <span className={`relative block h-2 w-2 rounded-full ${p.c}`} />
+        </span>
+      ))}
+    </div>
+  );
+}
+
+/* ---------- TRUST BAR ---------- */
+function TrustBar() {
   const items = [
-    "Retail", "E-commerce", "Distributors", "Banks", "Warehousing",
-    "Manufacturing", "3PL", "FMCG", "Financial Services",
+    { icon: ShieldCheck, label: "Enterprise Ready" },
+    { icon: Cloud, label: "Cloud Native" },
+    { icon: BrainCircuit, label: "Artificial Intelligence" },
+    { icon: Radar, label: "Real-Time Visibility" },
+    { icon: Lock, label: "Enterprise Security" },
+    { icon: Terminal, label: "API First" },
+    { icon: ShieldCheck, label: "POPIA Ready" },
+    { icon: Network, label: "Scalable Architecture" },
   ];
   return (
-    <section className="border-y border-border bg-surface">
-      <div className="container-page py-10">
-        <div className="flex flex-wrap items-center justify-center gap-x-10 gap-y-4 text-xs font-semibold uppercase tracking-widest text-ink-muted">
-          <span className="text-primary">Trusted across sectors</span>
-          {items.map((i) => (
-            <span key={i} className="opacity-70">{i}</span>
+    <section className="border-y border-white/5 bg-surface/60">
+      <div className="container-page py-6">
+        <div className="flex flex-wrap items-center justify-center gap-x-10 gap-y-4">
+          {items.map(({ icon: Icon, label }) => (
+            <div key={label} className="flex items-center gap-2 text-xs font-medium uppercase tracking-[0.15em] text-ink-muted">
+              <Icon className="h-3.5 w-3.5 text-gold" />
+              {label}
+            </div>
           ))}
         </div>
       </div>
@@ -210,608 +270,415 @@ function TrustStrip() {
   );
 }
 
-/* ---------------- WHY POTLAKA ---------------- */
-function WhyPotlaka() {
-  const cards = [
-    { icon: Users, title: "Professional drivers", desc: "Vetted, uniformed teams trained to represent your brand at every doorstep." },
-    { icon: ShieldCheck, title: "Reliable deliveries", desc: "Operational discipline built for enterprise SLAs, not gig-economy variability." },
-    { icon: Radar, title: "Real-time visibility", desc: "Live tracking, milestone events and proactive exception management." },
-    { icon: FileSignature, title: "Electronic proof of delivery", desc: "Signatures, photos and timestamps captured on every consignment." },
-    { icon: Cpu, title: "Technology-driven ops", desc: "Digital dispatch, driver applications and business dashboards end-to-end." },
-    { icon: Layers, title: "Scalable capacity", desc: "Absorb peak season, promotional spikes and rapid geographic expansion." },
-    { icon: Sparkles, title: "Operational excellence", desc: "Continuous performance reporting focused on your customer experience." },
-    { icon: Timer, title: "Dedicated business support", desc: "Named account managers with response times measured in minutes." },
+/* ---------- SECTION SHELL ---------- */
+function Section({ children, eyebrow, id }: { children: React.ReactNode; eyebrow?: string; id?: string }) {
+  return (
+    <section id={id} className="relative py-28 md:py-36">
+      <div className="container-page">{children}</div>
+    </section>
+  );
+}
+function Eyebrow({ children }: { children: React.ReactNode }) {
+  return (
+    <div className="inline-flex items-center gap-2 rounded-full glass px-3 py-1 text-[11px] font-medium uppercase tracking-[0.2em] text-ink-muted">
+      <span className="h-1 w-1 rounded-full bg-gold" />
+      {children}
+    </div>
+  );
+}
+function H2({ children, className = "" }: { children: React.ReactNode; className?: string }) {
+  return (
+    <h2 className={`mt-5 text-balance text-4xl font-semibold leading-[1.02] tracking-tight text-ink md:text-5xl lg:text-6xl ${className}`}>
+      {children}
+    </h2>
+  );
+}
+
+/* ---------- CHALLENGE ---------- */
+function Challenge() {
+  const pains = [
+    "Disconnected systems", "Manual processes", "Poor visibility", "Delivery failures",
+    "Warehouse inefficiencies", "Customer frustration", "High operating costs", "No actionable data",
   ];
   return (
-    <section className="container-page py-24 md:py-32">
-      <SectionHeading
-        eyebrow="Why POTLAKA.COM"
-        title={<>An extension of your business — <span className="text-gradient-primary">delivered.</span></>}
-        description="We become part of your operations. Every parcel, every doorstep, every conversation reflects the customer experience your brand promises."
-      />
+    <Section>
+      <div className="grid gap-16 lg:grid-cols-2 lg:items-center">
+        <div>
+          <Eyebrow>The Challenge</Eyebrow>
+          <H2>Logistics is broken by <span className="text-gradient-primary">complexity.</span></H2>
+          <p className="mt-6 max-w-lg text-lg leading-relaxed text-ink-muted">
+            Enterprises run their supply chain across a dozen disconnected tools. Data lives in silos.
+            Decisions are made in the dark. Customers pay the price.
+          </p>
+        </div>
+        <div className="grid grid-cols-2 gap-3">
+          {pains.map((p, i) => (
+            <motion.div
+              key={p}
+              initial={{ opacity: 0, y: 12 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: i * 0.04, ease }}
+              className="rounded-2xl border border-white/5 bg-white/[0.02] p-5"
+            >
+              <div className="h-1 w-8 rounded-full bg-white/10" />
+              <div className="mt-3 text-sm font-medium text-ink">{p}</div>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </Section>
+  );
+}
 
-      <div className="mt-16 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-        {cards.map((c, i) => (
+/* ---------- PLATFORM ---------- */
+function Platform() {
+  const modules = [
+    { icon: Warehouse, title: "Warehouse Management", copy: "Slotting, pick-paths, receiving and inventory intelligence." },
+    { icon: Truck, title: "Transport Management", copy: "Planning, dispatch and multi-leg execution at national scale." },
+    { icon: Gauge, title: "Fleet Intelligence", copy: "Telematics, driver scoring, fuel and utilisation analytics." },
+    { icon: Bot, title: "AI Automation", copy: "Route optimisation, demand forecasting, exception handling." },
+    { icon: Users, title: "Customer Experience", copy: "Portals, tracking, SMS & WhatsApp notifications, self-service." },
+    { icon: LineChart, title: "Business Intelligence", copy: "Executive dashboards and operational insight in real time." },
+  ];
+  return (
+    <Section id="platform">
+      <div className="max-w-3xl">
+        <Eyebrow>The POTLAKA Platform</Eyebrow>
+        <H2>One Platform.<br/><span className="text-gradient-gold">Every Logistics Operation.</span></H2>
+        <p className="mt-6 text-lg leading-relaxed text-ink-muted">
+          The Enterprise Logistics Operating System — six deeply integrated modules on a single, cloud-native architecture.
+        </p>
+      </div>
+
+      <div className="mt-16 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+        {modules.map((m, i) => (
           <motion.div
-            key={c.title}
-            initial="hidden"
-            whileInView="show"
+            key={m.title}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-80px" }}
-            custom={i}
-            variants={fadeUp}
-            className="group relative overflow-hidden rounded-2xl border border-border bg-surface-elevated p-6 transition-all hover:-translate-y-1 hover:shadow-card"
+            transition={{ duration: 0.6, delay: i * 0.05, ease }}
+            className="group relative overflow-hidden rounded-3xl border border-white/5 bg-gradient-to-b from-white/[0.04] to-white/[0.01] p-7 transition-colors hover:border-white/15"
           >
-            <div className="pointer-events-none absolute -right-16 -top-16 h-40 w-40 rounded-full bg-[image:var(--gradient-primary)] opacity-0 blur-3xl transition-opacity duration-500 group-hover:opacity-20" />
-            <div className="mb-5 inline-flex h-11 w-11 items-center justify-center rounded-xl bg-primary/10 text-primary transition-colors group-hover:bg-[image:var(--gradient-primary)] group-hover:text-white">
-              <c.icon className="h-5 w-5" />
+            <div className="absolute -right-16 -top-16 h-40 w-40 rounded-full bg-[image:var(--gradient-primary)] opacity-0 blur-3xl transition-opacity group-hover:opacity-30" />
+            <div className="grid h-11 w-11 place-items-center rounded-xl bg-white/5 text-gold ring-hairline">
+              <m.icon className="h-5 w-5" />
             </div>
-            <h3 className="text-lg font-semibold text-ink">{c.title}</h3>
-            <p className="mt-2 text-sm leading-relaxed text-ink-muted">{c.desc}</p>
+            <h3 className="mt-6 text-xl font-semibold text-ink">{m.title}</h3>
+            <p className="mt-2 text-sm leading-relaxed text-ink-muted">{m.copy}</p>
+            <div className="mt-8 inline-flex items-center gap-1 text-xs font-medium text-ink-muted transition-colors group-hover:text-gold">
+              Explore module <ArrowUpRight className="h-3.5 w-3.5" />
+            </div>
           </motion.div>
         ))}
       </div>
-    </section>
+    </Section>
   );
 }
 
-/* ---------------- SERVICES ---------------- */
-function Services() {
-  const services = [
-    { icon: Cpu, title: "Warehouse automation", desc: "WMS integration, scanning, robotics-ready workflows and automated stock control." },
-    { icon: Radar, title: "Fleet & transport automation", desc: "Telematics, live tracking, automated dispatch and intelligent route optimisation." },
-    { icon: BarChart3, title: "Logistics control tower", desc: "Real-time dashboards, exception alerts and predictive delivery analytics." },
-    { icon: Truck, title: "Tech-driven last-mile", desc: "Automated last-mile delivery for retailers, distributors, banks and e-commerce." },
-    { icon: Boxes, title: "Dedicated fleet solutions", desc: "Vehicles and teams dedicated exclusively to your brand, wired into your systems." },
-    { icon: Timer, title: "Same & next-day delivery", desc: "Time-bound delivery windows that align with your customer promise." },
-    { icon: Building2, title: "Warehouse & retail distribution", desc: "DC to store, store to store, warehouse to customer — fully digitised." },
-    { icon: Repeat, title: "Reverse logistics & returns", desc: "Automated collections and returns workflows that protect margin." },
-  ];
-  return (
-    <section className="relative bg-surface py-24 md:py-32">
-      <div className="container-page">
-        <div className="grid gap-10 lg:grid-cols-[1fr_1.4fr] lg:items-end">
-          <SectionHeading
-            eyebrow="What we do"
-            title={<>Automation and last-mile, <br className="hidden md:block" />engineered as one platform.</>}
-          />
-          <p className="text-lg leading-relaxed text-ink-muted lg:pl-6">
-            From warehouse automation and fleet telematics to tech-driven last-mile
-            delivery for retailers, distributors, banks and e-commerce leaders — we
-            build the digital backbone that moves your business faster.
-          </p>
-        </div>
-
-        <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-          {services.map((s, i) => (
-            <motion.div
-              key={s.title}
-              initial="hidden"
-              whileInView="show"
-              viewport={{ once: true, margin: "-80px" }}
-              custom={i}
-              variants={fadeUp}
-              className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-border bg-background p-6 transition-all hover:-translate-y-1 hover:border-primary/30 hover:shadow-card"
-            >
-              <div className="mb-5 inline-flex h-11 w-11 items-center justify-center rounded-xl bg-accent/15 text-accent-foreground">
-                <s.icon className="h-5 w-5" strokeWidth={2} />
-              </div>
-              <h3 className="text-base font-semibold text-ink">{s.title}</h3>
-              <p className="mt-2 flex-1 text-sm leading-relaxed text-ink-muted">{s.desc}</p>
-              <div className="mt-5 inline-flex items-center gap-1.5 text-sm font-medium text-primary opacity-0 transition-opacity group-hover:opacity-100">
-                Learn more <ArrowRight className="h-3.5 w-3.5" />
-              </div>
-            </motion.div>
-          ))}
-        </div>
-
-        <div className="mt-12 flex justify-center">
-          <Link
-            to="/services"
-            className="inline-flex items-center gap-2 rounded-full border border-border bg-surface-elevated px-6 py-3 text-sm font-semibold text-ink transition-colors hover:border-primary hover:text-primary"
-          >
-            Explore all services <ArrowRight className="h-4 w-4" />
-          </Link>
-        </div>
-      </div>
-    </section>
-  );
-}
-
-/* ---------------- AUTOMATION ---------------- */
-const AUTOMATION_PILLARS = [
-  {
-    icon: Truck,
-    eyebrow: "Transport",
-    title: "Autonomous fleet orchestration",
-    desc: "AI dispatch, telematics-driven routing and predictive maintenance that keep every vehicle earning.",
-    cases: [
-      "Dynamic route optimisation across multi-drop runs",
-      "Driver behaviour scoring & fuel-burn analytics",
-      "Predictive maintenance alerts before breakdowns",
-      "Automated POD capture with geo-verified signatures",
-    ],
-  },
-  {
-    icon: Network,
-    eyebrow: "Logistics",
-    title: "Control-tower automation",
-    desc: "A single operational fabric that unifies orders, carriers, exceptions and SLAs in real time.",
-    cases: [
-      "Order-to-delivery orchestration across 3PLs",
-      "Exception detection with auto-escalation workflows",
-      "SLA & carrier-performance scorecards",
-      "Automated customer notifications via SMS, email, WhatsApp",
-    ],
-  },
-  {
-    icon: Warehouse,
-    eyebrow: "Warehousing",
-    title: "Smart warehouse & inventory",
-    desc: "WMS, barcode/RFID scanning and robotics-ready workflows that eliminate paper and human error.",
-    cases: [
-      "Real-time inventory visibility across bins & DCs",
-      "Barcode/RFID pick-pack-ship with zero-error scanning",
-      "Wave-planning & slotting powered by demand data",
-      "Returns automation with condition capture & re-stock",
-    ],
-  },
-];
-
-const AUTOMATION_CAPABILITIES = [
-  { icon: Bot, title: "AI dispatch & routing", desc: "Machine-learning route engines that adapt to traffic, load and SLA in real time." },
-  { icon: ScanLine, title: "Barcode & RFID scanning", desc: "Chain-of-custody scanning from DC pick to customer signature." },
-  { icon: Workflow, title: "Workflow automation", desc: "Rules engines that trigger tasks, alerts and escalations without human touch." },
-  { icon: Brain, title: "Predictive analytics", desc: "Forecast demand, stockouts, delivery risk and maintenance windows." },
-  { icon: Radar, title: "IoT telematics", desc: "Live vehicle, driver and cold-chain telemetry across the fleet." },
-  { icon: Cpu, title: "API & ERP integration", desc: "Plug into SAP, Oracle, Sage, Shopify and bespoke ERPs via secure APIs." },
-];
-
-function Automation() {
-  return (
-    <section id="automation" className="relative overflow-hidden bg-surface py-24 md:py-32">
-      <div className="absolute inset-0 bg-mesh opacity-40" />
-      <div className="container-page relative">
-        <div className="max-w-3xl">
-          <SectionEyebrow>High-tech automation solutions</SectionEyebrow>
-          <SectionHeading
-            title={<>Automation engineered for <span className="text-gradient-primary">transport, logistics & warehousing</span>.</>}
-            description="We combine AI, IoT, RFID and cloud platforms to remove manual work, eliminate errors and give operators total visibility — from the loading bay to the customer's door."
-          />
-        </div>
-
-        <div className="mt-14 grid gap-6 lg:grid-cols-3">
-          {AUTOMATION_PILLARS.map((p, i) => (
-            <motion.div
-              key={p.title}
-              initial="hidden" whileInView="show" viewport={{ once: true, margin: "-80px" }} custom={i} variants={fadeUp}
-              className="group relative flex flex-col overflow-hidden rounded-3xl border border-border bg-background p-8 shadow-card transition-all hover:-translate-y-1 hover:border-primary/40"
-            >
-              <div className="mb-6 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-[image:var(--gradient-primary)] text-white shadow-elegant">
-                <p.icon className="h-6 w-6" />
-              </div>
-              <div className="text-xs font-semibold uppercase tracking-wider text-accent">{p.eyebrow}</div>
-              <h3 className="mt-2 text-2xl font-semibold text-ink">{p.title}</h3>
-              <p className="mt-3 text-sm leading-relaxed text-ink-muted">{p.desc}</p>
-              <ul className="mt-6 space-y-2.5 border-t border-border pt-6">
-                {p.cases.map((c) => (
-                  <li key={c} className="flex items-start gap-2.5 text-sm text-ink">
-                    <span className="mt-1.5 h-1.5 w-1.5 flex-none rounded-full bg-accent" />
-                    <span>{c}</span>
-                  </li>
-                ))}
-              </ul>
-            </motion.div>
-          ))}
-        </div>
-
-        <div className="mt-16">
-          <div className="text-xs font-semibold uppercase tracking-wider text-primary">Core automation capabilities</div>
-          <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {AUTOMATION_CAPABILITIES.map((c) => (
-              <div key={c.title} className="flex items-start gap-4 rounded-2xl border border-border bg-background p-5">
-                <div className="inline-flex h-10 w-10 flex-none items-center justify-center rounded-lg bg-primary/10 text-primary">
-                  <c.icon className="h-5 w-5" />
-                </div>
-                <div>
-                  <div className="font-semibold text-ink">{c.title}</div>
-                  <p className="mt-1 text-sm leading-relaxed text-ink-muted">{c.desc}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        <div className="mt-12">
-          <Link
-            to="/technology"
-            className="inline-flex items-center gap-2 rounded-full bg-[image:var(--gradient-primary)] px-6 py-3.5 text-sm font-semibold text-primary-foreground shadow-elegant transition-transform hover:scale-[1.02]"
-          >
-            Explore the automation platform <ArrowRight className="h-4 w-4" />
-          </Link>
-        </div>
-      </div>
-    </section>
-  );
-}
-
-/* ---------------- TECHNOLOGY ---------------- */
-function Technology() {
-  return (
-    <section className="container-page py-24 md:py-32">
-      <div className="grid gap-14 lg:grid-cols-2 lg:items-center">
-        <div className="order-2 lg:order-1">
-          <div className="relative overflow-hidden rounded-3xl border border-border bg-[oklch(0.16_0.02_260)] p-6 shadow-elegant md:p-8">
-            <div className="absolute inset-0 bg-mesh opacity-60" />
-            <div className="relative">
-              <div className="flex items-center justify-between text-xs text-white/60">
-                <div className="flex items-center gap-2">
-                  <span className="h-2.5 w-2.5 rounded-full bg-[oklch(0.7_0.2_25)]" />
-                  <span className="h-2.5 w-2.5 rounded-full bg-[oklch(0.8_0.17_85)]" />
-                  <span className="h-2.5 w-2.5 rounded-full bg-[oklch(0.7_0.2_150)]" />
-                </div>
-                <span className="font-mono">potlaka.ops · live</span>
-              </div>
-
-              <div className="mt-6 grid gap-3 sm:grid-cols-3">
-                <StatTile label="Active routes" value="42" accent />
-                <StatTile label="On-time %" value="99.4" />
-                <StatTile label="ePODs today" value="1,284" />
-              </div>
-
-              <div className="mt-4 rounded-2xl border border-white/10 bg-white/5 p-4">
-                <div className="flex items-center justify-between text-xs text-white/70">
-                  <span>Deliveries this week</span>
-                  <span className="text-accent">+18.2%</span>
-                </div>
-                <div className="mt-4 flex h-24 items-end gap-2">
-                  {[38, 52, 46, 68, 74, 82, 91].map((h, i) => (
-                    <motion.div
-                      key={i}
-                      initial={{ scaleY: 0 }}
-                      whileInView={{ scaleY: 1 }}
-                      viewport={{ once: true }}
-                      transition={{ delay: i * 0.06, duration: 0.6, ease: "easeOut" }}
-                      style={{ height: `${h}%` }}
-                      className="flex-1 origin-bottom rounded-md bg-[image:var(--gradient-accent)]"
-                    />
-                  ))}
-                </div>
-                <div className="mt-2 flex justify-between text-[10px] uppercase tracking-wider text-white/50">
-                  {["M","T","W","T","F","S","S"].map((d, i) => <span key={i}>{d}</span>)}
-                </div>
-              </div>
-
-              <div className="mt-4 grid grid-cols-2 gap-3">
-                <MiniCard icon={Bell} title="Customer notifications" hint="SMS · Email" />
-                <MiniCard icon={RouteIcon} title="Route optimisation" hint="Live" />
-                <MiniCard icon={FileSignature} title="Digital ePOD" hint="Sig + photo" />
-                <MiniCard icon={BarChart3} title="Business reporting" hint="Weekly" />
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="order-1 lg:order-2">
-          <SectionEyebrow>Technology</SectionEyebrow>
-          <h2 className="mt-4 text-balance text-4xl font-semibold leading-[1.05] tracking-tight text-ink md:text-5xl">
-            A logistics platform designed for <span className="text-gradient-primary">enterprise visibility</span>.
-          </h2>
-          <p className="mt-5 text-lg leading-relaxed text-ink-muted">
-            Fleet visibility, driver applications, electronic proof of delivery, real-time
-            customer notifications and performance analytics — a single operational fabric
-            that keeps your business informed at every step.
-          </p>
-
-          <ul className="mt-8 grid gap-4 sm:grid-cols-2">
-            {[
-              "Interactive logistics dashboard",
-              "Fleet & driver visibility",
-              "Electronic proof of delivery",
-              "Delivery & performance analytics",
-              "Customer notifications",
-              "Digital signature capture",
-            ].map((f) => (
-              <li key={f} className="flex items-start gap-3 text-sm text-ink">
-                <span className="mt-1 inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary">
-                  <svg viewBox="0 0 24 24" className="h-3 w-3" fill="none" stroke="currentColor" strokeWidth="3">
-                    <path d="M5 12l5 5L20 7" strokeLinecap="round" strokeLinejoin="round" />
-                  </svg>
-                </span>
-                {f}
-              </li>
-            ))}
-          </ul>
-        </div>
-      </div>
-    </section>
-  );
-}
-
-function StatTile({ label, value, accent = false }: { label: string; value: string; accent?: boolean }) {
-  return (
-    <div className={`rounded-2xl border border-white/10 p-4 ${accent ? "bg-[image:var(--gradient-primary)] text-white" : "bg-white/5 text-white"}`}>
-      <div className="text-[10px] uppercase tracking-wider opacity-70">{label}</div>
-      <div className="mt-1 font-display text-2xl font-semibold">{value}</div>
-    </div>
-  );
-}
-
-function MiniCard({ icon: Icon, title, hint }: { icon: React.ComponentType<{ className?: string }>; title: string; hint: string }) {
-  return (
-    <div className="flex items-center gap-3 rounded-xl border border-white/10 bg-white/5 p-3 text-white">
-      <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-white/10">
-        <Icon className="h-4 w-4" />
-      </div>
-      <div className="min-w-0">
-        <div className="truncate text-sm font-medium">{title}</div>
-        <div className="text-[10px] uppercase tracking-wider text-white/60">{hint}</div>
-      </div>
-    </div>
-  );
-}
-
-/* ---------------- INDUSTRIES ---------------- */
-const FLAGSHIP_INDUSTRIES = [
-  {
-    icon: Store,
-    name: "Retailers",
-    headline: "Store fulfilment & replenishment, engineered for speed.",
-    desc: "From national chains to independent brands — automated replenishment runs, store-to-customer delivery and branded last-mile that protects your customer experience.",
-    outcomes: ["Same-day store-to-door", "Automated replenishment routing", "Branded, uniformed drivers", "Full ePOD & exception reporting"],
-  },
-  {
-    icon: Boxes,
-    name: "Distributors",
-    headline: "Multi-drop distribution with control-tower visibility.",
-    desc: "Scheduled, predictable delivery windows to trade customers — orchestrated by our control tower with live tracking, SLA scorecards and automated exception handling.",
-    outcomes: ["Fixed multi-drop schedules", "Trade-customer notifications", "SLA & DIFOT scorecards", "ERP & WMS integration"],
-  },
-  {
-    icon: ShieldCheck,
-    name: "Banks",
-    headline: "Secure, chain-of-custody delivery for financial services.",
-    desc: "Discreet, verified delivery of cards, documents, devices and confidential materials — with vetted drivers, tamper-evident handling and full audit trails.",
-    outcomes: ["Vetted, screened drivers", "Chain-of-custody scanning", "Tamper-evident packaging", "Compliance-grade audit trail"],
-  },
-  {
-    icon: Package,
-    name: "E-commerce",
-    headline: "Branded delivery experiences that convert to repeat buyers.",
-    desc: "API-integrated last-mile for e-commerce leaders — with Shopify/WooCommerce/Magento connectors, live customer tracking and returns automation that protects margin.",
-    outcomes: ["Shopify / Woo / Magento APIs", "Live tracking & notifications", "Same-day & next-day windows", "Automated returns workflows"],
-  },
-];
-
-function Industries() {
-  const other = [
-    "3PL & Logistics","Warehousing","Manufacturing","FMCG",
-    "Healthcare","Pharmaceutical","Automotive","Electronics","Wholesale","Industrial Suppliers",
-  ];
-  return (
-    <section className="relative overflow-hidden bg-[oklch(0.16_0.02_260)] py-24 text-white md:py-32">
-      <div className="absolute inset-0 bg-mesh opacity-70" />
-      <div className="container-page relative">
-        <div className="grid gap-10 lg:grid-cols-[1fr_1.2fr] lg:items-end">
-          <div>
-            <div className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-white/80">
-              <span className="h-1.5 w-1.5 rounded-full bg-accent" /> Industries we serve
-            </div>
-            <h2 className="mt-4 text-balance text-4xl font-semibold leading-[1.05] tracking-tight md:text-5xl">
-              Purpose-built for the sectors that <span className="text-gradient-accent">move South Africa</span>.
-            </h2>
-          </div>
-          <p className="text-lg leading-relaxed text-white/75">
-            Four flagship verticals — retailers, distributors, banks and e-commerce
-            leaders — each with a delivery playbook engineered around their
-            operational reality, service levels and customer expectations.
-          </p>
-        </div>
-
-        <div className="mt-14 grid gap-5 md:grid-cols-2">
-          {FLAGSHIP_INDUSTRIES.map((v, idx) => (
-            <motion.div
-              key={v.name}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-80px" }}
-              transition={{ delay: idx * 0.05, duration: 0.6 }}
-              className="group relative overflow-hidden rounded-3xl border border-white/10 bg-white/[0.04] p-8 backdrop-blur transition-all hover:-translate-y-1 hover:border-accent/40 hover:bg-white/[0.08]"
-            >
-              <div className="flex items-start gap-5">
-                <div className="inline-flex h-12 w-12 flex-none items-center justify-center rounded-xl bg-[image:var(--gradient-accent)] text-accent-foreground shadow-glow-accent">
-                  <v.icon className="h-6 w-6" />
-                </div>
-                <div>
-                  <div className="text-xs font-semibold uppercase tracking-wider text-accent">{v.name}</div>
-                  <h3 className="mt-1 text-xl font-semibold text-white">{v.headline}</h3>
-                </div>
-              </div>
-              <p className="mt-5 text-sm leading-relaxed text-white/75">{v.desc}</p>
-              <ul className="mt-6 grid grid-cols-1 gap-2 border-t border-white/10 pt-5 sm:grid-cols-2">
-                {v.outcomes.map((o) => (
-                  <li key={o} className="flex items-start gap-2 text-sm text-white/85">
-                    <span className="mt-1.5 h-1.5 w-1.5 flex-none rounded-full bg-accent" />
-                    <span>{o}</span>
-                  </li>
-                ))}
-              </ul>
-            </motion.div>
-          ))}
-        </div>
-
-        <div className="mt-14">
-          <div className="text-xs font-semibold uppercase tracking-wider text-white/60">Also serving</div>
-          <div className="mt-4 flex flex-wrap gap-2">
-            {other.map((i) => (
-              <span key={i} className="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-white/80">
-                {i}
-              </span>
-            ))}
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-}
-
-/* ---------------- PROCESS ---------------- */
-function Process() {
+/* ---------- HOW IT WORKS ---------- */
+function HowItWorks() {
   const steps = [
-    { n: "01", title: "Consultation", desc: "Understanding your volume, footprint and customer promise." },
-    { n: "02", title: "Solution design", desc: "Fleet, capacity and service levels tailored to your business." },
-    { n: "03", title: "Onboarding", desc: "Structured go-live with dedicated account management." },
-    { n: "04", title: "Daily collections", desc: "Scheduled, reliable pickups from your operations." },
-    { n: "05", title: "Professional delivery", desc: "Uniformed teams, ePOD and real-time visibility." },
-    { n: "06", title: "Performance reporting", desc: "Continuous insights that improve customer experience." },
+    { n: "01", title: "Ingest", copy: "Orders, WMS, TMS, telematics, ERP — unified into one operating layer." },
+    { n: "02", title: "Optimise", copy: "AI plans routes, allocates fleet, predicts demand and pre-empts exceptions." },
+    { n: "03", title: "Execute", copy: "Drivers, warehouses and dispatch run the plan through mobile and web." },
+    { n: "04", title: "Prove", copy: "OTP, GPS, signature and chain-of-custody at every handover." },
+    { n: "05", title: "Learn", copy: "Every event feeds the model. The platform improves with every drop." },
   ];
   return (
-    <section className="container-page py-24 md:py-32">
-      <SectionHeading
-        eyebrow="How we work"
-        title={<>A partnership designed for <span className="text-gradient-primary">predictable outcomes</span>.</>}
-        description="From first conversation to steady-state operations, every step is engineered to reduce risk and accelerate results."
-      />
-
-      <div className="mt-16 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+    <Section>
+      <div className="max-w-3xl">
+        <Eyebrow>How It Works</Eyebrow>
+        <H2>An operating system for your <span className="text-gradient-primary">supply chain.</span></H2>
+      </div>
+      <div className="mt-16 grid gap-px overflow-hidden rounded-3xl border border-white/5 bg-white/[0.03] md:grid-cols-5">
         {steps.map((s, i) => (
           <motion.div
             key={s.n}
-            initial={{ opacity: 0, y: 24 }}
+            initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-60px" }}
-            transition={{ delay: i * 0.05, duration: 0.6 }}
-            className="relative rounded-2xl border border-border bg-surface-elevated p-7"
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: i * 0.08, ease }}
+            className="relative bg-background/60 p-7"
           >
-            <div className="flex items-center gap-4">
-              <div className="font-display text-4xl font-semibold text-gradient-primary">{s.n}</div>
-              <div className="h-px flex-1 bg-border" />
-            </div>
-            <h3 className="mt-5 text-xl font-semibold text-ink">{s.title}</h3>
-            <p className="mt-2 text-sm leading-relaxed text-ink-muted">{s.desc}</p>
+            <div className="font-mono text-xs text-gold">{s.n}</div>
+            <div className="mt-3 text-lg font-semibold text-ink">{s.title}</div>
+            <p className="mt-2 text-sm leading-relaxed text-ink-muted">{s.copy}</p>
           </motion.div>
         ))}
       </div>
-    </section>
+    </Section>
   );
 }
 
-/* ---------------- COVERAGE ---------------- */
-function Coverage() {
+/* ---------- AI ---------- */
+function AISection() {
+  const caps = [
+    "Predict delays before they occur",
+    "Optimise routes across your fleet",
+    "Allocate drivers to demand",
+    "Forecast volume by hour, day, week",
+    "Cut fuel with intelligent sequencing",
+    "Verify addresses and authenticate deliveries",
+    "Surface executive insight in real time",
+    "Automate exception handling end-to-end",
+  ];
   return (
-    <section className="relative overflow-hidden bg-surface py-24 md:py-32">
-      <div className="container-page grid gap-14 lg:grid-cols-2 lg:items-center">
-        <div>
-          <SectionEyebrow>Coverage</SectionEyebrow>
-          <h2 className="mt-4 text-balance text-4xl font-semibold leading-[1.05] tracking-tight text-ink md:text-5xl">
-            Gauteng today. <span className="text-gradient-primary">South Africa next.</span>
-          </h2>
-          <p className="mt-5 text-lg leading-relaxed text-ink-muted">
-            Operating across Johannesburg and Ekurhuleni with a clear roadmap to expand
-            our intelligent last-mile network into major metros across South Africa.
-          </p>
-          <div className="mt-8 flex flex-wrap gap-3">
-            {["Johannesburg","Ekurhuleni","Tshwane — coming","Cape Town — coming","Durban — coming"].map((c) => (
-              <span key={c} className="inline-flex items-center gap-2 rounded-full border border-border bg-background px-4 py-2 text-sm font-medium text-ink">
-                <MapPin className="h-3.5 w-3.5 text-accent" /> {c}
-              </span>
+    <Section>
+      <div className="relative overflow-hidden rounded-[2rem] border border-white/5 bg-gradient-to-b from-white/[0.04] to-transparent p-10 md:p-16">
+        <div className="pointer-events-none absolute inset-0 bg-mesh opacity-60" />
+        <div className="relative grid gap-16 lg:grid-cols-[1fr_1.1fr] lg:items-center">
+          <div>
+            <Eyebrow>Artificial Intelligence</Eyebrow>
+            <H2>Intelligence built into <span className="text-gradient-gold">every decision.</span></H2>
+            <p className="mt-6 text-lg leading-relaxed text-ink-muted">
+              The POTLAKA AI engine turns raw logistics data into decisions — continuously, autonomously and at enterprise scale.
+            </p>
+          </div>
+          <div className="grid gap-3 sm:grid-cols-2">
+            {caps.map((c, i) => (
+              <motion.div
+                key={c}
+                initial={{ opacity: 0, y: 12 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: i * 0.04, ease }}
+                className="flex items-start gap-3 rounded-xl glass px-4 py-3"
+              >
+                <Sparkles className="mt-0.5 h-4 w-4 shrink-0 text-gold" />
+                <span className="text-sm text-ink">{c}</span>
+              </motion.div>
             ))}
           </div>
         </div>
+      </div>
+    </Section>
+  );
+}
 
-        <div className="relative">
-          <div className="relative overflow-hidden rounded-3xl border border-border bg-[oklch(0.16_0.02_260)] p-6 shadow-elegant">
-            <div className="absolute inset-0 bg-mesh opacity-70" />
-            <div className="relative aspect-square">
-              <svg viewBox="0 0 400 400" className="h-full w-full">
-                <defs>
-                  <radialGradient id="glow" cx="50%" cy="50%" r="50%">
-                    <stop offset="0%" stopColor="oklch(0.72 0.19 48)" stopOpacity="0.55" />
-                    <stop offset="100%" stopColor="oklch(0.72 0.19 48)" stopOpacity="0" />
-                  </radialGradient>
-                </defs>
-                {/* concentric rings */}
-                {[60,110,160,200].map((r) => (
-                  <circle key={r} cx="200" cy="200" r={r} fill="none" stroke="oklch(1 0 0 / 0.10)" />
+/* ---------- OUTCOMES ---------- */
+function Outcomes() {
+  const kpis = [
+    { v: "-28%", l: "Cost per delivery" },
+    { v: "+42%", l: "Warehouse throughput" },
+    { v: "98.4%", l: "On-time delivery" },
+    { v: "-19%", l: "Fuel spend" },
+  ];
+  return (
+    <Section>
+      <div className="max-w-3xl">
+        <Eyebrow>Business Outcomes</Eyebrow>
+        <H2>We don't sell software.<br/>We deliver <span className="text-gradient-primary">measurable results.</span></H2>
+      </div>
+      <div className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        {kpis.map((k, i) => (
+          <motion.div
+            key={k.l}
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: i * 0.06, ease }}
+            className="rounded-3xl border border-white/5 bg-white/[0.02] p-8"
+          >
+            <div className="font-display text-5xl font-semibold text-gradient-gold">{k.v}</div>
+            <div className="mt-3 text-sm text-ink-muted">{k.l}</div>
+          </motion.div>
+        ))}
+      </div>
+    </Section>
+  );
+}
+
+/* ---------- MANAGED SERVICES ---------- */
+function Managed() {
+  const services = [
+    "Warehousing", "Distribution", "Fleet Operations", "Last-Mile Delivery",
+    "Returns Management", "Fulfilment", "Reverse Logistics", "National Distribution",
+    "Dedicated Fleet", "Logistics Outsourcing",
+  ];
+  return (
+    <Section>
+      <div className="grid gap-16 lg:grid-cols-[1fr_1.1fr] lg:items-center">
+        <div>
+          <Eyebrow>Managed Logistics Services</Eyebrow>
+          <H2>Technology that <span className="text-gradient-gold">delivers.</span></H2>
+          <p className="mt-6 max-w-lg text-lg leading-relaxed text-ink-muted">
+            Deploy the POTLAKA platform inside your organisation — or let our operations teams run
+            your logistics using the same enterprise-grade technology.
+          </p>
+          <Link to="/services" className="mt-8 inline-flex items-center gap-2 text-sm font-medium text-gold">
+            Explore managed services <ArrowRight className="h-4 w-4" />
+          </Link>
+        </div>
+        <div className="grid grid-cols-2 gap-2 sm:grid-cols-2">
+          {services.map((s) => (
+            <div key={s} className="rounded-xl border border-white/5 bg-white/[0.02] px-4 py-4 text-sm text-ink">
+              {s}
+            </div>
+          ))}
+        </div>
+      </div>
+    </Section>
+  );
+}
+
+/* ---------- BANKING ---------- */
+function Banking() {
+  const solutions = ["Debit Card Delivery", "Credit Card Delivery", "PIN Mailers", "Welcome Packs", "Secure Documents", "Branch Logistics", "ATM Consumables", "Sensitive Assets"];
+  const security = ["OTP Verification", "Identity Verification", "GPS Verification", "Electronic Signatures", "Driver Authentication", "Chain of Custody", "Audit Trails", "POPIA-Aligned"];
+  return (
+    <Section>
+      <div className="relative overflow-hidden rounded-[2rem] border border-white/5 bg-[oklch(0.10_0.02_260)] p-10 md:p-16">
+        <div className="pointer-events-none absolute -right-40 -top-40 h-96 w-96 rounded-full bg-gold/10 blur-3xl" />
+        <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr]">
+          <div>
+            <Eyebrow>Banking &amp; Financial Services</Eyebrow>
+            <H2>Secure financial <span className="text-gradient-gold">logistics.</span></H2>
+            <p className="mt-6 text-lg leading-relaxed text-ink-muted">
+              Technology-enabled logistics for banks, financial institutions and fintechs — engineered
+              around chain-of-custody, verification and compliance.
+            </p>
+          </div>
+          <div className="grid gap-8 sm:grid-cols-2">
+            <div>
+              <div className="text-xs font-medium uppercase tracking-[0.18em] text-gold">Solutions</div>
+              <ul className="mt-4 space-y-2.5">
+                {solutions.map((s) => (
+                  <li key={s} className="flex items-center gap-2 text-sm text-ink"><Landmark className="h-3.5 w-3.5 text-ink-muted" />{s}</li>
                 ))}
-                {/* JHB / EKR nodes */}
-                <circle cx="200" cy="200" r="70" fill="url(#glow)" />
-                <g>
-                  <line x1="200" y1="200" x2="260" y2="180" stroke="oklch(0.72 0.19 48 / 0.6)" strokeWidth="1.5" strokeDasharray="3 4" />
-                  <line x1="200" y1="200" x2="140" y2="150" stroke="oklch(0.62 0.20 250 / 0.6)" strokeWidth="1.5" strokeDasharray="3 4" />
-                  <line x1="200" y1="200" x2="170" y2="270" stroke="oklch(0.62 0.20 250 / 0.6)" strokeWidth="1.5" strokeDasharray="3 4" />
-                  <line x1="200" y1="200" x2="290" y2="240" stroke="oklch(0.72 0.19 48 / 0.6)" strokeWidth="1.5" strokeDasharray="3 4" />
-                </g>
-                <Node x={200} y={200} label="JHB" primary />
-                <Node x={260} y={180} label="Ekurhuleni" />
-                <Node x={140} y={150} label="Sandton" />
-                <Node x={170} y={270} label="Soweto" />
-                <Node x={290} y={240} label="OR Tambo" />
-                <Node x={100} y={90} label="Tshwane" muted />
-                <Node x={340} y={330} label="Durban" muted />
-                <Node x={70} y={330} label="Cape Town" muted />
-              </svg>
+              </ul>
+            </div>
+            <div>
+              <div className="text-xs font-medium uppercase tracking-[0.18em] text-gold">Enterprise Security</div>
+              <ul className="mt-4 space-y-2.5">
+                {security.map((s) => (
+                  <li key={s} className="flex items-center gap-2 text-sm text-ink"><ShieldCheck className="h-3.5 w-3.5 text-ink-muted" />{s}</li>
+                ))}
+              </ul>
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </Section>
   );
 }
 
-function Node({ x, y, label, primary = false, muted = false }: { x: number; y: number; label: string; primary?: boolean; muted?: boolean }) {
-  const fill = primary ? "oklch(0.72 0.19 48)" : muted ? "oklch(1 0 0 / 0.35)" : "oklch(0.75 0.18 245)";
+/* ---------- INDUSTRIES ---------- */
+function Industries() {
+  const list = [
+    { icon: Landmark, name: "Banks" },
+    { icon: Building2, name: "Financial Services" },
+    { icon: ShoppingBag, name: "Retail" },
+    { icon: Factory, name: "Manufacturing" },
+    { icon: Wrench, name: "Mining" },
+    { icon: Building2, name: "Government" },
+    { icon: Pill, name: "Healthcare" },
+    { icon: Pill, name: "Pharmaceutical" },
+    { icon: Truck, name: "Fleet Operators" },
+    { icon: Boxes, name: "Logistics" },
+    { icon: Warehouse, name: "Warehousing" },
+    { icon: RouteIcon, name: "Distribution" },
+    { icon: Wrench, name: "Construction" },
+    { icon: ShieldCheck, name: "Insurance" },
+    { icon: Wifi, name: "Telecoms" },
+    { icon: Package, name: "E-Commerce" },
+    { icon: Fuel, name: "Automotive" },
+    { icon: ShoppingBag, name: "FMCG" },
+  ];
   return (
-    <g>
-      {primary && <circle cx={x} cy={y} r="12" fill="oklch(0.72 0.19 48 / 0.25)" />}
-      <circle cx={x} cy={y} r={primary ? 6 : 4} fill={fill} />
-      <text x={x + 10} y={y + 4} fill={muted ? "oklch(1 0 0 / 0.5)" : "white"} fontSize="10" fontFamily="Inter, sans-serif" fontWeight="500">{label}</text>
-    </g>
-  );
-}
-
-/* ---------------- FINAL CTA ---------------- */
-function FinalCTA() {
-  return (
-    <section className="container-page py-24 md:py-32">
-      <div className="relative overflow-hidden rounded-[2rem] bg-hero p-10 text-white md:p-16 lg:p-20">
-        <div className="absolute inset-0 bg-mesh opacity-70" />
-        <div className="absolute inset-0 opacity-40" style={{
-          backgroundImage: `url(${warehouse})`, backgroundSize: "cover", backgroundPosition: "center",
-          mixBlendMode: "overlay",
-        }} />
-        <div className="relative grid gap-10 lg:grid-cols-[1.4fr_1fr] lg:items-end">
-          <div>
-            <SectionEyebrow>Let's move</SectionEyebrow>
-            <h2 className="mt-4 text-balance text-4xl font-semibold leading-[1.03] tracking-tight md:text-5xl lg:text-6xl">
-              Ready to improve your <span className="text-gradient-accent">last-mile operations?</span>
-            </h2>
-            <p className="mt-5 max-w-xl text-lg leading-relaxed text-white/80">
-              Speak with our enterprise team. We'll design a delivery model tailored to
-              your volumes, service levels and customer expectations.
-            </p>
+    <Section>
+      <div className="max-w-3xl">
+        <Eyebrow>Industries</Eyebrow>
+        <H2>Engineered for the enterprises that <span className="text-gradient-primary">move Africa.</span></H2>
+      </div>
+      <div className="mt-14 grid grid-cols-2 gap-2 sm:grid-cols-3 lg:grid-cols-6">
+        {list.map((i) => (
+          <div key={i.name} className="group flex flex-col items-start gap-3 rounded-2xl border border-white/5 bg-white/[0.02] p-5 transition-colors hover:border-white/15">
+            <i.icon className="h-4 w-4 text-gold" />
+            <span className="text-sm font-medium text-ink">{i.name}</span>
           </div>
-          <div className="flex flex-col gap-3">
-            <Link to="/contact" className="group inline-flex items-center justify-between gap-4 rounded-2xl bg-[image:var(--gradient-accent)] px-6 py-5 text-base font-semibold text-accent-foreground shadow-glow-accent transition-transform hover:scale-[1.01]">
-              Request a business proposal
-              <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-0.5" />
-            </Link>
-            <Link to="/contact" className="group inline-flex items-center justify-between gap-4 rounded-2xl glass px-6 py-5 text-base font-semibold text-white transition-colors hover:bg-white/15">
-              Book a consultation
-              <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-0.5" />
-            </Link>
-            <Link to="/contact" className="group inline-flex items-center justify-between gap-4 rounded-2xl border border-white/25 px-6 py-5 text-base font-semibold text-white transition-colors hover:bg-white/5">
-              Open a business account
-              <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-0.5" />
-            </Link>
+        ))}
+      </div>
+    </Section>
+  );
+}
+
+/* ---------- TRIAL ---------- */
+function Trial() {
+  const included = [
+    "Enterprise platform access",
+    "Live onboarding",
+    "AI route optimisation",
+    "Warehouse management",
+    "Driver mobile application",
+    "Customer portal",
+    "Executive dashboards",
+    "SMS & WhatsApp notifications",
+    "Technical implementation support",
+    "Performance reporting",
+  ];
+  return (
+    <Section id="trial">
+      <div className="relative overflow-hidden rounded-[2.5rem] border border-white/10 bg-gradient-to-b from-white/[0.05] to-white/[0.01] p-10 md:p-20">
+        <div className="pointer-events-none absolute inset-0 bg-mesh opacity-70" />
+        <div className="relative grid gap-16 lg:grid-cols-[1.05fr_1fr] lg:items-center">
+          <div>
+            <Eyebrow>30-Day Enterprise Trial</Eyebrow>
+            <H2>Experience the future of logistics — <span className="text-gradient-gold">live.</span></H2>
+            <p className="mt-6 max-w-lg text-lg leading-relaxed text-ink-muted">
+              Deploy the POTLAKA Enterprise Logistics Operating System in a real business environment
+              and see measurable operational improvement within 30 days.
+            </p>
+            <div className="mt-9 flex flex-wrap gap-3">
+              <Link to="/contact" className="inline-flex items-center gap-2 rounded-full bg-gold px-6 py-3.5 text-sm font-semibold text-[oklch(0.14_0.02_260)] shadow-glow-gold transition-transform hover:scale-[1.02]">
+                Start My Free 30-Day Trial <ArrowRight className="h-4 w-4" />
+              </Link>
+              <Link to="/contact" className="inline-flex items-center gap-2 rounded-full glass px-6 py-3.5 text-sm font-semibold text-ink hover:bg-white/10">
+                Book a Live Demonstration
+              </Link>
+            </div>
+            <div className="mt-6 flex items-center gap-5 text-xs text-ink-muted">
+              <span className="inline-flex items-center gap-1.5"><Timer className="h-3.5 w-3.5" /> 30 days</span>
+              <span className="inline-flex items-center gap-1.5"><CheckCircle2 className="h-3.5 w-3.5" /> No installation</span>
+              <span className="inline-flex items-center gap-1.5"><TrendingUp className="h-3.5 w-3.5" /> Measurable results</span>
+            </div>
+          </div>
+          <div className="rounded-2xl border border-white/10 bg-black/20 p-6">
+            <div className="text-xs font-medium uppercase tracking-[0.2em] text-gold">What's included</div>
+            <ul className="mt-5 grid gap-2.5">
+              {included.map((i) => (
+                <li key={i} className="flex items-start gap-3 text-sm text-ink">
+                  <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-gold" />
+                  {i}
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
+      </div>
+    </Section>
+  );
+}
 
-        {/* driver strip */}
-        <div className="relative mt-14 grid gap-6 border-t border-white/15 pt-10 sm:grid-cols-[auto_1fr] sm:items-center">
-          <img src={driver} alt="POTLAKA professional delivery team member" className="h-16 w-16 rounded-full object-cover ring-2 ring-white/30" width={64} height={64} loading="lazy" />
-          <div>
-            <div className="font-display text-lg font-semibold">Professional delivery teams. Every stop. Every day.</div>
-            <div className="text-sm text-white/70">Uniformed. Vetted. Trained to represent your brand.</div>
+/* ---------- FINAL CTA ---------- */
+function FinalCTA() {
+  return (
+    <section className="relative py-32">
+      <div className="container-page">
+        <div className="mx-auto max-w-4xl text-center">
+          <Eyebrow>POTLAKA</Eyebrow>
+          <H2 className="mx-auto">Technology. <span className="text-gradient-gold">Intelligence.</span> Execution.</H2>
+          <p className="mx-auto mt-6 max-w-xl text-lg text-ink-muted">
+            Service. Innovation. Simplified.
+          </p>
+          <div className="mt-10 flex flex-wrap justify-center gap-3">
+            <Link to="/contact" className="inline-flex items-center gap-2 rounded-full bg-[image:var(--gradient-primary)] px-6 py-3.5 text-sm font-semibold text-primary-foreground shadow-elegant">
+              Book a Live Demo <ArrowRight className="h-4 w-4" />
+            </Link>
+            <Link to="/contact" className="inline-flex items-center gap-2 rounded-full bg-gold px-6 py-3.5 text-sm font-semibold text-[oklch(0.14_0.02_260)] shadow-glow-gold">
+              Start Free 30-Day Trial
+            </Link>
           </div>
         </div>
       </div>

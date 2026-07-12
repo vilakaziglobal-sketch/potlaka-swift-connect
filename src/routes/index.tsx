@@ -673,21 +673,21 @@ function Trial() {
             <Eyebrow>30-Day Enterprise Trial</Eyebrow>
             <H2>Experience the future of logistics — <span className="text-gradient-gold">live.</span></H2>
             <p className="mt-6 max-w-lg text-lg leading-relaxed text-ink-muted">
-              Deploy the POTLAKA Enterprise Logistics Operating System in a real business environment
-              and see measurable operational improvement within 30 days.
+              Deploy the POTLAKA Enterprise Logistics Operating System in a live business environment
+              and see measurable operational improvement inside 30 days.
             </p>
             <div className="mt-9 flex flex-wrap gap-3">
               <Link to="/contact" className="inline-flex items-center gap-2 rounded-full bg-gold px-6 py-3.5 text-sm font-semibold text-[oklch(0.14_0.02_260)] shadow-glow-gold transition-transform hover:scale-[1.02]">
-                Start My Free 30-Day Trial <ArrowRight className="h-4 w-4" />
+                Start my 30-day trial <ArrowRight className="h-4 w-4" />
               </Link>
               <Link to="/contact" className="inline-flex items-center gap-2 rounded-full glass px-6 py-3.5 text-sm font-semibold text-ink hover:bg-white/10">
-                Book a Live Demonstration
+                Book a live demonstration
               </Link>
             </div>
             <div className="mt-6 flex items-center gap-5 text-xs text-ink-muted">
               <span className="inline-flex items-center gap-1.5"><Timer className="h-3.5 w-3.5" /> 30 days</span>
-              <span className="inline-flex items-center gap-1.5"><CheckCircle2 className="h-3.5 w-3.5" /> No installation</span>
-              <span className="inline-flex items-center gap-1.5"><TrendingUp className="h-3.5 w-3.5" /> Measurable results</span>
+              <span className="inline-flex items-center gap-1.5"><CheckCircle2 className="h-3.5 w-3.5" /> Zero install</span>
+              <span className="inline-flex items-center gap-1.5"><TrendingUp className="h-3.5 w-3.5" /> Measurable ROI</span>
             </div>
           </div>
           <div className="rounded-2xl border border-white/10 bg-black/20 p-6">

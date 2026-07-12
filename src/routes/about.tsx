@@ -31,7 +31,7 @@ function AboutPage() {
               Built in South Africa. <span className="text-gradient-accent">Built for business.</span>
             </h1>
             <p className="mt-6 max-w-xl text-lg text-white/80 md:text-xl">
-              POTLAKA.COM is the trading name of Vilakazi Global SA (Pty) Ltd — a
+              POTLAKA<span className="font-black text-red-500">.</span>COM is the trading name of Vilakazi Global SA (Pty) Ltd — a
               proudly South African, 100% Black-owned technology company delivering
               high-tech automation for transport, logistics and warehousing, and
               tech-driven last-mile logistics for retailers, distributors, banks and
@@ -60,7 +60,7 @@ function AboutPage() {
             <p>
               Established in 2020 during the COVID-19 pandemic by founder and Managing
               Director <span className="font-semibold text-ink">Sipho Vilakazi</span>,
-              POTLAKA.COM was created to bring professionalism, reliability and
+              POTLAKA<span className="font-black text-red-500">.</span>COM was created to bring professionalism, reliability and
               technology to a category that South African businesses had every reason
               to expect more from.
             </p>
@@ -133,7 +133,7 @@ function AboutPage() {
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
             {[
               { k: "Legal name", v: "Vilakazi Global SA (Pty) Ltd" },
-              { k: "Trading as", v: "POTLAKA.COM" },
+              { k: "Trading as", v: "POTLAKA.COM" as unknown as string },
               { k: "Founded", v: "2020" },
               { k: "Ownership", v: "100% Black-owned SA" },
               { k: "Head office", v: "Shop No 5, Kariba Centre, 1 Naauw Street, Elsburg, Germiston, 1428" },

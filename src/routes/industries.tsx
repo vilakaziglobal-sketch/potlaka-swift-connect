@@ -19,7 +19,7 @@ const FLAGSHIP = [
     name: "Retailers",
     headline: "Omnichannel fulfilment, replenishment and branded last-mile.",
     intro:
-      "For national chains and independent brands, delivery IS the brand experience. We run store, DC and warehouse fulfilment flows that protect your customer promise.",
+      "For national chains and independent brands, delivery is the brand experience. We run store, DC and warehouse fulfilment flows that defend your customer promise.",
     useCases: [
       "Omnichannel fulfilment from store, DC or warehouse",
       "Automated replenishment routes across your network",
@@ -34,13 +34,13 @@ const FLAGSHIP = [
     name: "Distributors",
     headline: "Multi-drop trade distribution with SLA scorecards.",
     intro:
-      "For wholesalers and B2B distributors, predictability is everything. Our control tower orchestrates fixed schedules, trade customer notifications and exception handling.",
+      "For wholesalers and B2B distributors, predictability is everything. Our control tower orchestrates fixed schedules, trade customer notifications and live exception handling.",
     useCases: [
       "Fixed-window multi-drop routes to trade customers",
       "Route optimisation across hundreds of daily stops",
       "Automated trade-customer ETAs and delivery confirmations",
       "SLA and DIFOT scorecards per customer and per route",
-      "ERP / WMS integration for order sync and POD reconciliation",
+      "ERP and WMS integration for order sync and POD reconciliation",
     ],
     kpis: ["Multi-drop routing", "SLA scorecards", "ERP integration"],
   },
@@ -55,7 +55,7 @@ const FLAGSHIP = [
       "Recipient identity verification and authentication",
       "Vetted, background-checked drivers assigned to your account",
       "Device and asset deployment with chain-of-custody scanning",
-      "Full audit trail: photos, signatures, GPS and timestamps per event",
+      "Full audit trail — photos, signatures, GPS and timestamps per event",
     ],
     kpis: ["Vetted drivers", "Tamper-evident", "Audit trail"],
   },
@@ -64,9 +64,9 @@ const FLAGSHIP = [
     name: "E-commerce",
     headline: "API-integrated last-mile that turns first-time buyers into repeat customers.",
     intro:
-      "For online brands, the delivery experience is the brand experience. We plug into your store, offer flexible delivery windows and automate returns to protect margin.",
+      "For online brands, the delivery experience is the brand experience. We plug into your store, unlock flexible delivery windows and automate returns to protect your margin.",
     useCases: [
-      "E-commerce platform and order-management system integration",
+      "Direct integration with your e-commerce and order-management systems",
       "Same-day and next-day delivery windows across Gauteng",
       "Branded tracking pages and customer notifications",
       "Automated returns collections with condition capture",
@@ -78,7 +78,7 @@ const FLAGSHIP = [
 
 const OTHER = [
   { name: "3PL & Logistics", desc: "White-label capacity and automation for third-party logistics operators." },
-  { name: "Warehousing", desc: "WMS, barcode/RFID and integrated outbound distribution for warehouse operators." },
+  { name: "Warehousing", desc: "WMS, barcode and RFID plus integrated outbound distribution for warehouse operators." },
   { name: "Manufacturing", desc: "Just-in-time delivery for finished goods, parts and B2B distribution." },
   { name: "FMCG", desc: "High-frequency distribution to trade, retail and direct-to-consumer channels." },
   { name: "Healthcare", desc: "Controlled, professional handling for hospitals, clinics and medical suppliers." },
@@ -86,7 +86,7 @@ const OTHER = [
   { name: "Automotive", desc: "Parts distribution across dealership networks and aftermarket suppliers." },
   { name: "Electronics", desc: "High-value electronics distribution with careful handling and ePOD." },
   { name: "Wholesale", desc: "Multi-drop distribution to trade customers with predictable service windows." },
-  { name: "Industrial Suppliers", desc: "Reliable distribution for industrial parts and equipment providers." },
+  { name: "Industrial Suppliers", desc: "Dependable distribution for industrial parts and equipment providers." },
 ];
 
 function IndustriesPage() {

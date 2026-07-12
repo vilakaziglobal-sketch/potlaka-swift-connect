@@ -91,8 +91,8 @@ function TechPage() {
                 <ul className="mt-4 space-y-2.5">
                   {[
                     { icon: ShieldCheck, text: "Role-based access control" },
-                    { icon: Lock, text: "Encrypted data in transit & at rest" },
-                    { icon: FileSignature, text: "Auditable ePOD & chain-of-custody" },
+                    { icon: Lock, text: "Encrypted data in transit and at rest" },
+                    { icon: FileSignature, text: "Auditable ePOD and chain of custody" },
                     { icon: Cpu, text: "POPIA-aligned data handling" },
                   ].map((s) => (
                     <li key={s.text} className="flex items-center gap-2 text-sm text-ink"><s.icon className="h-3.5 w-3.5 text-ink-muted" />{s.text}</li>
@@ -100,7 +100,7 @@ function TechPage() {
                 </ul>
               </div>
               <div>
-                <div className="text-xs font-medium uppercase tracking-[0.18em] text-gold">Safety & automation</div>
+                <div className="text-xs font-medium uppercase tracking-[0.18em] text-gold">Safety and automation</div>
                 <ul className="mt-4 space-y-2.5">
                   {[
                     { icon: HardHat, text: "Driver behaviour & safety scoring" },

@@ -74,6 +74,11 @@ function AboutPage() {
               company that becomes an extension of our clients' businesses — ensuring
               every delivery reflects their brand and their customer service standards.
             </p>
+            <p>
+              Our solutions cover security and safety across transport, logistics and
+              warehousing. By applying automation, we simplify complex processes and
+              give our clients and their staff more time to focus on what matters.
+            </p>
           </div>
         </div>
       </section>

@@ -73,15 +73,16 @@ function TechPage() {
           <div className="relative grid gap-12 lg:grid-cols-[0.9fr_1.1fr]">
             <div>
               <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-3 py-1.5 text-xs font-semibold uppercase tracking-wider text-white/90 backdrop-blur">
-                <span className="h-1.5 w-1.5 rounded-full bg-accent" /> Safety &amp; Security
+                <span className="h-1.5 w-1.5 rounded-full bg-accent" /> Safety and security
               </div>
               <h2 className="mt-6 text-balance text-4xl font-semibold leading-[1.03] tracking-tight text-ink md:text-5xl">
                 Security and safety <span className="text-gradient-gold">by design</span>.
               </h2>
               <p className="mt-6 text-lg leading-relaxed text-ink-muted">
-                Our platform covers security and safety across transport, logistics and warehousing.
-                Automation removes manual effort at every step, giving your staff more time to focus
-                on what matters.
+                Every workflow across transport, logistics and warehousing is
+                built on enterprise-grade security and safety controls.
+                Automation removes manual effort at every step — giving your
+                team more time for the work that matters.
               </p>
             </div>
             <div className="grid gap-8 sm:grid-cols-2">

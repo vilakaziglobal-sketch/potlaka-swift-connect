@@ -330,8 +330,8 @@ function Platform() {
     { icon: Truck, title: "Transport Management", copy: "Planning, dispatch and multi-leg execution at national scale." },
     { icon: Gauge, title: "Fleet Intelligence", copy: "Telematics, driver scoring, fuel and utilisation analytics." },
     { icon: Bot, title: "AI Automation", copy: "Route optimisation, demand forecasting and autonomous exception handling." },
-    { icon: Users, title: "Customer Experience", copy: "Portals, live tracking and SMS &amp; WhatsApp notifications built for self-service." },
-    { icon: LineChart, title: "Business Intelligence", copy: "Executive dashboards and operational insight — in real time." },
+    { icon: Users, title: "Customer Experience", copy: "Portals, live tracking and SMS & WhatsApp notifications built for self-service." },
+    { icon: LineChart, title: "Client Reporting", copy: "Real-time dashboards and automated reports — no more manual updates." },
   ];
   return (
     <Section id="platform">

@@ -45,6 +45,8 @@ function TechPage() {
               Warehouse management, fleet telematics, automated dispatch, ePOD and a
               logistics control tower — one operational fabric powering tech-driven
               last-mile for retailers, distributors, banks and e-commerce leaders.
+              Built-in security and safety controls simplify operations so your team
+              can focus on what matters.
             </p>
           </div>
         </div>

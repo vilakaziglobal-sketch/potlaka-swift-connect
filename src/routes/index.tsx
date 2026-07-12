@@ -45,15 +45,12 @@ function Home() {
       <HowItWorks />
       <AISection />
       <Outcomes />
-      <SafetySecurity />
-      <Managed />
-      <Banking />
-      <Industries />
       <Trial />
       <FinalCTA />
     </>
   );
 }
+
 
 /* ---------- HERO ---------- */
 function Hero() {

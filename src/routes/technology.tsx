@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Radar, Cpu, Bell, FileSignature, BarChart3, Route as RouteIcon, Smartphone, LineChart, Warehouse, Network, Bot, ShieldCheck } from "lucide-react";
+import { Radar, Cpu, Bell, FileSignature, BarChart3, Route as RouteIcon, Smartphone, LineChart, Warehouse, Network, Bot, ShieldCheck, HardHat, Lock, Users } from "lucide-react";
 
 export const Route = createFileRoute("/technology")({
   component: TechPage,

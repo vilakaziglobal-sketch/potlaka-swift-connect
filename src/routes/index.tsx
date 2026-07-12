@@ -100,11 +100,13 @@ function Hero() {
           </div>
 
           <div className="mt-14 flex items-center gap-8 text-xs uppercase tracking-[0.18em] text-ink-muted/70">
+            <span className="flex items-center gap-2">
+              <span className="text-sm font-bold text-gold">95%</span> On-time delivery
+            </span>
+            <span className="h-1 w-1 rounded-full bg-ink-muted/40" />
             <span>Enterprise Ready</span>
             <span className="h-1 w-1 rounded-full bg-ink-muted/40" />
             <span>Cloud Native</span>
-            <span className="h-1 w-1 rounded-full bg-ink-muted/40" />
-            <span>POPIA Aligned</span>
           </div>
         </motion.div>
 
@@ -143,7 +145,7 @@ function LiveDashboard() {
 
         {/* Body */}
         <div className="grid gap-3 p-4 sm:grid-cols-3">
-          <KPI label="On-time" value="98.4%" trend="+2.1" />
+          <KPI label="On-time delivery" value="95%" trend="+2.1" />
           <KPI label="Fleet util." value="87%" trend="+4.6" />
           <KPI label="Cost / drop" value="R42" trend="-8.3" negative />
         </div>

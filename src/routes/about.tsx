@@ -31,7 +31,7 @@ function AboutPage() {
               Engineered in South Africa. <span className="text-gradient-accent">Built for enterprise.</span>
             </h1>
             <p className="mt-6 max-w-xl text-lg text-white/80 md:text-xl">
-              POTLAKA<span className="font-black text-red-500">.</span>COM is the trading name of Vilakazi Global SA (Pty) Ltd — a
+              POTLAKA<span className="font-black text-[#FF1A1A]">.</span>COM is the trading name of Vilakazi Global SA (Pty) Ltd — a
               proudly South African, 100% Black-owned technology company
               engineering high-tech automation for transport, logistics and
               warehousing, and tech-driven last-mile for retailers, distributors,
@@ -60,7 +60,7 @@ function AboutPage() {
             <p>
               Founded in 2020 at the height of the COVID-19 pandemic by
               Managing Director <span className="font-semibold text-ink">Sipho Vilakazi</span>,
-              POTLAKA<span className="font-black text-red-500">.</span>COM set out to
+              POTLAKA<span className="font-black text-[#FF1A1A]">.</span>COM set out to
               raise the bar for a category South African enterprises had every
               reason to expect more from — bringing professionalism, reliability
               and technology to the last mile.

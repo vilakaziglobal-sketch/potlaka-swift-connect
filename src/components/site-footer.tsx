@@ -9,11 +9,11 @@ export function SiteFooter() {
       <div className="container-page relative py-16">
         <div className="grid gap-12 lg:grid-cols-4">
           <div className="lg:col-span-2">
-            <div className="mb-5 [&_span]:text-white">
+            <div className="mb-5 [&_div>span]:text-white">
               <Logo />
             </div>
             <p className="max-w-md text-sm leading-relaxed text-white/70">
-              POTLAKA<span className="font-black text-red-500">.</span>COM is the trading name of Vilakazi Global SA (Pty) Ltd —
+              POTLAKA<span className="font-black text-[#FF1A1A]">.</span>COM is the trading name of Vilakazi Global SA (Pty) Ltd —
               a proudly South African, 100% Black-owned technology company
               engineering high-tech automation for transport, logistics and
               warehousing, and tech-driven last-mile for retailers,
@@ -53,7 +53,7 @@ export function SiteFooter() {
         </div>
 
         <div className="mt-14 flex flex-col items-start justify-between gap-4 border-t border-white/10 pt-8 text-xs text-white/60 md:flex-row md:items-center">
-          <p>© {new Date().getFullYear()} Vilakazi Global SA (Pty) Ltd trading as POTLAKA<span className="font-black text-red-500">.</span>COM. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Vilakazi Global SA (Pty) Ltd trading as POTLAKA<span className="font-black text-[#FF1A1A]">.</span>COM. All rights reserved.</p>
           <p>Proudly South African · 100% Black-owned</p>
         </div>
       </div>

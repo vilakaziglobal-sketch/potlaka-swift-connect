@@ -104,8 +104,8 @@ function IndustriesPage() {
             </h1>
             <p className="mt-6 max-w-2xl text-lg text-white/80 md:text-xl">
               Four flagship verticals, each with a dedicated playbook — plus deep
-              experience across 3PL, healthcare, pharmaceutical, manufacturing, FMCG
-              and industrial distribution.
+              experience across 3PL, healthcare, pharmaceutical, manufacturing,
+              FMCG and industrial distribution.
             </p>
           </div>
         </div>

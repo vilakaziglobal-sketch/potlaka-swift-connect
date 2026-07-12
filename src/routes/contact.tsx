@@ -29,10 +29,10 @@ const schema = z.object({
 type FormValues = z.infer<typeof schema>;
 
 const INTENTS: { id: FormValues["intent"]; label: string; desc: string }[] = [
-  { id: "proposal", label: "Request a proposal", desc: "Tailored pricing and service design" },
-  { id: "consultation", label: "Book a consultation", desc: "30-minute strategy call with our team" },
-  { id: "account", label: "Open a business account", desc: "Start onboarding as a business client" },
-  { id: "general", label: "General enquiry", desc: "Media, partnerships or careers" },
+  { id: "proposal", label: "Request a proposal", desc: "Tailored pricing and a service model built for your business" },
+  { id: "consultation", label: "Book a consultation", desc: "A 30-minute strategy session with our enterprise team" },
+  { id: "account", label: "Open a business account", desc: "Begin onboarding as a POTLAKA enterprise client" },
+  { id: "general", label: "General enquiry", desc: "Media, partnerships and careers" },
 ];
 
 function ContactPage() {

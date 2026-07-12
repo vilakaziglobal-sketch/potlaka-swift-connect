@@ -124,9 +124,9 @@ function AboutPage() {
               A growing, professionally branded fleet.
             </h2>
             <p className="mt-5 text-lg leading-relaxed text-ink-muted">
-              Our operational planning includes dedicated delivery and collection
-              vehicles to support business clients across our service network — with
-              a clear roadmap for growth as we expand into new metros.
+              A dedicated fleet of delivery and collection vehicles supports
+              business clients across our service network — with a clear
+              roadmap to expand into every major South African metro.
             </p>
             <Link to="/contact" className="mt-8 inline-flex items-center gap-2 rounded-full bg-[image:var(--gradient-primary)] px-6 py-3.5 text-sm font-semibold text-primary-foreground shadow-elegant transition-transform hover:scale-[1.02]">
               Partner with us <ArrowRight className="h-4 w-4" />

@@ -55,7 +55,9 @@ function ServicesPage() {
             <p className="mt-6 max-w-2xl text-lg text-white/80 md:text-xl">
               We design, automate and run last-mile logistics for South African
               enterprises — with the technology to make every delivery predictable,
-              visible and on-brand.
+              visible and on-brand. Our solutions cover security and safety across
+              transport, logistics and warehousing, simplifying processes so your
+              team can focus on what matters.
             </p>
           </div>
         </div>

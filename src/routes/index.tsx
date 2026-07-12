@@ -720,10 +720,10 @@ function FinalCTA() {
           </p>
           <div className="mt-10 flex flex-wrap justify-center gap-3">
             <Link to="/contact" className="inline-flex items-center gap-2 rounded-full bg-[image:var(--gradient-primary)] px-6 py-3.5 text-sm font-semibold text-primary-foreground shadow-elegant">
-              Book a Live Demo <ArrowRight className="h-4 w-4" />
+              Book a live demo <ArrowRight className="h-4 w-4" />
             </Link>
             <Link to="/contact" className="inline-flex items-center gap-2 rounded-full bg-gold px-6 py-3.5 text-sm font-semibold text-[oklch(0.14_0.02_260)] shadow-glow-gold">
-              Start Free 30-Day Trial
+              Start your 30-day trial
             </Link>
           </div>
         </div>

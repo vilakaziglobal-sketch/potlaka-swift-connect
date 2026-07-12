@@ -382,10 +382,11 @@ function Platform() {
 function HowItWorks() {
   const steps = [
     { n: "01", title: "Ingest", copy: "Orders, WMS, TMS, telematics, ERP — unified into one operating layer." },
-    { n: "02", title: "Optimise", copy: "AI plans routes, allocates fleet, predicts demand and pre-empts exceptions." },
-    { n: "03", title: "Execute", copy: "Drivers, warehouses and dispatch run the plan through mobile and web." },
-    { n: "04", title: "Prove", copy: "OTP, GPS, signature and chain-of-custody at every handover." },
-    { n: "05", title: "Learn", copy: "Every event feeds the model. The platform improves with every drop." },
+    { n: "01", title: "Ingest", copy: "Orders, WMS, TMS, telematics and ERP — unified into one operating layer." },
+    { n: "02", title: "Optimise", copy: "AI plans routes, allocates fleet, forecasts demand and pre-empts exceptions." },
+    { n: "03", title: "Execute", copy: "Drivers, warehouses and dispatch run the plan across mobile and web." },
+    { n: "04", title: "Prove", copy: "OTP, GPS, signature and chain-of-custody captured at every handover." },
+    { n: "05", title: "Learn", copy: "Every event trains the model. The platform gets sharper with every drop." },
   ];
   return (
     <Section>

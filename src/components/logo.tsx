@@ -9,7 +9,7 @@ export function Logo({ className = "" }: { className?: string }) {
         <span className="absolute -bottom-0.5 -right-0.5 h-2.5 w-2.5 rounded-full bg-[image:var(--gradient-accent)] ring-2 ring-background" />
       </div>
       <span className="font-display text-lg font-bold tracking-tight text-ink">
-        POTLAKA<span className="font-black text-red-500">.</span>COM
+        POTLAKA<span className="font-black text-[#FF1A1A]">.</span>COM
       </span>
     </div>
   );

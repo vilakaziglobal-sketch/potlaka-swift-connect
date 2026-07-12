@@ -133,7 +133,7 @@ function AboutPage() {
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
             {[
               { k: "Legal name", v: "Vilakazi Global SA (Pty) Ltd" },
-              { k: "Trading as", v: "POTLAKA.COM" as unknown as string },
+              { k: "Trading as", v: "POTLAKA.COM" },
               { k: "Founded", v: "2020" },
               { k: "Ownership", v: "100% Black-owned SA" },
               { k: "Head office", v: "Shop No 5, Kariba Centre, 1 Naauw Street, Elsburg, Germiston, 1428" },

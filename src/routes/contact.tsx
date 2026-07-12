@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { z } from "zod";
-import { Mail, Phone, MapPin, MessageCircle, ArrowRight, Check } from "lucide-react";
+import { Mail, Phone, MessageCircle, ArrowRight, Check } from "lucide-react";
 
 export const Route = createFileRoute("/contact")({
   component: ContactPage,
@@ -165,7 +165,6 @@ function ContactPage() {
             <ContactCard icon={Mail} title="Business email" value="ops@potlaka.com" href="mailto:ops@potlaka.com" />
             <ContactCard icon={Phone} title="Enterprise line" value="+27 11 383 2537" href="tel:+27113832537" />
             <ContactCard icon={MessageCircle} title="WhatsApp business" value="+27 79 025 8048" href="https://wa.me/27790258048" />
-            <ContactCard icon={MapPin} title="Head office" value="Shop No 5, Kariba Centre, 1 Naauw Street, Elsburg, Germiston, 1428" />
 
             <div className="rounded-3xl bg-[image:var(--gradient-primary)] p-7 text-white">
               <div className="text-xs font-semibold uppercase tracking-wider text-white/70">Response time</div>

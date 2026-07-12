@@ -10,19 +10,14 @@ export default defineTool({
   handler: () => {
     const services = [
       {
-        name: "Same-day last-mile delivery",
+        name: "Tech-driven last-mile delivery",
         description:
-          "Rapid same-day delivery across Johannesburg and Ekurhuleni for time-sensitive B2B consignments.",
+          "Automated dispatch, live tracking and electronic proof of delivery for every consignment.",
       },
       {
         name: "Scheduled distribution routes",
         description:
-          "Structured, recurring delivery routes for retailers, distributors and manufacturers.",
-      },
-      {
-        name: "E-commerce fulfilment",
-        description:
-          "Reliable last-mile handover for online retailers, with electronic proof of delivery on every parcel.",
+          "Structured, recurring delivery routes designed around your commercial calendar.",
       },
       {
         name: "Dedicated fleet & driver programmes",
@@ -30,9 +25,19 @@ export default defineTool({
           "Branded vehicles and trained drivers dedicated to a single client's operation.",
       },
       {
-        name: "Returns & reverse logistics",
+        name: "On-demand & overflow capacity",
         description:
-          "Managed collection and returns handling integrated with the client's systems.",
+          "Extra vehicles and drivers when volumes spike, without compromising service levels.",
+      },
+      {
+        name: "Reverse logistics & collections",
+        description:
+          "Managed collections and returns handling integrated with the client's systems.",
+      },
+      {
+        name: "White-label delivery experience",
+        description:
+          "Your brand, your uniform, your customer experience — powered by the POTLAKA operational engine.",
       },
     ];
     return {

@@ -25,7 +25,7 @@ const FEATURES = [
   { icon: BarChart3, title: "Executive reporting", desc: "Weekly and monthly SLA, cost-to-serve and performance reporting." },
   { icon: LineChart, title: "Delivery analytics", desc: "Insights on volumes, service levels, exceptions and customer experience." },
   { icon: Cpu, title: "Systems integration", desc: "APIs and connectors into ERP, e-commerce, WMS, TMS and banking platforms." },
-  { icon: ShieldCheck, title: "Secure chain-of-custody", desc: "Auditable handovers for bank cards, PIN mailers and confidential documents." },
+  { icon: ShieldCheck, title: "Secure chain-of-custody", desc: "Auditable handovers for sensitive, high-value or confidential consignments." },
 ];
 
 function TechPage() {

@@ -525,7 +525,7 @@ function Managed() {
 
 /* ---------- BANKING ---------- */
 function Banking() {
-  const solutions = ["Debit Card Delivery", "Credit Card Delivery", "PIN Mailers", "Welcome Packs", "Secure Documents", "Branch Logistics", "ATM Consumables", "Sensitive Assets"];
+  const solutions = ["High-Value Consignments", "Sensitive Documents", "Branch & ATM Logistics", "Customer Device Deployment", "Secure Asset Movement", "Confidential Materials", "Retail & Corporate Deliveries", "Regulated Item Handling"];
   const security = ["OTP Verification", "Identity Verification", "GPS Verification", "Electronic Signatures", "Driver Authentication", "Chain of Custody", "Audit Trails", "POPIA-Aligned"];
   return (
     <Section>

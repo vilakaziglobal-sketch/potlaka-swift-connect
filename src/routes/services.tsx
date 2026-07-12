@@ -6,8 +6,8 @@ export const Route = createFileRoute("/services")({
   component: ServicesPage,
   head: () => ({
     meta: [
-      { title: "Services — Automation & Tech-Driven Last-Mile | POTLAKA.COM" },
-      { name: "description", content: "High-tech automation for transport, logistics and warehousing — plus tech-driven last-mile delivery for retailers, distributors, banks and e-commerce leaders across South Africa." },
+      { title: "Services — Last-Mile Delivery & Logistics Technology | POTLAKA.COM" },
+      { name: "description", content: "South Africa's do-it-all last-mile delivery company — powered by proprietary logistics technology, automation and real-time visibility for retailers, distributors, banks and e-commerce leaders." },
       { property: "og:title", content: "Services — POTLAKA.COM" },
     ],
     links: [{ rel: "canonical", href: "/services" }],
@@ -24,20 +24,19 @@ const AUTOMATION = [
 ];
 
 const LASTMILE = [
-  { icon: Truck, title: "Tech-driven last-mile delivery", desc: "Automated last-mile logistics engineered for retailers, distributors, banks and e-commerce leaders." },
+  { icon: Truck, title: "Tech-driven last-mile delivery", desc: "Automated dispatch, live tracking and electronic proof of delivery for every consignment." },
   { icon: Boxes, title: "Dedicated fleet solutions", desc: "Vehicles and teams dedicated exclusively to your brand, uniformed and integrated into your daily operations." },
-  { icon: ClipboardList, title: "Scheduled deliveries", desc: "Fixed, predictable delivery windows aligned to your commercial and operational calendar." },
-  { icon: Timer, title: "Same-day deliveries", desc: "Time-critical delivery windows for retail, banking, healthcare, e-commerce and financial services." },
-  { icon: Timer, title: "Next-day deliveries", desc: "Standard next-day service across our network with full visibility and ePOD." },
-  { icon: Store, title: "Store-to-customer delivery", desc: "Retail fulfilment from your storefront directly to your customer's door." },
-  { icon: Building2, title: "Warehouse distribution", desc: "DC-to-store and DC-to-customer distribution with structured milestone reporting." },
-  { icon: Store, title: "Retail distribution", desc: "Store-to-store transfers, replenishment runs and multi-drop retail routes." },
-  { icon: Repeat, title: "Reverse logistics", desc: "Managed returns and reverse flows engineered to protect margin and customer trust." },
-  { icon: Package, title: "Bank card & document delivery", desc: "Secure, tracked delivery of bank cards, PIN mailers, contracts and confidential documents." },
+  { icon: ClipboardList, title: "Scheduled route planning", desc: "Fixed, predictable delivery windows aligned to your commercial and operational calendar." },
+  { icon: Timer, title: "On-demand capacity", desc: "Extra vehicles and drivers when volumes spike, without compromising service levels." },
+  { icon: Store, title: "B2B & B2C fulfilment", desc: "Professional handovers for business customers and end consumers, unified on one platform." },
+  { icon: Building2, title: "Distribution centre flows", desc: "DC-to-store and DC-to-customer distribution with structured milestone reporting." },
+  { icon: Store, title: "Inter-store transfers", desc: "Replenishment, stock balancing and store-to-store movement on structured routes." },
+  { icon: Repeat, title: "Reverse logistics", desc: "Managed collections and returns engineered to protect margin and customer trust." },
   { icon: Boxes, title: "Overflow delivery capacity", desc: "On-demand capacity to absorb promotional peaks, launches and seasonal spikes." },
   { icon: Users, title: "Dedicated delivery teams", desc: "Named, trained delivery teams that operate as an extension of your business." },
   { icon: Truck, title: "White-label delivery", desc: "Your brand, your uniform, your customer experience — powered by our operational engine." },
   { icon: MapPin, title: "Business collections", desc: "Scheduled and ad-hoc collections from suppliers, partners and business locations." },
+  { icon: Package, title: "Branded customer experience", desc: "Tracking pages, SMS and WhatsApp updates, and signatures that reflect your brand." },
 ];
 
 function ServicesPage() {
@@ -51,12 +50,12 @@ function ServicesPage() {
               <span className="h-1.5 w-1.5 rounded-full bg-accent" /> Services
             </div>
             <h1 className="mt-6 text-balance text-5xl font-semibold leading-[1.03] tracking-tight md:text-6xl">
-              High-tech automation and tech-driven last-mile — one platform.
+              One last-mile delivery company. One intelligent platform.
             </h1>
             <p className="mt-6 max-w-2xl text-lg text-white/80 md:text-xl">
-              Automation solutions for transport, logistics and warehousing — plus a
-              full portfolio of tech-driven last-mile services for retailers,
-              distributors, banks and e-commerce leaders.
+              We design, automate and run last-mile logistics for South African
+              enterprises — with the technology to make every delivery predictable,
+              visible and on-brand.
             </p>
           </div>
         </div>
@@ -84,8 +83,8 @@ function ServicesPage() {
       <section className="container-page py-20 md:py-28">
         <SectionHeading
           eyebrow="Tech-driven last-mile"
-          title={<>Last-mile logistics for <span className="text-gradient-primary">retailers, distributors, banks & e-commerce</span>.</>}
-          description="Automated dispatch, real-time visibility and electronic proof of delivery on every consignment."
+          title={<>Last-mile logistics built for <span className="text-gradient-primary">your operation</span>.</>}
+          description="From scheduled routes to on-demand capacity, our platform matches the right vehicle, driver and workflow to every delivery."
         />
         <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {LASTMILE.map((s) => (

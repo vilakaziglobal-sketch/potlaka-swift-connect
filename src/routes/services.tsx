@@ -83,8 +83,8 @@ function ServicesPage() {
       <section className="container-page py-20 md:py-28">
         <SectionHeading
           eyebrow="Tech-driven last-mile"
-          title={<>Last-mile logistics for <span className="text-gradient-primary">retailers, distributors, banks & e-commerce</span>.</>}
-          description="Automated dispatch, real-time visibility and electronic proof of delivery on every consignment."
+          title={<>Last-mile logistics built for <span className="text-gradient-primary">your operation</span>.</>}
+          description="From scheduled routes to on-demand capacity, our platform matches the right vehicle, driver and workflow to every delivery."
         />
         <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {LASTMILE.map((s) => (

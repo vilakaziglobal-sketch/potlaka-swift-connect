@@ -12,17 +12,17 @@ export const Route = createFileRoute("/")({
   component: Home,
   head: () => ({
     meta: [
-      { title: "POTLAKA — Engineering the Future of Logistics in Africa" },
+      { title: "POTLAKA — Logistics Technology for South African Enterprises" },
       {
         name: "description",
         content:
-          "POTLAKA develops the AI-powered Enterprise Logistics Operating System that unifies warehousing, transport, fleet and last-mile delivery into one intelligent platform.",
+          "POTLAKA develops technology for transport, logistics and warehousing, and tech-driven last-mile delivery for South African retailers, distributors, banks and e-commerce businesses.",
       },
-      { property: "og:title", content: "POTLAKA — Engineering the Future of Logistics" },
+      { property: "og:title", content: "POTLAKA — Logistics Technology for South African Enterprises" },
       {
         property: "og:description",
         content:
-          "One AI-powered platform for warehousing, transport, fleet and last-mile delivery.",
+          "Technology for warehousing, transport, fleet and last-mile delivery.",
       },
     ],
     links: [{ rel: "canonical", href: "/" }],
@@ -65,16 +65,16 @@ function Hero() {
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-gold opacity-75" />
               <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-gold" />
             </span>
-            Africa's Logistics Technology Company
+            South African Logistics Technology
           </div>
 
           <h1 className="mt-6 text-balance text-5xl font-semibold leading-[0.98] tracking-tight text-ink md:text-6xl lg:text-7xl">
-            Engineering the{" "}
-            <span className="text-gradient-gold">future of logistics.</span>
+            Smarter logistics{" "}
+            <span className="text-gradient-gold">for your business.</span>
           </h1>
 
           <p className="mt-7 max-w-xl text-lg leading-relaxed text-ink-muted">
-            POTLAKA develops an AI-powered <span className="text-ink">Enterprise Logistics Operating System</span> that unifies warehousing, transport, fleet and last-mile delivery into one intelligent platform — with real-time reporting intelligence for your clients.
+            POTLAKA develops technology for transport, logistics and warehousing, and runs tech-driven last-mile delivery for South African retailers, distributors, banks and e-commerce businesses — with real-time reporting for your clients.
           </p>
 
           <div className="mt-10 flex flex-wrap items-center gap-3">
@@ -89,14 +89,10 @@ function Hero() {
 
           <div className="mt-14 flex flex-wrap items-center gap-x-8 gap-y-3 text-xs uppercase tracking-[0.18em] text-ink-muted/70">
             <span className="flex items-center gap-2">
-              <span className="text-sm font-bold text-gold">95%</span> On-time delivery
-            </span>
-            <span className="h-1 w-1 rounded-full bg-ink-muted/40" />
-            <span className="flex items-center gap-2">
               <Activity className="h-3.5 w-3.5 text-gold" /> Real-time client reporting
             </span>
             <span className="h-1 w-1 rounded-full bg-ink-muted/40" />
-            <span>Cloud Native</span>
+            <span>Cloud-based platform</span>
           </div>
         </motion.div>
 
@@ -135,24 +131,24 @@ function LiveDashboard() {
 
         {/* Body */}
         <div className="grid gap-3 p-4 sm:grid-cols-3">
-          <KPI label="On-time delivery" value="95%" trend="+2.1" />
-          <KPI label="Fleet util." value="87%" trend="+4.6" />
-          <KPI label="Cost / drop" value="R42" trend="-8.3" negative />
+          <KPI label="On-time delivery" value="Live" trend="Tracking" />
+          <KPI label="Fleet util." value="Live" trend="Tracking" />
+          <KPI label="Cost / drop" value="Live" trend="Tracking" />
         </div>
 
         <div className="mx-4 rounded-2xl border border-white/5 bg-black/20 p-4">
           <div className="mb-3 flex items-center justify-between text-xs">
             <span className="font-medium text-ink">Live Fleet · Johannesburg</span>
-            <span className="font-mono text-ink-muted">147 active</span>
+            <span className="font-mono text-ink-muted">Example view</span>
           </div>
           <MapMock />
         </div>
 
         <div className="grid gap-3 p-4 sm:grid-cols-2">
-          <MiniCard icon={<BrainCircuit className="h-4 w-4" />} title="AI reoptimised 12 routes" sub="Saved 84 km · 2h ago" />
-          <MiniCard icon={<LineChart className="h-4 w-4" />} title="Client report auto-sent" sub="Live SLA dashboard · 08:00" />
-          <MiniCard icon={<Warehouse className="h-4 w-4" />} title="Bay 3 utilisation 94%" sub="WMS · Germiston DC" />
-          <MiniCard icon={<Activity className="h-4 w-4" />} title="SLA alert cleared" sub="Route 22 · on-time" />
+          <MiniCard icon={<BrainCircuit className="h-4 w-4" />} title="Routes reoptimised" sub="Automated dispatch" />
+          <MiniCard icon={<LineChart className="h-4 w-4" />} title="Client report sent" sub="Live SLA dashboard" />
+          <MiniCard icon={<Warehouse className="h-4 w-4" />} title="Bay utilisation" sub="WMS view" />
+          <MiniCard icon={<Activity className="h-4 w-4" />} title="SLA alert cleared" sub="Route update" />
         </div>
       </div>
 
@@ -238,14 +234,13 @@ function MapMock() {
 /* ---------- TRUST BAR ---------- */
 function TrustBar() {
   const items = [
-    { icon: ShieldCheck, label: "Enterprise Ready" },
-    { icon: Cloud, label: "Cloud Native" },
-    { icon: BrainCircuit, label: "Artificial Intelligence" },
-    { icon: Radar, label: "Real-Time Visibility" },
-    { icon: Lock, label: "Enterprise Security" },
-    { icon: Terminal, label: "API First" },
-    { icon: ShieldCheck, label: "POPIA Ready" },
-    { icon: Network, label: "Scalable Architecture" },
+    { icon: ShieldCheck, label: "Security Focused" },
+    { icon: Cloud, label: "Cloud Based" },
+    { icon: BrainCircuit, label: "Data Driven" },
+    { icon: Radar, label: "Live Tracking" },
+    { icon: Lock, label: "Access Control" },
+    { icon: Terminal, label: "API Connected" },
+    { icon: Network, label: "Scalable" },
   ];
   return (
     <section className="border-y border-white/5 bg-surface/60">
@@ -290,18 +285,18 @@ function H2({ children, className = "" }: { children: React.ReactNode; className
 /* ---------- CHALLENGE ---------- */
 function Challenge() {
   const pains = [
-    "Disconnected systems", "Manual processes", "Zero visibility", "Failed deliveries",
-    "Warehouse bottlenecks", "Frustrated customers", "Runaway costs", "Blind decisions",
+    "Disconnected systems", "Manual processes", "Limited visibility", "Failed deliveries",
+    "Warehouse bottlenecks", "Customer complaints", "Rising costs", "Slow decisions",
   ];
   return (
     <Section>
       <div className="grid gap-16 lg:grid-cols-2 lg:items-center">
         <div>
           <Eyebrow>The Challenge</Eyebrow>
-          <H2>Logistics is broken by <span className="text-gradient-primary">complexity.</span></H2>
+          <H2>Logistics gets complicated <span className="text-gradient-primary">fast.</span></H2>
           <p className="mt-6 max-w-lg text-lg leading-relaxed text-ink-muted">
-            Enterprises run their supply chain across a dozen disconnected tools. Data sits in silos.
-            Decisions are made blind. Customers pay the price.
+            Many enterprises run their supply chain across disconnected tools. Data sits in silos,
+            decisions take too long, and customers feel the impact.
           </p>
         </div>
         <div className="grid grid-cols-2 gap-3">
@@ -327,20 +322,20 @@ function Challenge() {
 /* ---------- PLATFORM ---------- */
 function Platform() {
   const modules = [
-    { icon: Warehouse, title: "Warehouse Management", copy: "Slotting, pick-paths, receiving and real-time inventory intelligence." },
-    { icon: Truck, title: "Transport Management", copy: "Planning, dispatch and multi-leg execution at national scale." },
-    { icon: Gauge, title: "Fleet Intelligence", copy: "Predictive driver scoring, fuel and utilisation analytics from our apps and handheld devices." },
-    { icon: Bot, title: "AI Automation", copy: "Route optimisation, demand forecasting and autonomous exception handling." },
-    { icon: Users, title: "Customer Experience", copy: "Portals, live tracking and SMS & WhatsApp notifications built for self-service." },
-    { icon: LineChart, title: "Client Reporting", copy: "Real-time dashboards and automated reports — no more manual updates." },
+    { icon: Warehouse, title: "Warehouse Management", copy: "Slotting, pick-paths, receiving and real-time inventory tracking." },
+    { icon: Truck, title: "Transport Management", copy: "Planning, dispatch and multi-leg execution across your network." },
+    { icon: Gauge, title: "Fleet Intelligence", copy: "Driver scoring, fuel and utilisation analytics from our apps and handheld devices." },
+    { icon: Bot, title: "Automation", copy: "Route optimisation, demand forecasting and exception handling." },
+    { icon: Users, title: "Customer Experience", copy: "Portals, live tracking and SMS & WhatsApp notifications for self-service." },
+    { icon: LineChart, title: "Client Reporting", copy: "Real-time dashboards and automated reports that reduce manual updates." },
   ];
   return (
     <Section id="platform">
       <div className="max-w-3xl">
         <Eyebrow>The POTLAKA Platform</Eyebrow>
-        <H2>One platform.<br/><span className="text-gradient-gold">Every logistics operation.</span></H2>
+        <H2>One platform for your <span className="text-gradient-gold">logistics operation.</span></H2>
         <p className="mt-6 text-lg leading-relaxed text-ink-muted">
-          The Enterprise Logistics Operating System — six deeply integrated modules on one cloud-native architecture.
+          Six integrated modules on one cloud-based architecture — warehouse, transport, fleet, automation, customer experience and reporting.
         </p>
       </div>
 
@@ -374,10 +369,10 @@ function Platform() {
 function HowItWorks() {
   const steps = [
     { n: "01", title: "Ingest", copy: "Orders, WMS, TMS, handheld device data and ERP — unified into one operating layer." },
-    { n: "02", title: "Optimise", copy: "AI plans routes, allocates fleet, forecasts demand and pre-empts exceptions." },
+    { n: "02", title: "Optimise", copy: "Data-driven routing, fleet allocation, demand forecasting and exception alerts." },
     { n: "03", title: "Execute", copy: "Drivers, warehouses and dispatch run the plan across mobile and web." },
     { n: "04", title: "Prove", copy: "OTP, GPS, signature and chain-of-custody captured at every handover." },
-    { n: "05", title: "Report", copy: "Real-time dashboards and automated client reports replace manual updates." },
+    { n: "05", title: "Report", copy: "Real-time dashboards and automated client reports that reduce manual updates." },
   ];
   return (
     <Section>
@@ -408,14 +403,14 @@ function HowItWorks() {
 /* ---------- AI ---------- */
 function AISection() {
   const caps = [
-    "Predict delays before they happen",
-    "Optimise routes across your entire fleet",
-    "Match drivers to demand in real time",
+    "Flag potential delays early",
+    "Suggest routes across your fleet",
+    "Match drivers to demand based on data",
     "Forecast volume by hour, day and week",
-    "Cut fuel spend with intelligent sequencing",
-    "Verify addresses and authenticate every delivery",
-    "Surface executive insight the moment it matters",
-    "Handle exceptions end-to-end, automatically",
+    "Reduce fuel spend with intelligent sequencing",
+    "Verify addresses and capture proof of delivery",
+    "Surface executive insight when it matters",
+    "Handle exceptions faster with automation",
   ];
   return (
     <Section>
@@ -423,10 +418,10 @@ function AISection() {
         <div className="pointer-events-none absolute inset-0 bg-mesh opacity-60" />
         <div className="relative grid gap-16 lg:grid-cols-[1fr_1.1fr] lg:items-center">
           <div>
-            <Eyebrow>Artificial Intelligence</Eyebrow>
-            <H2>Intelligence built into <span className="text-gradient-gold">every decision.</span></H2>
+            <Eyebrow>Automation & Insights</Eyebrow>
+            <H2>Data-driven decisions <span className="text-gradient-gold">at every step.</span></H2>
             <p className="mt-6 text-lg leading-relaxed text-ink-muted">
-              The POTLAKA AI engine turns raw logistics data into decisions — continuously, autonomously and at enterprise scale.
+              The POTLAKA engine turns raw logistics data into actionable insights — helping your team plan, execute and improve.
             </p>
           </div>
           <div className="grid gap-3 sm:grid-cols-2">
@@ -453,12 +448,12 @@ function AISection() {
 /* ---------- CLIENT REPORTING ---------- */
 function ClientReporting() {
   const benefits = [
-    "Live delivery dashboards for every client",
+    "Live delivery dashboards for clients",
     "Automated SLA, exception and milestone reports",
     "Real-time notifications via SMS, email and WhatsApp",
-    "Self-service tracking without manual follow-ups",
+    "Self-service tracking that reduces follow-ups",
     "Executive-ready analytics, always current",
-    "No more spreadsheets, phone calls or status emails",
+    "Fewer spreadsheets, phone calls and status emails",
   ];
   return (
     <Section>
@@ -466,10 +461,10 @@ function ClientReporting() {
         <div className="pointer-events-none absolute -right-32 -top-32 h-80 w-80 rounded-full bg-gold/10 blur-3xl" />
         <div className="relative grid gap-14 lg:grid-cols-2 lg:items-center">
           <div>
-            <Eyebrow>Client Intelligence</Eyebrow>
-            <H2>Real-time reporting intelligence for your <span className="text-gradient-gold">clients.</span></H2>
+            <Eyebrow>Client Reporting</Eyebrow>
+            <H2>Real-time reporting for your <span className="text-gradient-gold">clients.</span></H2>
             <p className="mt-6 text-lg leading-relaxed text-ink-muted">
-              Give your clients complete visibility without lifting a finger. Automated dashboards, live status updates and instant reports replace manual work — so your team focuses on delivery, not data entry.
+              Give your clients better visibility with less effort. Automated dashboards, live status updates and scheduled reports reduce manual work — so your team can focus on delivery.
             </p>
             <div className="mt-8">
               <Link to="/contact" className="inline-flex items-center gap-2 rounded-full bg-[image:var(--gradient-primary)] px-6 py-3.5 text-sm font-semibold text-primary-foreground shadow-elegant transition-transform hover:scale-[1.02]">
@@ -501,16 +496,16 @@ function ClientReporting() {
 /* ---------- OUTCOMES ---------- */
 function Outcomes() {
   const kpis = [
-    { v: "-28%", l: "Cost per delivery" },
-    { v: "+42%", l: "Warehouse throughput" },
-    { v: "98.4%", l: "On-time delivery" },
-    { v: "-19%", l: "Fuel spend" },
+    { v: "Lower", l: "Cost per delivery" },
+    { v: "Higher", l: "Warehouse throughput" },
+    { v: "Better", l: "On-time delivery" },
+    { v: "Reduced", l: "Fuel spend" },
   ];
   return (
     <Section>
       <div className="max-w-3xl">
         <Eyebrow>Business Outcomes</Eyebrow>
-        <H2>We don't sell software.<br/>We deliver <span className="text-gradient-primary">measurable results.</span></H2>
+        <H2>Practical results <span className="text-gradient-primary">for your operation.</span></H2>
       </div>
       <div className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
         {kpis.map((k, i) => (
@@ -540,9 +535,9 @@ function FinalCTA() {
       <div className="container-page">
         <div className="mx-auto max-w-4xl text-center">
           <Eyebrow>POTLAKA</Eyebrow>
-          <H2 className="mx-auto">Technology. <span className="text-gradient-gold">Intelligence.</span> Execution.</H2>
+          <H2 className="mx-auto">Technology. <span className="text-gradient-gold">Automation.</span> Delivery.</H2>
           <p className="mx-auto mt-6 max-w-xl text-lg text-ink-muted">
-            Service. Innovation. Simplified.
+            Practical logistics technology for South African enterprises.
           </p>
           <div className="mt-10 flex flex-wrap justify-center gap-3">
             <Link to="/contact" className="inline-flex items-center gap-2 rounded-full bg-[image:var(--gradient-primary)] px-6 py-3.5 text-sm font-semibold text-primary-foreground shadow-elegant">

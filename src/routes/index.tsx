@@ -22,7 +22,7 @@ export const Route = createFileRoute("/")({
       {
         property: "og:description",
         content:
-          "Africa's logistics technology company. One AI-powered platform for warehousing, transport, fleet and last-mile delivery.",
+          "One AI-powered platform for warehousing, transport, fleet and last-mile delivery.",
       },
     ],
     links: [{ rel: "canonical", href: "/" }],

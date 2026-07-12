@@ -157,7 +157,7 @@ function ContactPage() {
                   Send enquiry
                   <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
                 </button>
-                <p className="text-xs text-ink-muted">By submitting you agree to be contacted by our enterprise team. We will never share your details.</p>
+                <p className="text-xs text-ink-muted">By submitting you agree to be contacted by our enterprise team. Your details are never shared.</p>
               </form>
             )}
           </div>

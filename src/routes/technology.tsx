@@ -39,14 +39,15 @@ function TechPage() {
               <span className="h-1.5 w-1.5 rounded-full bg-accent" /> Technology
             </div>
             <h1 className="mt-6 text-balance text-5xl font-semibold leading-[1.03] tracking-tight md:text-6xl">
-              A high-tech automation platform for transport, logistics & warehousing.
+              A high-tech automation platform for transport, logistics and warehousing.
             </h1>
             <p className="mt-6 max-w-2xl text-lg text-white/80 md:text-xl">
-              Warehouse management, fleet telematics, automated dispatch, ePOD and a
-              logistics control tower — one operational fabric powering tech-driven
-              last-mile for retailers, distributors, banks and e-commerce leaders.
-              Built-in security and safety controls simplify operations so your team
-              can focus on what matters.
+              Warehouse management, fleet telematics, automated dispatch, ePOD
+              and a logistics control tower — one operational fabric powering
+              tech-driven last-mile for retailers, distributors, banks and
+              e-commerce leaders. Security and safety controls are engineered
+              into every layer, so your team is free to focus on the work that
+              matters.
             </p>
           </div>
         </div>

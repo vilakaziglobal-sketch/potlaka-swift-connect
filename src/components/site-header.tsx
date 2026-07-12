@@ -52,15 +52,15 @@ export function SiteHeader() {
         <div className="hidden items-center gap-2 lg:flex">
           <Link
             to="/contact"
-            className="rounded-full px-4 py-2 text-sm font-medium text-ink hover:text-primary"
+            className="rounded-full px-4 py-2 text-sm font-medium text-ink-muted hover:text-ink"
           >
-            Sign in
+            Book demo
           </Link>
           <Link
             to="/contact"
-            className="group inline-flex items-center gap-2 rounded-full bg-[image:var(--gradient-primary)] px-5 py-2.5 text-sm font-semibold text-primary-foreground shadow-elegant transition-transform hover:scale-[1.02]"
+            className="group inline-flex items-center gap-2 rounded-full bg-gold px-5 py-2.5 text-sm font-semibold text-[oklch(0.14_0.02_260)] shadow-glow-gold transition-transform hover:scale-[1.02]"
           >
-            Request proposal
+            Start free trial
             <svg viewBox="0 0 24 24" className="h-4 w-4 transition-transform group-hover:translate-x-0.5" fill="none" stroke="currentColor" strokeWidth="2.5">
               <path d="M5 12h14M13 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round" />
             </svg>

@@ -79,27 +79,25 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "POTLAKA.COM — High-Tech Automation for Transport, Logistics & Warehousing" },
+      { title: "POTLAKA — Engineering the Future of Logistics" },
       {
         name: "description",
         content:
-          "South African technology company delivering high-tech automation for transport, logistics and warehousing — plus tech-driven last-mile logistics engineered for retailers, distributors, banks and e-commerce leaders.",
+          "Africa's leading logistics technology company. POTLAKA has engineered an AI-powered Enterprise Logistics Operating System for warehousing, transport, fleet and last-mile delivery.",
       },
       { name: "author", content: "Vilakazi Global SA (Pty) Ltd" },
-      { property: "og:title", content: "POTLAKA.COM — High-Tech Automation for Transport, Logistics & Warehousing" },
+      { property: "og:title", content: "POTLAKA — Engineering the Future of Logistics" },
       {
         property: "og:description",
         content:
-          "South African technology company delivering high-tech automation for transport, logistics and warehousing — plus tech-driven last-mile logistics engineered for retailers, distributors, banks and e-commerce leaders.",
+          "An AI-powered Enterprise Logistics Operating System — warehousing, transport, fleet and last-mile in one intelligent ecosystem.",
       },
       { property: "og:type", content: "website" },
-      { property: "og:site_name", content: "POTLAKA.COM" },
+      { property: "og:site_name", content: "POTLAKA" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "theme-color", content: "#1a4bd1" },
-      { name: "twitter:title", content: "POTLAKA.COM — High-Tech Automation for Transport, Logistics & Warehousing" },
-      { name: "twitter:description", content: "South African technology company delivering high-tech automation for transport, logistics and warehousing — plus tech-driven last-mile logistics engineered for retailers, distributors, banks and e-commerce leaders." },
-      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/34b06db5-2796-4025-8e5e-f29977d9d593/id-preview-fe595fed--a098dde9-4070-4177-ba24-6c710740a0e9.lovable.app-1783540339280.png" },
-      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/34b06db5-2796-4025-8e5e-f29977d9d593/id-preview-fe595fed--a098dde9-4070-4177-ba24-6c710740a0e9.lovable.app-1783540339280.png" },
+      { name: "theme-color", content: "#0b1020" },
+      { name: "twitter:title", content: "POTLAKA — Engineering the Future of Logistics" },
+      { name: "twitter:description", content: "An AI-powered Enterprise Logistics Operating System for warehousing, transport, fleet and last-mile." },
     ],
     links: [
       { rel: "stylesheet", href: appCss },

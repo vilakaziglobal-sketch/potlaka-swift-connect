@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { Logo } from "./logo";
-import { Mail, Phone, MapPin } from "lucide-react";
+import { Mail, Phone } from "lucide-react";
 
 export function SiteFooter() {
   return (
@@ -20,10 +20,6 @@ export function SiteFooter() {
               e-commerce leaders.
             </p>
             <ul className="mt-6 space-y-3 text-sm text-white/80">
-              <li className="flex items-start gap-3">
-                <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-accent" />
-                <span>Head Office — Shop No 5, Kariba Centre, 1 Naauw Street, Elsburg, Germiston, 1428</span>
-              </li>
               <li className="flex items-start gap-3">
                 <Mail className="mt-0.5 h-4 w-4 shrink-0 text-accent" />
                 <a href="mailto:ops@potlaka.com" className="hover:text-white">ops@potlaka.com</a>

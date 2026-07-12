@@ -128,8 +128,8 @@ function ServicesPage() {
       <section className="container-page pb-24">
         <div className="rounded-3xl bg-[image:var(--gradient-primary)] p-10 text-white md:p-14">
           <SectionHeading
-            title={<span className="text-white">Not sure which service fits your operations?</span>}
-            description={<span className="text-white/80">Our enterprise team will design a bespoke delivery model based on your volumes, footprint and service-level commitments.</span>}
+            title={<span className="text-white">Not sure which service fits your operation?</span>}
+            description={<span className="text-white/80">Our enterprise team will design a bespoke delivery model around your volumes, footprint and service-level commitments.</span>}
           />
           <div className="mt-8">
             <Link to="/contact" className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3.5 text-sm font-semibold text-primary transition-transform hover:scale-[1.02]">

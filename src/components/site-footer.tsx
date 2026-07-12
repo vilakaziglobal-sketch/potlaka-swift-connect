@@ -9,7 +9,7 @@ export function SiteFooter() {
       <div className="container-page relative py-16">
         <div className="grid gap-12 lg:grid-cols-4">
           <div className="lg:col-span-2">
-            <div className="mb-5 [&_span]:text-white">
+            <div className="mb-5 [&_div>span]:text-white">
               <Logo />
             </div>
             <p className="max-w-md text-sm leading-relaxed text-white/70">

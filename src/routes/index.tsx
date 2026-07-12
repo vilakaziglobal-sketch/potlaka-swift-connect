@@ -378,7 +378,7 @@ function HowItWorks() {
     <Section>
       <div className="max-w-3xl">
         <Eyebrow>How It Works</Eyebrow>
-        <H2>An operating system for your <span className="text-gradient-primary">supply chain.</span></H2>
+        <H2>A smarter way to run your <span className="text-gradient-primary">supply chain.</span></H2>
       </div>
       <div className="mt-16 grid gap-px overflow-hidden rounded-3xl border border-white/5 bg-white/[0.03] md:grid-cols-5">
         {steps.map((s, i) => (

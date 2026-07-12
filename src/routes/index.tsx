@@ -175,12 +175,12 @@ function LiveDashboard() {
   );
 }
 
-function KPI({ label, value, trend, negative }: { label: string; value: string; trend: string; negative?: boolean }) {
+function KPI({ label, value, trend }: { label: string; value: string; trend: string }) {
   return (
     <div className="rounded-xl border border-white/5 bg-white/[0.02] p-3">
       <div className="text-[10px] uppercase tracking-wider text-ink-muted">{label}</div>
       <div className="mt-1 font-display text-xl font-semibold text-ink">{value}</div>
-      <div className={`mt-0.5 font-mono text-[10px] ${negative ? "text-emerald-300" : "text-gold"}`}>{trend}%</div>
+      <div className="mt-0.5 font-mono text-[10px] text-gold">{trend}</div>
     </div>
   );
 }

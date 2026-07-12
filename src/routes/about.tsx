@@ -53,31 +53,33 @@ function AboutPage() {
           <div>
             <div className="text-xs font-semibold uppercase tracking-wider text-primary">Our story</div>
             <h2 className="mt-4 text-balance text-3xl font-semibold leading-tight tracking-tight text-ink md:text-4xl">
-              A logistics company built during a moment that changed everything.
+              Born in a moment that redefined logistics — and built for the decade that follows.
             </h2>
           </div>
           <div className="space-y-5 text-lg leading-relaxed text-ink-muted">
             <p>
-              Established in 2020 during the COVID-19 pandemic by founder and Managing
-              Director <span className="font-semibold text-ink">Sipho Vilakazi</span>,
-              POTLAKA<span className="font-black text-red-500">.</span>COM was created to bring professionalism, reliability and
-              technology to a category that South African businesses had every reason
-              to expect more from.
+              Founded in 2020 at the height of the COVID-19 pandemic by
+              Managing Director <span className="font-semibold text-ink">Sipho Vilakazi</span>,
+              POTLAKA<span className="font-black text-red-500">.</span>COM set out to
+              raise the bar for a category South African enterprises had every
+              reason to expect more from — bringing professionalism, reliability
+              and technology to the last mile.
             </p>
             <p>
-              The name POTLAKA is the Sesotho word for <em>"Hurry Up"</em> — a promise of
-              urgency, responsiveness and dependable service. We move business faster
-              through intelligent last-mile delivery.
+              POTLAKA is the Sesotho word for <em>"Hurry Up"</em> — our promise
+              of urgency, responsiveness and dependable service. We move
+              business faster through intelligent last-mile execution.
             </p>
             <p>
-              We are not a traditional courier. We are a technology-driven last-mile
-              company that becomes an extension of our clients' businesses — ensuring
-              every delivery reflects their brand and their customer service standards.
+              We are not a traditional courier. We are a technology company that
+              operates as an extension of our clients' brands — protecting
+              their customer promise on every delivery.
             </p>
             <p>
-              Our solutions cover security and safety across transport, logistics and
-              warehousing. By applying automation, we simplify complex processes and
-              give our clients and their staff more time to focus on what matters.
+              Security and safety are engineered into every transport,
+              logistics and warehousing workflow. Automation strips out the
+              routine — freeing your teams to focus on customers, exceptions
+              and growth.
             </p>
           </div>
         </div>

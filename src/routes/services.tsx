@@ -66,7 +66,7 @@ function ServicesPage() {
       <section className="container-page pt-20 md:pt-28">
         <SectionHeading
           eyebrow="Automation solutions"
-          title={<>High-tech automation for transport, logistics <span className="text-gradient-primary">& warehousing</span>.</>}
+          title={<>High-tech automation for transport, logistics <span className="text-gradient-primary">and warehousing</span>.</>}
           description="Digitise, connect and automate the systems that move your business — from the warehouse floor to the customer's door."
         />
         <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">

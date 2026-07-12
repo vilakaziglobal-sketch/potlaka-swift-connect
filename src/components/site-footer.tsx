@@ -14,9 +14,9 @@ export function SiteFooter() {
             </div>
             <p className="max-w-md text-sm leading-relaxed text-white/70">
               POTLAKA<span className="font-black text-[#FF1A1A]">.</span>COM is a proudly South African, 100% Black-owned technology
-              company engineering high-tech automation for transport, logistics and
+              company developing automation for transport, logistics and
               warehousing, and tech-driven last-mile for retailers,
-              distributors, banks and e-commerce leaders.
+              distributors, banks and e-commerce.
             </p>
             <ul className="mt-6 space-y-3 text-sm text-white/80">
               <li className="flex items-start gap-3">

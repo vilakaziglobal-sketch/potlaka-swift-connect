@@ -12,7 +12,7 @@ export default defineTool({
       {
         name: "Tech-driven last-mile delivery",
         description:
-          "Automated dispatch, live tracking and electronic proof of delivery for every consignment.",
+          "Automated dispatch, live tracking and electronic proof of delivery on each consignment.",
       },
       {
         name: "Scheduled distribution routes",
@@ -27,7 +27,7 @@ export default defineTool({
       {
         name: "On-demand & overflow capacity",
         description:
-          "Extra vehicles and drivers when volumes spike, without compromising service levels.",
+          "Extra vehicles and drivers when volumes spike, to help maintain service levels.",
       },
       {
         name: "Reverse logistics & collections",

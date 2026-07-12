@@ -9,7 +9,6 @@ export default defineTool({
   annotations: { readOnlyHint: true, idempotentHint: true, openWorldHint: false },
   handler: () => {
     const contact = {
-      headOffice: "Shop No 5, Kariba Centre, 1 Naauw Street, Elsburg, Germiston, 1428",
       phone: "+27 11 383 2537",
       email: "ops@potlaka.com",
       whatsapp: "+27 79 025 8048",

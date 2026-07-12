@@ -14,7 +14,7 @@ export default defineTool({
       founder: "Sipho Vilakazi",
       role: "Founder & Managing Director",
       positioning:
-        "South African technology company delivering high-tech automation for transport, logistics and warehousing — and tech-driven last-mile logistics engineered for retailers, distributors, banks and e-commerce leaders.",
+        "South African technology company developing automation for transport, logistics and warehousing — and tech-driven last-mile logistics for retailers, distributors, banks and e-commerce.",
       website: "https://potlaka.com",
     };
     return {

@@ -7,7 +7,7 @@ export const Route = createFileRoute("/services")({
   head: () => ({
     meta: [
       { title: "Services — Last-Mile Delivery for South African Enterprises | POTLAKA.COM" },
-      { name: "description", content: "South Africa's do-it-all last-mile delivery company — dedicated fleet, scheduled routes, on-demand capacity, reverse logistics and white-label delivery for enterprise brands." },
+      { name: "description", content: "Last-mile delivery services for South African enterprises — dedicated fleet, scheduled routes, on-demand capacity, reverse logistics and white-label delivery." },
       { property: "og:title", content: "Services — POTLAKA.COM" },
     ],
     links: [{ rel: "canonical", href: "/services" }],
@@ -42,10 +42,10 @@ function ServicesPage() {
               <span className="h-1.5 w-1.5 rounded-full bg-accent" /> Services
             </div>
             <h1 className="mt-6 text-balance text-5xl font-semibold leading-[1.03] tracking-tight md:text-6xl">
-              One last-mile delivery company. One intelligent platform.
+              Last-mile delivery for South African enterprises.
             </h1>
             <p className="mt-6 max-w-2xl text-lg text-white/80 md:text-xl">
-              We design and operate last-mile delivery for South African enterprises — dedicated fleet, scheduled routes, on-demand capacity and reverse logistics, all on one operating engine.
+              We design and operate last-mile delivery for South African enterprises — dedicated fleet, scheduled routes, on-demand capacity and reverse logistics, supported by our operating platform.
             </p>
 
           </div>
@@ -56,7 +56,7 @@ function ServicesPage() {
         <SectionHeading
           eyebrow="Tech-driven last-mile"
           title={<>Last-mile logistics built for <span className="text-gradient-primary">your operation</span>.</>}
-          description="From scheduled routes to on-demand capacity, our platform matches the right vehicle, driver and workflow to every delivery — every time."
+          description="From scheduled routes to on-demand capacity, our platform helps match the right vehicle, driver and workflow to each delivery."
         />
         <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {LASTMILE.map((s) => (

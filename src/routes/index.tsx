@@ -328,7 +328,7 @@ function Platform() {
     { icon: Gauge, title: "Fleet Intelligence", copy: "Driver scoring, fuel and utilisation analytics from our apps and handheld devices." },
     { icon: Bot, title: "Automation", copy: "Route optimisation, demand forecasting and exception handling." },
     { icon: Users, title: "Customer Experience", copy: "Portals, live tracking and SMS & WhatsApp notifications for self-service." },
-    { icon: LineChart, title: "Client Reporting", copy: "Real-time dashboards and automated reports that reduce manual updates." },
+    { icon: LineChart, title: "Client Reporting", copy: "A live reporting facility where your clients view dashboards and reports themselves — no request needed." },
   ];
   return (
     <Section id="platform">
@@ -373,7 +373,7 @@ function HowItWorks() {
     { n: "02", title: "Optimise", copy: "Data-driven routing, fleet allocation, demand forecasting and exception alerts." },
     { n: "03", title: "Execute", copy: "Drivers, warehouses and dispatch run the plan across mobile and web." },
     { n: "04", title: "Prove", copy: "OTP, GPS, signature and chain-of-custody captured at every handover." },
-    { n: "05", title: "Report", copy: "Real-time dashboards and automated client reports that reduce manual updates." },
+    { n: "05", title: "Report", copy: "A live client reporting facility. Your clients view dashboards and reports without asking for them." },
   ];
   return (
     <Section>
@@ -449,10 +449,10 @@ function AISection() {
 /* ---------- CLIENT REPORTING ---------- */
 function ClientReporting() {
   const benefits = [
-    "Live delivery dashboards for clients",
-    "Automated SLA, exception and milestone reports",
+    "Live client reporting facility — view reports without asking",
+    "Self-service dashboards for delivery, SLA and milestone data",
+    "Automated reports sent on schedule or triggered by events",
     "Real-time notifications via SMS, email and WhatsApp",
-    "Self-service tracking that reduces follow-ups",
     "Executive-ready analytics, kept current",
     "Fewer spreadsheets, phone calls and status emails",
   ];
@@ -463,9 +463,9 @@ function ClientReporting() {
         <div className="relative grid gap-14 lg:grid-cols-2 lg:items-center">
           <div>
             <Eyebrow>Client Reporting</Eyebrow>
-            <H2>Real-time reporting for your <span className="text-gradient-gold">clients.</span></H2>
+            <H2>A live reporting facility for your <span className="text-gradient-gold">clients.</span></H2>
             <p className="mt-6 text-lg leading-relaxed text-ink-muted">
-              Give your clients better visibility with less effort. Automated dashboards, live status updates and scheduled reports reduce manual work — so your team can focus on delivery.
+              Give your clients a self-service reporting facility where they view dashboards, track deliveries and download reports without asking for them. Automated status updates and scheduled reports reduce manual work — so your team can focus on delivery.
             </p>
             <div className="mt-8">
               <Link to="/contact" className="inline-flex items-center gap-2 rounded-full bg-[image:var(--gradient-primary)] px-6 py-3.5 text-sm font-semibold text-primary-foreground shadow-elegant transition-transform hover:scale-[1.02]">

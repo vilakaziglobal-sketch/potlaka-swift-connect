@@ -10,9 +10,40 @@ export const Route = createFileRoute("/contact")({
       { title: "Contact POTLAKA.COM — Request a Proposal or Consultation" },
       { name: "description", content: "Speak to our enterprise team. Request a business proposal, book a consultation or open a business account with POTLAKA.COM." },
       { property: "og:title", content: "Contact POTLAKA.COM" },
+      { property: "og:description", content: "Request a proposal, book a consultation or open a business account." },
+      { property: "og:url", content: "https://www.potlaka.com/contact" },
+      { property: "og:type", content: "website" },
+      { name: "twitter:title", content: "Contact POTLAKA.COM" },
+      { name: "twitter:description", content: "Request a proposal, book a consultation or open a business account." },
     ],
-    links: [{ rel: "canonical", href: "/contact" }],
+    links: [{ rel: "canonical", href: "https://www.potlaka.com/contact" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "ContactPage",
+          url: "https://www.potlaka.com/contact",
+          about: { "@id": "https://www.potlaka.com/#organization" },
+          mainEntity: {
+            "@type": "Organization",
+            "@id": "https://www.potlaka.com/#organization",
+            contactPoint: [
+              {
+                "@type": "ContactPoint",
+                telephone: "+27113832537",
+                contactType: "sales",
+                email: "ops@potlaka.com",
+                areaServed: "ZA",
+                availableLanguage: ["English"],
+              },
+            ],
+          },
+        }),
+      },
+    ],
   }),
+
 });
 
 const schema = z.object({

@@ -8,9 +8,15 @@ export const Route = createFileRoute("/careers")({
       { title: "Careers at POTLAKA.COM — Shape Last-Mile Logistics" },
       { name: "description", content: "Join a proudly South African, 100% Black-owned technology-driven logistics company building enterprise last-mile delivery." },
       { property: "og:title", content: "Careers at POTLAKA.COM" },
+      { property: "og:description", content: "Build the future of last-mile delivery with POTLAKA.COM." },
+      { property: "og:url", content: "https://www.potlaka.com/careers" },
+      { property: "og:type", content: "website" },
+      { name: "twitter:title", content: "Careers at POTLAKA.COM" },
+      { name: "twitter:description", content: "Build the future of last-mile delivery with POTLAKA.COM." },
     ],
-    links: [{ rel: "canonical", href: "/careers" }],
+    links: [{ rel: "canonical", href: "https://www.potlaka.com/careers" }],
   }),
+
 });
 
 function CareersPage() {

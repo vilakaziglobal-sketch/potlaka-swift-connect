@@ -8,10 +8,16 @@ export const Route = createFileRoute("/industries")({
       { title: "Industries — Retailers, Distributors, Banks & E-commerce | POTLAKA.COM" },
       { name: "description", content: "Tech-driven last-mile and logistics automation for retailers, distributors, banks and e-commerce — plus 3PLs, healthcare, pharma, FMCG and more across South Africa." },
       { property: "og:title", content: "Industries — POTLAKA.COM" },
+      { property: "og:description", content: "Logistics automation for retailers, distributors, banks and e-commerce leaders." },
+      { property: "og:url", content: "https://www.potlaka.com/industries" },
+      { property: "og:type", content: "website" },
+      { name: "twitter:title", content: "Industries — POTLAKA.COM" },
+      { name: "twitter:description", content: "Logistics automation for South African enterprises." },
     ],
-    links: [{ rel: "canonical", href: "/industries" }],
+    links: [{ rel: "canonical", href: "https://www.potlaka.com/industries" }],
   }),
 });
+
 
 const FLAGSHIP = [
   {

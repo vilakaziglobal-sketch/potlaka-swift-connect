@@ -9,9 +9,15 @@ export const Route = createFileRoute("/about")({
       { title: "About POTLAKA.COM — 100% Black-Owned Last-Mile Delivery" },
       { name: "description", content: "Founded in 2020, POTLAKA.COM delivers dependable, technology-driven last-mile logistics for South African enterprises." },
       { property: "og:title", content: "About POTLAKA.COM" },
+      { property: "og:description", content: "100% black-owned last-mile logistics for South African enterprises." },
+      { property: "og:url", content: "https://www.potlaka.com/about" },
+      { property: "og:type", content: "website" },
+      { name: "twitter:title", content: "About POTLAKA.COM" },
+      { name: "twitter:description", content: "100% black-owned last-mile logistics for South African enterprises." },
     ],
-    links: [{ rel: "canonical", href: "/about" }],
+    links: [{ rel: "canonical", href: "https://www.potlaka.com/about" }],
   }),
+
 });
 
 

@@ -8,10 +8,16 @@ export const Route = createFileRoute("/technology")({
       { title: "Technology — Automation Platform for Logistics | POTLAKA.COM" },
       { name: "description", content: "POTLAKA.COM platform: warehouse management, fleet intelligence, control tower, dispatch, ePOD and analytics." },
       { property: "og:title", content: "Technology — POTLAKA.COM" },
+      { property: "og:description", content: "Warehouse management, fleet intelligence, control tower, dispatch, ePOD and analytics." },
+      { property: "og:url", content: "https://www.potlaka.com/technology" },
+      { property: "og:type", content: "website" },
+      { name: "twitter:title", content: "Technology — POTLAKA.COM" },
+      { name: "twitter:description", content: "Automation platform for enterprise logistics." },
     ],
-    links: [{ rel: "canonical", href: "/technology" }],
+    links: [{ rel: "canonical", href: "https://www.potlaka.com/technology" }],
   }),
 });
+
 
 const FEATURES = [
   { icon: Warehouse, title: "Warehouse automation (WMS)", desc: "Barcode and RFID scanning, pick-pack workflows and automated stock control." },

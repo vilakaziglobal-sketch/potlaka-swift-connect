@@ -9,10 +9,48 @@ export const Route = createFileRoute("/services")({
       { title: "Services — Last-Mile Delivery for South African Enterprises | POTLAKA.COM" },
       { name: "description", content: "Last-mile delivery for South African enterprises — dedicated fleet, scheduled routes, on-demand capacity and reverse logistics." },
       { property: "og:title", content: "Services — POTLAKA.COM" },
+      { property: "og:description", content: "Dedicated fleet, scheduled routes, on-demand capacity and reverse logistics for South African enterprises." },
+      { property: "og:url", content: "https://www.potlaka.com/services" },
+      { property: "og:type", content: "website" },
+      { name: "twitter:title", content: "Services — POTLAKA.COM" },
+      { name: "twitter:description", content: "Enterprise last-mile delivery services across South Africa." },
     ],
-    links: [{ rel: "canonical", href: "/services" }],
+    links: [{ rel: "canonical", href: "https://www.potlaka.com/services" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          serviceType: "Last-mile delivery and logistics technology",
+          provider: { "@id": "https://www.potlaka.com/#organization" },
+          areaServed: { "@type": "Country", name: "South Africa" },
+          url: "https://www.potlaka.com/services",
+          hasOfferCatalog: {
+            "@type": "OfferCatalog",
+            name: "POTLAKA Enterprise Logistics Services",
+            itemListElement: [
+              "Tech-driven last-mile delivery",
+              "Dedicated fleet solutions",
+              "Scheduled route planning",
+              "On-demand capacity",
+              "B2B & B2C fulfilment",
+              "Distribution centre flows",
+              "Inter-store transfers",
+              "Reverse logistics",
+              "White-label delivery",
+              "Real-time client reporting",
+            ].map((name) => ({
+              "@type": "Offer",
+              itemOffered: { "@type": "Service", name },
+            })),
+          },
+        }),
+      },
+    ],
   }),
 });
+
 
 const LASTMILE = [
   { icon: Truck, title: "Tech-driven last-mile delivery", desc: "Automated dispatch, live tracking and electronic proof of delivery on each consignment." },

@@ -1,7 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { motion } from "framer-motion";
-import executives from "@/assets/executives.jpg";
-import warehouse from "@/assets/warehouse.jpg";
 import { ArrowRight } from "lucide-react";
 
 export const Route = createFileRoute("/about")({
@@ -11,11 +9,11 @@ export const Route = createFileRoute("/about")({
       { title: "About POTLAKA.COM — 100% Black-Owned Last-Mile Delivery" },
       { name: "description", content: "Founded in 2020, POTLAKA.COM delivers dependable, technology-driven last-mile logistics for South African enterprises." },
       { property: "og:title", content: "About POTLAKA.COM" },
-      { property: "og:image", content: executives },
     ],
     links: [{ rel: "canonical", href: "/about" }],
   }),
 });
+
 
 function AboutPage() {
   return (
@@ -39,10 +37,24 @@ function AboutPage() {
           </div>
           <motion.div
             initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}
-            className="relative aspect-[4/3] overflow-hidden rounded-3xl border border-white/15 shadow-elegant"
+            className="relative aspect-[4/3] overflow-hidden rounded-3xl border border-white/15 bg-[image:var(--gradient-primary)] shadow-elegant"
           >
-            <img src={executives} alt="POTLAKA executive team reviewing logistics dashboards" className="h-full w-full object-cover" width={1600} height={1000} />
+            <div className="absolute inset-0 bg-mesh opacity-60" />
+            <div className="relative grid h-full grid-cols-2 gap-4 p-8">
+              {[
+                { k: "95%", v: "On-time delivery" },
+                { k: "24/7", v: "Control tower" },
+                { k: "100%", v: "Black-owned" },
+                { k: "2020", v: "Est. in SA" },
+              ].map((s) => (
+                <div key={s.v} className="flex flex-col justify-end rounded-2xl border border-white/15 bg-white/10 p-5 backdrop-blur">
+                  <div className="font-display text-3xl font-semibold text-white md:text-4xl">{s.k}</div>
+                  <div className="mt-1 text-xs uppercase tracking-wider text-white/75">{s.v}</div>
+                </div>
+              ))}
+            </div>
           </motion.div>
+
         </div>
       </section>
 
@@ -113,9 +125,19 @@ function AboutPage() {
       {/* Fleet */}
       <section className="container-page py-24 md:py-32">
         <div className="grid gap-14 lg:grid-cols-2 lg:items-center">
-          <div className="relative aspect-[4/3] overflow-hidden rounded-3xl border border-border shadow-elegant">
-            <img src={warehouse} alt="POTLAKA distribution operations" className="h-full w-full object-cover" width={1600} height={1000} loading="lazy" />
+          <div className="relative aspect-[4/3] overflow-hidden rounded-3xl border border-border bg-[image:var(--gradient-primary)] shadow-elegant">
+            <div className="absolute inset-0 bg-mesh opacity-60" />
+            <div className="relative flex h-full flex-col justify-between p-8 text-white">
+              <div className="inline-flex w-fit items-center gap-2 rounded-full border border-white/20 bg-white/10 px-3 py-1.5 text-xs font-semibold uppercase tracking-wider backdrop-blur">
+                <span className="h-1.5 w-1.5 rounded-full bg-accent" /> Dedicated fleet
+              </div>
+              <div>
+                <div className="font-display text-5xl font-semibold md:text-6xl">Nationwide</div>
+                <div className="mt-2 text-sm text-white/75">Expanding across every major SA metro</div>
+              </div>
+            </div>
           </div>
+
           <div>
             <div className="text-xs font-semibold uppercase tracking-wider text-accent">Our fleet</div>
             <h2 className="mt-4 text-balance text-4xl font-semibold leading-tight tracking-tight text-ink md:text-5xl">

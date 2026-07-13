@@ -50,12 +50,8 @@ export function SiteHeader() {
         </nav>
 
         <div className="hidden items-center gap-2 lg:flex">
-          <Link
-            to="/contact"
-            className="rounded-full px-4 py-2 text-sm font-medium text-ink-muted hover:text-ink"
-          >
-            Book demo
-          </Link>
+
+
           <Link
             to="/contact"
             className="group inline-flex items-center gap-2 rounded-full bg-gold px-5 py-2.5 text-sm font-semibold text-[oklch(0.14_0.02_260)] shadow-glow-gold transition-transform hover:scale-[1.02]"

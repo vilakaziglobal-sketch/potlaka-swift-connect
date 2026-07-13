@@ -31,7 +31,7 @@ const FEATURES = [
   { icon: BarChart3, title: "Real-time client reporting", desc: "Live dashboards and automated reports that reduce manual updates for your clients." },
   { icon: LineChart, title: "Delivery analytics", desc: "Insight on volumes, service levels, exceptions and customer experience." },
   { icon: Cpu, title: "Systems integration", desc: "APIs and connectors into ERP, e-commerce, WMS, TMS and core banking platforms." },
-  { icon: ShieldCheck, title: "Secure chain of custody", desc: "Auditable handovers for sensitive, high-value or confidential consignments." },
+  { icon: ShieldCheck, title: "Cargo, driver & recipient security", desc: "Security features designed to protect cargo, drivers and recipients at every handover." },
 ];
 
 function TechPage() {
@@ -96,10 +96,11 @@ function TechPage() {
                 <div className="text-xs font-medium uppercase tracking-[0.18em] text-gold">Security controls</div>
                 <ul className="mt-4 space-y-2.5">
                   {[
-                    { icon: ShieldCheck, text: "Role-based access control" },
+                    { icon: ShieldCheck, text: "Security features to protect cargo, drivers and recipients" },
                     { icon: Lock, text: "Encrypted data in transit and at rest" },
                     { icon: FileSignature, text: "Auditable ePOD and chain of custody" },
                     { icon: Cpu, text: "POPIA-aligned data handling" },
+                    { icon: Users, text: "Role-based access control" },
                   ].map((s) => (
                     <li key={s.text} className="flex items-center gap-2 text-sm text-ink"><s.icon className="h-3.5 w-3.5 text-ink-muted" />{s.text}</li>
                   ))}

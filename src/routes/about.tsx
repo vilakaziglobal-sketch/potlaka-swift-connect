@@ -92,10 +92,16 @@ function AboutPage() {
               delivery.
             </p>
             <p>
+              Our live client reporting facility gives your stakeholders
+              self-service access to dashboards and reports, so they can view
+              delivery performance without asking for it.
+            </p>
+            <p>
               Security and safety are built into every transport,
-              logistics and warehousing workflow. Automation reduces the
-              routine — freeing your teams to focus on customers, exceptions
-              and growth.
+              logistics and warehousing workflow, with features designed to
+              protect cargo, drivers and recipients at every handover.
+              Automation reduces the routine — freeing your teams to focus on
+              customers, exceptions and growth.
             </p>
           </div>
         </div>

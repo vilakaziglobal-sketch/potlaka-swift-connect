@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { SectionHeading } from "@/components/section";
-import { ArrowRight, Truck, Boxes, Timer, Store, Building2, Repeat, Package, Users, ClipboardList, MapPin, Activity } from "lucide-react";
+import { ArrowRight, Truck, Boxes, Timer, Store, Building2, Repeat, Package, Users, ClipboardList, MapPin, Activity, ShieldCheck } from "lucide-react";
 
 export const Route = createFileRoute("/services")({
   component: ServicesPage,

@@ -16,7 +16,7 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "POTLAKA develops technology for transport, logistics and warehousing, and tech-driven last-mile delivery for South African retailers, distributors, banks and e-commerce businesses.",
+          "POTLAKA develops technology-driven last-mile delivery for South African retailers, distributors, banks and e-commerce enterprises.",
       },
       { property: "og:title", content: "POTLAKA — Logistics Technology for South African Enterprises" },
       {

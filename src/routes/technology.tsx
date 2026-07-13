@@ -6,7 +6,7 @@ export const Route = createFileRoute("/technology")({
   head: () => ({
     meta: [
       { title: "Technology — Automation Platform for Logistics | POTLAKA.COM" },
-      { name: "description", content: "The POTLAKA.COM platform: warehouse management, fleet intelligence, control-tower visibility, automated dispatch, ePOD, driver applications and analytics." },
+      { name: "description", content: "POTLAKA.COM platform: warehouse management, fleet intelligence, control tower, dispatch, ePOD and analytics." },
       { property: "og:title", content: "Technology — POTLAKA.COM" },
     ],
     links: [{ rel: "canonical", href: "/technology" }],
@@ -60,7 +60,7 @@ function TechPage() {
               <div className="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary group-hover:bg-[image:var(--gradient-primary)] group-hover:text-white transition-colors">
                 <f.icon className="h-6 w-6" />
               </div>
-              <h3 className="text-lg font-semibold text-ink">{f.title}</h3>
+              <h2 className="text-lg font-semibold text-ink">{f.title}</h2>
               <p className="mt-2 text-sm leading-relaxed text-ink-muted">{f.desc}</p>
             </div>
           ))}

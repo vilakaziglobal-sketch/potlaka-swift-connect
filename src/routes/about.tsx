@@ -37,10 +37,24 @@ function AboutPage() {
           </div>
           <motion.div
             initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}
-            className="relative aspect-[4/3] overflow-hidden rounded-3xl border border-white/15 shadow-elegant"
+            className="relative aspect-[4/3] overflow-hidden rounded-3xl border border-white/15 bg-[image:var(--gradient-primary)] shadow-elegant"
           >
-            <img src={executives} alt="POTLAKA executive team reviewing logistics dashboards" className="h-full w-full object-cover" width={1600} height={1000} />
+            <div className="absolute inset-0 bg-mesh opacity-60" />
+            <div className="relative grid h-full grid-cols-2 gap-4 p-8">
+              {[
+                { k: "95%", v: "On-time delivery" },
+                { k: "24/7", v: "Control tower" },
+                { k: "100%", v: "Black-owned" },
+                { k: "2020", v: "Est. in SA" },
+              ].map((s) => (
+                <div key={s.v} className="flex flex-col justify-end rounded-2xl border border-white/15 bg-white/10 p-5 backdrop-blur">
+                  <div className="font-display text-3xl font-semibold text-white md:text-4xl">{s.k}</div>
+                  <div className="mt-1 text-xs uppercase tracking-wider text-white/75">{s.v}</div>
+                </div>
+              ))}
+            </div>
           </motion.div>
+
         </div>
       </section>
 

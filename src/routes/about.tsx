@@ -120,7 +120,7 @@ function AboutPage() {
               { t: "Safety & Automation", d: "Security and safety engineered in. Automation that frees your people to drive growth." },
             ].map((v) => (
               <div key={v.t} className="rounded-2xl border border-border bg-background p-7">
-                <div className="font-display text-2xl font-semibold text-gradient-primary">{v.t}</div>
+                <div className="font-display text-2xl font-semibold leading-[1.2] pb-1 text-gradient-primary">{v.t}</div>
                 <p className="mt-3 text-sm leading-relaxed text-ink-muted">{v.d}</p>
               </div>
             ))}

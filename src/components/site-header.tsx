@@ -50,8 +50,15 @@ export function SiteHeader() {
         </nav>
 
         <div className="hidden items-center gap-2 lg:flex">
-
-
+          <Link
+            to="/client-login"
+            className="inline-flex items-center gap-2 rounded-full border border-border px-4 py-2 text-sm font-semibold text-ink transition-colors hover:bg-secondary"
+          >
+            <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="2">
+              <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4M10 17l5-5-5-5M15 12H3" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+            Client login
+          </Link>
           <Link
             to="/contact"
             className="group inline-flex items-center gap-2 rounded-full bg-gold px-5 py-2.5 text-sm font-semibold text-[oklch(0.14_0.02_260)] shadow-glow-gold transition-transform hover:scale-[1.02]"
@@ -62,6 +69,7 @@ export function SiteHeader() {
             </svg>
           </Link>
         </div>
+
 
         <button
           className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-border bg-surface-elevated text-ink lg:hidden"

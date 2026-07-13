@@ -1,0 +1,13 @@
+# POTLAKA.COM
+
+> POTLAKA.COM is a proudly South African, 100% Black-owned technology company developing automation for transport, logistics and warehousing, and tech-driven last-mile delivery for retailers, distributors, banks and e-commerce enterprises.
+
+## Pages
+
+- [Home](/): Overview of POTLAKA.COM's logistics technology and last-mile delivery.
+- [Services](/services): Last-mile delivery services — dedicated fleet, scheduled routes, on-demand capacity and reverse logistics.
+- [Industries](/industries): Sector playbooks for retailers, distributors, banks and e-commerce.
+- [Technology](/technology): Automation platform — WMS, predictive fleet intelligence, control tower, dispatch, ePOD and analytics.
+- [About](/about): Company story, values and fleet.
+- [Careers](/careers): Open roles across operations, technology and driver teams.
+- [Contact](/contact): Get in touch with the enterprise team.

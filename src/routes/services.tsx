@@ -7,7 +7,7 @@ export const Route = createFileRoute("/services")({
   head: () => ({
     meta: [
       { title: "Services — Last-Mile Delivery for South African Enterprises | POTLAKA.COM" },
-      { name: "description", content: "Last-mile delivery services for South African enterprises — dedicated fleet, scheduled routes, on-demand capacity, reverse logistics and white-label delivery." },
+      { name: "description", content: "Last-mile delivery for South African enterprises — dedicated fleet, scheduled routes, on-demand capacity and reverse logistics." },
       { property: "og:title", content: "Services — POTLAKA.COM" },
     ],
     links: [{ rel: "canonical", href: "/services" }],
@@ -64,7 +64,7 @@ function ServicesPage() {
               <div className="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-accent/15 text-accent-foreground">
                 <s.icon className="h-6 w-6" />
               </div>
-              <h3 className="text-xl font-semibold text-ink">{s.title}</h3>
+              <h2 className="text-xl font-semibold text-ink">{s.title}</h2>
               <p className="mt-3 text-sm leading-relaxed text-ink-muted">{s.desc}</p>
             </div>
           ))}

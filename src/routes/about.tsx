@@ -8,8 +8,8 @@ export const Route = createFileRoute("/about")({
   component: AboutPage,
   head: () => ({
     meta: [
-      { title: "About POTLAKA.COM — Proudly South African, 100% Black-Owned" },
-      { name: "description", content: "POTLAKA.COM — founded in 2020 by Sipho Vilakazi to deliver dependable last-mile logistics for South African businesses." },
+      { title: "About POTLAKA.COM — 100% Black-Owned Last-Mile Delivery" },
+      { name: "description", content: "Founded in 2020, POTLAKA.COM delivers dependable, technology-driven last-mile logistics for South African enterprises." },
       { property: "og:title", content: "About POTLAKA.COM" },
       { property: "og:image", content: executives },
     ],

@@ -5,8 +5,8 @@ export const Route = createFileRoute("/careers")({
   component: CareersPage,
   head: () => ({
     meta: [
-      { title: "Careers at POTLAKA.COM — Build the future of last-mile delivery" },
-      { name: "description", content: "Join a proudly South African, 100% Black-owned technology-driven logistics company building the future of enterprise last-mile delivery." },
+      { title: "Careers at POTLAKA.COM — Shape Last-Mile Logistics" },
+      { name: "description", content: "Join a proudly South African, 100% Black-owned technology-driven logistics company building enterprise last-mile delivery." },
       { property: "og:title", content: "Careers at POTLAKA.COM" },
     ],
     links: [{ rel: "canonical", href: "/careers" }],

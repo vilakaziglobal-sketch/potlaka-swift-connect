@@ -39,7 +39,8 @@ export const Route = createFileRoute("/services")({
               "Inter-store transfers",
               "Reverse logistics",
               "White-label delivery",
-              "Real-time client reporting",
+              "Live client reporting facility",
+              "Cargo, driver and recipient security",
             ].map((name) => ({
               "@type": "Offer",
               itemOffered: { "@type": "Service", name },
@@ -65,7 +66,8 @@ const LASTMILE = [
   { icon: Truck, title: "White-label delivery", desc: "Your brand, your uniform, your customer experience — powered by our operating engine." },
   { icon: MapPin, title: "Business collections", desc: "Scheduled and ad-hoc collections from suppliers, partners and business locations." },
   { icon: Package, title: "Branded customer experience", desc: "Tracking pages, SMS and WhatsApp updates, and signatures that reflect your brand." },
-  { icon: Activity, title: "Real-time client reporting", desc: "Live dashboards and automated reports give your clients timely visibility — fewer manual updates." },
+  { icon: Activity, title: "Live client reporting facility", desc: "A self-service reporting facility where your clients view dashboards and download reports without asking for them." },
+  { icon: ShieldCheck, title: "Cargo, driver & recipient security", desc: "Security features and controls designed to protect cargo, drivers and recipients at every handover." },
 ];
 
 

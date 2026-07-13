@@ -1,7 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { motion } from "framer-motion";
-import executives from "@/assets/executives.jpg";
-import warehouse from "@/assets/warehouse.jpg";
 import { ArrowRight } from "lucide-react";
 
 export const Route = createFileRoute("/about")({
@@ -11,11 +9,11 @@ export const Route = createFileRoute("/about")({
       { title: "About POTLAKA.COM — 100% Black-Owned Last-Mile Delivery" },
       { name: "description", content: "Founded in 2020, POTLAKA.COM delivers dependable, technology-driven last-mile logistics for South African enterprises." },
       { property: "og:title", content: "About POTLAKA.COM" },
-      { property: "og:image", content: executives },
     ],
     links: [{ rel: "canonical", href: "/about" }],
   }),
 });
+
 
 function AboutPage() {
   return (

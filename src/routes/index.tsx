@@ -19,15 +19,16 @@ export const Route = createFileRoute("/")({
           "POTLAKA develops technology-driven last-mile delivery for South African retailers, distributors, banks and e-commerce enterprises.",
       },
       { property: "og:title", content: "POTLAKA — Logistics Technology for South African Enterprises" },
-      {
-        property: "og:description",
-        content:
-          "Technology for warehousing, transport, fleet and last-mile delivery.",
-      },
+      { property: "og:description", content: "Technology for warehousing, transport, fleet and last-mile delivery." },
+      { property: "og:url", content: "https://www.potlaka.com/" },
+      { property: "og:type", content: "website" },
+      { name: "twitter:title", content: "POTLAKA — Logistics Technology for South African Enterprises" },
+      { name: "twitter:description", content: "Technology-driven last-mile delivery for South African enterprises." },
     ],
-    links: [{ rel: "canonical", href: "/" }],
+    links: [{ rel: "canonical", href: "https://www.potlaka.com/" }],
   }),
 });
+
 
 const ease = [0.22, 1, 0.36, 1] as const;
 const fadeUp = {

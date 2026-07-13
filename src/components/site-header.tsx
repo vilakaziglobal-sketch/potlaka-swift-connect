@@ -94,12 +94,20 @@ export function SiteHeader() {
               </Link>
             ))}
             <Link
+              to="/client-login"
+              onClick={() => setOpen(false)}
+              className="mt-2 inline-flex items-center justify-center gap-2 rounded-full border border-border px-5 py-3 text-sm font-semibold text-ink"
+            >
+              Client login
+            </Link>
+            <Link
               to="/contact"
               onClick={() => setOpen(false)}
-              className="mt-2 inline-flex items-center justify-center gap-2 rounded-full bg-[image:var(--gradient-primary)] px-5 py-3 text-sm font-semibold text-primary-foreground"
+              className="inline-flex items-center justify-center gap-2 rounded-full bg-[image:var(--gradient-primary)] px-5 py-3 text-sm font-semibold text-primary-foreground"
             >
               Request proposal
             </Link>
+
           </div>
         </div>
       )}

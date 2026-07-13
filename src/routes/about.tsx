@@ -125,9 +125,19 @@ function AboutPage() {
       {/* Fleet */}
       <section className="container-page py-24 md:py-32">
         <div className="grid gap-14 lg:grid-cols-2 lg:items-center">
-          <div className="relative aspect-[4/3] overflow-hidden rounded-3xl border border-border shadow-elegant">
-            <img src={warehouse} alt="POTLAKA distribution operations" className="h-full w-full object-cover" width={1600} height={1000} loading="lazy" />
+          <div className="relative aspect-[4/3] overflow-hidden rounded-3xl border border-border bg-[image:var(--gradient-primary)] shadow-elegant">
+            <div className="absolute inset-0 bg-mesh opacity-60" />
+            <div className="relative flex h-full flex-col justify-between p-8 text-white">
+              <div className="inline-flex w-fit items-center gap-2 rounded-full border border-white/20 bg-white/10 px-3 py-1.5 text-xs font-semibold uppercase tracking-wider backdrop-blur">
+                <span className="h-1.5 w-1.5 rounded-full bg-accent" /> Dedicated fleet
+              </div>
+              <div>
+                <div className="font-display text-5xl font-semibold md:text-6xl">Nationwide</div>
+                <div className="mt-2 text-sm text-white/75">Expanding across every major SA metro</div>
+              </div>
+            </div>
           </div>
+
           <div>
             <div className="text-xs font-semibold uppercase tracking-wider text-accent">Our fleet</div>
             <h2 className="mt-4 text-balance text-4xl font-semibold leading-tight tracking-tight text-ink md:text-5xl">

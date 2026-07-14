@@ -95,6 +95,24 @@ function ContactPage() {
       return;
     }
     setErrors({});
+
+    const intentLabel = INTENTS.find((i) => i.id === parsed.data.intent)?.label ?? parsed.data.intent;
+    const subject = `[${intentLabel}] Enterprise enquiry — ${parsed.data.company}`;
+    const bodyLines = [
+      `Intent: ${intentLabel}`,
+      `Name: ${parsed.data.name}`,
+      `Company: ${parsed.data.company}`,
+      parsed.data.role ? `Role: ${parsed.data.role}` : "",
+      `Email: ${parsed.data.email}`,
+      parsed.data.phone ? `Phone: ${parsed.data.phone}` : "",
+      parsed.data.volumes ? `Estimated monthly volume: ${parsed.data.volumes}` : "",
+      "",
+      "Requirements:",
+      parsed.data.message,
+    ].filter((line) => line !== "");
+
+    const mailto = `mailto:ops@potlaka.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(bodyLines.join("\n"))}`;
+    window.location.href = mailto;
     setSubmitted(true);
   }
 

@@ -188,6 +188,13 @@ function ContactPage() {
               </div>
             ) : (
               <form onSubmit={onSubmit} className="space-y-6" noValidate>
+                {/* Honeypot — hidden from users, filled by bots */}
+                <div aria-hidden="true" className="absolute -left-[9999px] h-0 w-0 overflow-hidden">
+                  <label>
+                    Website (leave blank)
+                    <input type="text" name="website" tabIndex={-1} autoComplete="off" />
+                  </label>
+                </div>
                 <div>
                   <label className="mb-3 block text-xs font-semibold uppercase tracking-wider text-ink-muted">How can we help?</label>
                   <div className="grid gap-3 sm:grid-cols-2">

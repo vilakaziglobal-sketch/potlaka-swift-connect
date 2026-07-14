@@ -248,7 +248,12 @@ function ContactPage() {
                   Send enquiry
                   <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
                 </button>
-                <p className="text-xs text-ink-muted">By submitting you agree to be contacted by our enterprise team. Your details are never shared.</p>
+                {spamError && (
+                  <p className="rounded-lg border border-destructive/30 bg-destructive/5 px-3 py-2 text-xs text-destructive" role="alert">
+                    {spamError}
+                  </p>
+                )}
+                <p className="text-xs text-ink-muted">Protected by anti-spam checks. By submitting you agree to be contacted by our enterprise team. Your details are never shared.</p>
               </form>
             )}
           </div>

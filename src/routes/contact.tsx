@@ -95,6 +95,24 @@ function ContactPage() {
       return;
     }
     setErrors({});
+
+    const intentLabel = INTENTS.find((i) => i.id === parsed.data.intent)?.label ?? parsed.data.intent;
+    const subject = `[${intentLabel}] Enterprise enquiry — ${parsed.data.company}`;
+    const bodyLines = [
+      `Intent: ${intentLabel}`,
+      `Name: ${parsed.data.name}`,
+      `Company: ${parsed.data.company}`,
+      parsed.data.role ? `Role: ${parsed.data.role}` : "",
+      `Email: ${parsed.data.email}`,
+      parsed.data.phone ? `Phone: ${parsed.data.phone}` : "",
+      parsed.data.volumes ? `Estimated monthly volume: ${parsed.data.volumes}` : "",
+      "",
+      "Requirements:",
+      parsed.data.message,
+    ].filter((line) => line !== "");
+
+    const mailto = `mailto:ops@potlaka.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(bodyLines.join("\n"))}`;
+    window.location.href = mailto;
     setSubmitted(true);
   }
 
@@ -126,12 +144,16 @@ function ContactPage() {
                 <div className="mb-6 inline-flex h-16 w-16 items-center justify-center rounded-full bg-[image:var(--gradient-primary)] text-white">
                   <Check className="h-8 w-8" strokeWidth={3} />
                 </div>
-                <h2 className="text-3xl font-semibold text-ink">Thank you — we've got it.</h2>
+                <h2 className="text-3xl font-semibold text-ink">Your email client is opening.</h2>
                 <p className="mt-3 max-w-md text-ink-muted">
-                  A member of our enterprise team will be in touch within one
-                  business day to schedule a call and design a solution around
-                  your requirements.
+                  We've pre-filled a message to ops@potlaka.com with your details. Please review and hit send — our enterprise team will reply within one business day.
                 </p>
+                <a
+                  href="mailto:ops@potlaka.com"
+                  className="mt-6 text-sm font-semibold text-primary underline"
+                >
+                  Email didn't open? Send to ops@potlaka.com
+                </a>
               </div>
             ) : (
               <form onSubmit={onSubmit} className="space-y-6" noValidate>

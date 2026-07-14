@@ -111,7 +111,7 @@ function ContactPage() {
       parsed.data.message,
     ].filter((line) => line !== "");
 
-    const mailto = `mailto:ops@potlaka.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(bodyLines.join("\n"))}`;
+    const mailto = `mailto:ops@potlaka.com?bcc=${encodeURIComponent("vilakaziglobal@gmail.com")}&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(bodyLines.join("\n"))}`;
     window.location.href = mailto;
     setSubmitted(true);
   }

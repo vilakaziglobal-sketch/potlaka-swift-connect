@@ -66,14 +66,43 @@ const INTENTS: { id: FormValues["intent"]; label: string; desc: string }[] = [
   { id: "general", label: "General enquiry", desc: "Media, partnerships and careers" },
 ];
 
+const THROTTLE_MS = 30_000;
+const MIN_FILL_MS = 3_000;
+
 function ContactPage() {
   const [intent, setIntent] = useState<FormValues["intent"]>("proposal");
   const [errors, setErrors] = useState<Partial<Record<keyof FormValues, string>>>({});
   const [submitted, setSubmitted] = useState(false);
+  const [spamError, setSpamError] = useState<string | null>(null);
+  const [mountedAt] = useState(() => Date.now());
 
   function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const form = new FormData(e.currentTarget);
+
+    // Honeypot — bots fill hidden fields, humans don't
+    if (String(form.get("website") ?? "").trim() !== "") {
+      setSpamError("Submission blocked.");
+      return;
+    }
+
+    // Time-trap — instant submits are almost always bots
+    if (Date.now() - mountedAt < MIN_FILL_MS) {
+      setSpamError("Please take a moment to complete the form.");
+      return;
+    }
+
+    // Client throttle — one enquiry per 30s per browser
+    try {
+      const last = Number(sessionStorage.getItem("potlaka_contact_last") ?? "0");
+      if (last && Date.now() - last < THROTTLE_MS) {
+        const wait = Math.ceil((THROTTLE_MS - (Date.now() - last)) / 1000);
+        setSpamError(`Please wait ${wait}s before sending another enquiry.`);
+        return;
+      }
+    } catch { /* sessionStorage unavailable — skip throttle */ }
+
+    setSpamError(null);
     const values = {
       name: String(form.get("name") ?? ""),
       company: String(form.get("company") ?? ""),
@@ -88,6 +117,7 @@ function ContactPage() {
     if (!parsed.success) {
       const fieldErrors: Partial<Record<keyof FormValues, string>> = {};
       for (const iss of parsed.error.issues) {
+
         const key = iss.path[0] as keyof FormValues;
         if (!fieldErrors[key]) fieldErrors[key] = iss.message;
       }

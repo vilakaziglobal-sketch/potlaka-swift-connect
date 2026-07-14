@@ -142,6 +142,7 @@ function ContactPage() {
     ].filter((line) => line !== "");
 
     const mailto = `mailto:ops@potlaka.com?bcc=${encodeURIComponent("vilakaziglobal@gmail.com")}&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(bodyLines.join("\n"))}`;
+    try { sessionStorage.setItem("potlaka_contact_last", String(Date.now())); } catch { /* ignore */ }
     window.location.href = mailto;
     setSubmitted(true);
   }

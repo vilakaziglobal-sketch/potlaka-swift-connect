@@ -66,14 +66,43 @@ const INTENTS: { id: FormValues["intent"]; label: string; desc: string }[] = [
   { id: "general", label: "General enquiry", desc: "Media, partnerships and careers" },
 ];
 
+const THROTTLE_MS = 30_000;
+const MIN_FILL_MS = 3_000;
+
 function ContactPage() {
   const [intent, setIntent] = useState<FormValues["intent"]>("proposal");
   const [errors, setErrors] = useState<Partial<Record<keyof FormValues, string>>>({});
   const [submitted, setSubmitted] = useState(false);
+  const [spamError, setSpamError] = useState<string | null>(null);
+  const [mountedAt] = useState(() => Date.now());
 
   function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const form = new FormData(e.currentTarget);
+
+    // Honeypot — bots fill hidden fields, humans don't
+    if (String(form.get("website") ?? "").trim() !== "") {
+      setSpamError("Submission blocked.");
+      return;
+    }
+
+    // Time-trap — instant submits are almost always bots
+    if (Date.now() - mountedAt < MIN_FILL_MS) {
+      setSpamError("Please take a moment to complete the form.");
+      return;
+    }
+
+    // Client throttle — one enquiry per 30s per browser
+    try {
+      const last = Number(sessionStorage.getItem("potlaka_contact_last") ?? "0");
+      if (last && Date.now() - last < THROTTLE_MS) {
+        const wait = Math.ceil((THROTTLE_MS - (Date.now() - last)) / 1000);
+        setSpamError(`Please wait ${wait}s before sending another enquiry.`);
+        return;
+      }
+    } catch { /* sessionStorage unavailable — skip throttle */ }
+
+    setSpamError(null);
     const values = {
       name: String(form.get("name") ?? ""),
       company: String(form.get("company") ?? ""),
@@ -88,6 +117,7 @@ function ContactPage() {
     if (!parsed.success) {
       const fieldErrors: Partial<Record<keyof FormValues, string>> = {};
       for (const iss of parsed.error.issues) {
+
         const key = iss.path[0] as keyof FormValues;
         if (!fieldErrors[key]) fieldErrors[key] = iss.message;
       }
@@ -112,6 +142,7 @@ function ContactPage() {
     ].filter((line) => line !== "");
 
     const mailto = `mailto:ops@potlaka.com?bcc=${encodeURIComponent("vilakaziglobal@gmail.com")}&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(bodyLines.join("\n"))}`;
+    try { sessionStorage.setItem("potlaka_contact_last", String(Date.now())); } catch { /* ignore */ }
     window.location.href = mailto;
     setSubmitted(true);
   }
@@ -157,6 +188,13 @@ function ContactPage() {
               </div>
             ) : (
               <form onSubmit={onSubmit} className="space-y-6" noValidate>
+                {/* Honeypot — hidden from users, filled by bots */}
+                <div aria-hidden="true" className="absolute -left-[9999px] h-0 w-0 overflow-hidden">
+                  <label>
+                    Website (leave blank)
+                    <input type="text" name="website" tabIndex={-1} autoComplete="off" />
+                  </label>
+                </div>
                 <div>
                   <label className="mb-3 block text-xs font-semibold uppercase tracking-wider text-ink-muted">How can we help?</label>
                   <div className="grid gap-3 sm:grid-cols-2">
@@ -210,7 +248,12 @@ function ContactPage() {
                   Send enquiry
                   <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
                 </button>
-                <p className="text-xs text-ink-muted">By submitting you agree to be contacted by our enterprise team. Your details are never shared.</p>
+                {spamError && (
+                  <p className="rounded-lg border border-destructive/30 bg-destructive/5 px-3 py-2 text-xs text-destructive" role="alert">
+                    {spamError}
+                  </p>
+                )}
+                <p className="text-xs text-ink-muted">Protected by anti-spam checks. By submitting you agree to be contacted by our enterprise team. Your details are never shared.</p>
               </form>
             )}
           </div>
